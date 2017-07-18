@@ -161,7 +161,8 @@ a {
   .crossprice {
     display: none !important;
   }
-  .cmp-product-thumb .thumb-meta .vat-porto-info {
+  /*Porto Info*/
+  .vat-porto-info {
       font-size: 10px !important;
   }
   .single-leftside {
@@ -172,8 +173,8 @@ a {
     height: 400px !important;
   }
   .owl-height {
-    height: 400px !important;
-        text-align: center;
+    height: 400px;
+    text-align: center;
   }
   .owl-carousel .owl-single-item-control {
     color: #FD98BB !important;
@@ -192,6 +193,30 @@ a {
   .owl-thumbs .owl-thumb.active, .owl-thumbs .owl-thumb:hover {
     border: 1px solid #FF80AB;
   }
+/* Artikelseite Mobile */
+@media (max-width: 767px) {
+  /*Mobile höhe des Carousel*/
+  #thumb-carousel {
+   height: 85px;
+  }
+  #single-carousel {
+   height: 405px;
+  }
+  /* Verhindert das verschieben der Artikelbeschreibung */
+  .single-rightside {
+    width: auto !important;
+    bottom: auto !important;
+  }
+  .single-rightside div:last-child {
+    display: none;
+  }
+}
+/* Setzt "In den Warenkorb" mittig in derDesktop Ansicht */
+@media (min-width: 992px){
+  .cmp-product-thumb .btn-group {
+      bottom: 2.3rem !important;
+  }
+}
 /***** Sidebar Categories *****************************************************/
 .sidebar-categories {
   font-family: 'Muli', sans-serif !important;
