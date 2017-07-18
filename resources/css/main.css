@@ -193,6 +193,9 @@ a {
   .owl-thumbs .owl-thumb.active, .owl-thumbs .owl-thumb:hover {
     border: 1px solid #FF80AB;
   }
+.cmp-product-thumb .add-to-basket-lg-container:hover {
+  border-color: transparent #FF80AB transparent transparent;
+}
 /* Artikelseite Mobile */
 @media (max-width: 767px) {
   /*Mobile höhe des Carousel*/
