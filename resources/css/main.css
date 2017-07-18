@@ -184,9 +184,6 @@ a {
       color: #FD98BB !important;
       opacity: 1;
     }
-  .owl-carousel .owl-dots {
-    top: 385px;
-  }
   .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #FF80AB !important;
   }
@@ -204,11 +201,13 @@ a {
   }
   #single-carousel {
    height: 405px;
+   margin-bottom: 18px;
   }
   /* Verhindert das verschieben der Artikelbeschreibung */
   .single-rightside {
     width: auto !important;
     bottom: auto !important;
+    float: none;
   }
   .single-rightside div:last-child {
     display: none;
