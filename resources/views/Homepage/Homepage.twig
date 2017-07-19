@@ -106,6 +106,31 @@
         </div>
       </div>
       <div class="homepage_row row">
+        <h3 style="text-align: center; margin-bottom: 25px;">Besuche uns auf Facebook und Instagram</h3>
+        <div class="col-md-6">
+          <a href="https://de-de.facebook.com/sadingoShopping/">
+            <div class="homepage_facebook"><p>Facebook</p></div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="https://www.instagram.com/sadingoshopping/">
+            <div class="homepage_instagram"><p>Instagram</p></div>
+          </a>
+        </div>
+      </div>
+      <!-- crosssell start -->
+      <div class="homepage_row row">
+          <div class="col-xs-12">
+             <ul class="product-list row grid">
+                  {% for item in itemListTop %}
+                      <li class="col-xs-12 col-sm-6 col-md-3">
+                          {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                      </li>
+                  {% endfor %}
+              </ul>
+          </div>
+      </div>
+      <div class="homepage_row row">
         <div class="col-md-3">
           <div class="homepage_card card" style="width: 20rem;">
             <img class="homepage_card_img card-img-top" src="..." alt="Specials">
@@ -136,19 +161,6 @@
             </div>
           </div>
         </div> -->
-      </div>
-      <div class="homepage_row row">
-        <h3 style="text-align: center; margin-bottom: 25px;">Besuche uns auf Facebook und Instagram</h3>
-        <div class="col-md-6">
-          <a href="https://de-de.facebook.com/sadingoShopping/">
-            <div class="homepage_facebook"><p>Facebook</p></div>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a href="https://www.instagram.com/sadingoshopping/">
-            <div class="homepage_instagram"><p>Instagram</p></div>
-          </a>
-        </div>
       </div>
     </div>
 
