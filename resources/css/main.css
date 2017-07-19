@@ -213,6 +213,12 @@ a {
 .cmp-product-thumb .add-to-basket-lg-container:hover {
   border-color: transparent #FF80AB transparent transparent;
 }
+.articlenumber {
+  display: none;
+}
+.single-rightside .m-b-3 {
+  display: none;
+}
 /* Artikelseite Mobile */
 @media (max-width: 767px) {
   /*Mobile höhe des Carousel*/
