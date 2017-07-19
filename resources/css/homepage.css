@@ -11,10 +11,6 @@
     display: none;
   }
 }
-/*****Title*****/
-.homepage_row-title {
-  margin-top: 5px !important;
-}
 /*****Container*****/
 .main_pagecontent {
   margin-top: 40px;
@@ -37,6 +33,10 @@
   /*****Rows*****/
 .homepage_row {
   margin-top: 25px;
+}
+/*****Title*****/
+.homepage_row-title {
+  margin-top: 5px;
 }
 /*****Cards*****/
 .homepage_card {
