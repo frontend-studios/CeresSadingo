@@ -292,9 +292,15 @@ a {
     border-color: #FF80AB;
     color: #fff;
 }
-/*Suche Button*/
+/*Suche Oben*/
 .cmp-search-box .search-submit {
   color: #FF80AB !important;
+}
+.cmp-search-box {
+     background-color: #FD98BB;
+}
+.control-search {
+  color: #d9534f;
 }
 /***** Content *****/
 .page-content {
