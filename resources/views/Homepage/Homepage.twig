@@ -28,7 +28,7 @@
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
-{% set homepageTopsellerId = config("CeresDark.homepage.homepageTopsellerId") %}
+{% set homepageTopsellerId = config("CeresSadingo.homepage.homepageTopsellerId") %}
 {% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageTopsellerId, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set itemListTop             = paginatedResultNew.documents %}
 
