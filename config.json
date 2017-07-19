@@ -29,6 +29,20 @@
 	},
 	{
 		"tab"       : "Homepage",
+		"key"       : "homepage.homepageTitle",
+		"label"     : "Title der Startseite",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageTitleText",
+		"label"     : "Text unter dem Title",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
 		"key"       : "homepage.homepageBannerLink",
 		"label"     : "Banner Link",
 		"type"      : "text",

@@ -8,6 +8,9 @@
 {% set homepageBannerLink  = config("CeresSadingo.homepage.homepageBannerLink") %}
 {% set homepageBannerText  = config("CeresSadingo.homepage.homepageBannerText") %}
 
+{% set homepageTitle  = config("CeresSadingo.homepage.homepageTitle") %}
+{% set homepageTitleText  = config("CeresSadingo.homepage.homepageTitleText") %}
+
 {% set homepageCategoriePerlenparadies  = config("CeresSadingo.homepage.homepagePerlenparadies") %}
 {% set homepageCategoriePerlenparadiesText  = config("CeresSadingo.homepage.homepagePerlenparadiesText") %}
 {% set homepageCategorieSchmuckmaterial  = config("CeresSadingo.homepage.homepageSchmuckmaterial") %}
@@ -52,10 +55,9 @@
 <div class="main_container_slider container-max page-content"><!--Anfang des Containers-->
     <div class="container main_pagecontent">
       <div class="homepage_row">
-        <h3>Willkommen bei Sadingo</h3>
+        <h3> {{ homepageTitle }} </h3>
         <p>
-          Hier bei Sadingo findest du Hochwertiges Schmuck- und Bastelmaterial, Holzperlen, Glasperlen, Metallperlen, Holzknöpfe, Bänder und
-          Lederartikel sowie Bastelzubehör und noch weitere Artikel, welche dir gefallen könnten!
+          {{ homepageTitleText }}
         </p>
       </div>
       <div class="homepage_sale-row">
