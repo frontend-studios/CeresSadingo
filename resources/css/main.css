@@ -108,6 +108,9 @@ a {
     display: none;
   }
 }
+.open .btnClose {
+  color: #d9534f;
+}
 /***** Menü Leiste (oben) *****************************************************/
 .wrapper-main>nav.container-max {
   background-color: #fff !important;
@@ -129,10 +132,21 @@ a {
   #mainNavbarCollapsable ul.mainmenu>li>ul>li a:hover {
     text-decoration: underline;
   }
-  #mainNavbarCollapsable ul.mainmenu>li:hover {
-    background: #FD98BB !important;
+/***** Mobile *****/
+.navbar-toggler{
+  color: #fff;
+}
+@media (max-width: 992px){
+#mainNavbarCollapsable{
+  background-color: #e878aa;
+}
+  #mainNavbarCollapsable a{
+    color: #fff !important;
   }
-
+    #mainNavbarCollapsable a:hover{
+      color: #fff !important;
+    }
+}
 /*Links der Menü Leiste*/
 .wrapper-main .navbar{
   font-family: 'Muli', sans-serif !important;
@@ -303,9 +317,9 @@ a {
   color: #FF80AB !important;
 }
 .cmp-search-box {
-     background-color: #FD98BB;
+  background-color: #FD98BB;
 }
-.control-search {
+.control-search .fa-close {
   color: #d9534f;
 }
 /***** Content *****/
@@ -335,20 +349,4 @@ a {
 /*Sofort versandfertig,Lieferzeit 2-3Tage*/
 .availability_1, .availability_2{
   background-color: #00c174;
-}
-
-/***** Mobile *****/
-.navbar-toggler{
-  color: #fff;
-}
-@media (max-width: 992px){
-#mainNavbarCollapsable{
-  background-color: #fff;
-}
-  #mainNavbarCollapsable a{
-    color: #e878aa !important;
-  }
-    #mainNavbarCollapsable a:hover{
-      color: #fff !important;
-    }
 }
