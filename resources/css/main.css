@@ -350,3 +350,7 @@ a {
 .availability_1, .availability_2{
   background-color: #00c174;
 }
+/*****Load Animation*****/
+.sk-fading-circle .sk-circle::before {
+  background-color: #e878aa;
+}
