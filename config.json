@@ -147,13 +147,6 @@
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
-		"key"       : "homepage.homepageSale",
-		"label"     : "Sale",
-		"type"      : "text",
-		"default"   : "/"
-	},
-	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageTopsellerId",
 	    "label"     : "Categorie ID for topseller Products",
