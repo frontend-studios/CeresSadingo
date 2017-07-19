@@ -126,12 +126,18 @@ a {
   background: #FD98BB !important;
   padding: 25px;
 }
-  #mainNavbarCollapsable ul.mainmenu>li>ul>li:hover {
+#mainNavbarCollapsable ul.mainmenu>li>ul>li:hover {
   background: #FD98BB !important;
-  }
-  #mainNavbarCollapsable ul.mainmenu>li>ul>li a:hover {
-    text-decoration: underline;
-  }
+}
+#mainNavbarCollapsable ul.mainmenu>li>ul>li:hover {
+  background: #FD98BB !important;
+}
+#mainNavbarCollapsable ul.mainmenu>li>ul>li a:hover {
+  text-decoration: underline;
+}
+#mainNavbarCollapsable ul.mainmenu>li:hover {
+  background: #FD98BB !important;
+}
 /***** Mobile *****/
 .navbar-toggler{
   color: #fff;
