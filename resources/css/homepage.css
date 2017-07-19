@@ -34,6 +34,11 @@
 /*****Title*****/
 .homepage_row-title {
   margin-top: 5px;
+  text-align: center;
+}
+.homepage_row-titletext {
+  margin-bottom: 15px;
+  text-align: center;
 }
 /*****Cards*****/
 .homepage_card {
