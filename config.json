@@ -50,8 +50,22 @@
 	},
 	{
 		"tab"       : "Homepage",
+		"key"       : "homepage.homepagePerlenparadiesText",
+		"label"     : "Perlenparadies Text",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
 		"key"       : "homepage.homepageSchmuckmaterial",
 		"label"     : "Schmuckmaterial",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageSchmuckmaterialText",
+		"label"     : "Schmuckmaterial Text",
 		"type"      : "text",
 		"default"   : "/"
 	},
@@ -64,8 +78,22 @@
 	},
 	{
 		"tab"       : "Homepage",
+		"key"       : "homepage.homepageBastelnKreativesText",
+		"label"     : "Basteln & Kreatives Text",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
 		"key"       : "homepage.homepageSchmuckstuecke",
 		"label"     : "Schmuckstücke",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageSchmuckstueckeText",
+		"label"     : "Schmuckstücke Text",
 		"type"      : "text",
 		"default"   : "/"
 	},

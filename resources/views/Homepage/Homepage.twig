@@ -9,9 +9,13 @@
 {% set homepageBannerText  = config("CeresSadingo.homepage.homepageBannerText") %}
 
 {% set homepageCategoriePerlenparadies  = config("CeresSadingo.homepage.homepagePerlenparadies") %}
+{% set homepageCategoriePerlenparadiesText  = config("CeresSadingo.homepage.homepagePerlenparadiesText") %}
 {% set homepageCategorieSchmuckmaterial  = config("CeresSadingo.homepage.homepageSchmuckmaterial") %}
+{% set homepageCategorieSchmuckmaterialText  = config("CeresSadingo.homepage.homepageSchmuckmaterialText") %}
 {% set homepageCategorieBastelnKreatives  = config("CeresSadingo.homepage.homepageBastelnKreatives") %}
+{% set homepageCategorieBastelnKreativesText  = config("CeresSadingo.homepage.homepageBastelnKreativesText") %}
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
+{% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
 {% set homepageCategorieSale  = config("CeresSadingo.homepage.homepageSale") %}
 
@@ -62,7 +66,7 @@
             <a href="/perlenparadies"><img class="homepage_card_img card-img-top" src="{{ homepageCategoriePerlenparadies }}" alt="Perlenparadies"></a>
             <div class="homepage_card-block card-block">
               <h4 class="card-title">Perlenparadies</h4>
-              <p class="card-text">Entdecke im Perlenparadies unsere Auswahl an verschiedenen Perlen.</p></br>
+              <p class="card-text"> {{ homepageCategoriePerlenparadiesText }} </p></br>
               <a href="/perlenparadies" class="btn btn-outline-primary">Entdecken</a>
             </div>
           </div>
@@ -72,7 +76,7 @@
             <a href="/schmuckmaterial"><img class="homepage_card_img card-img-top" src="{{ homepageCategorieSchmuckmaterial }}" alt="Schmuckmaterial"></a>
             <div class="homepage_card-block card-block">
               <h4 class="card-title">Schmuckmaterial</h4>
-              <p class="card-text">Suchst du Anhänger, Bänder oder auch Verschlüsse? Hier findest du was du suchst!</p>
+              <p class="card-text"> {{ homepageCategorieSchmuckmaterialText }}</p>
               <a href="/schmuckmaterial" class="btn btn-outline-primary">Entdecken</a>
             </div>
           </div>
@@ -82,7 +86,7 @@
             <a href="/basteln-kreatives"><img class="homepage_card_img card-img-top" src="{{ homepageCategorieBastelnKreatives }}" alt="Basteln & Kreatives"></a>
             <div class="homepage_card-block card-block">
               <h4 class="card-title">Basteln & Kreatives</h4>
-              <p class="card-text">Bastelst du gerne? Dann schau hier rein!</p></br>
+              <p class="card-text"> {{ homepageCategorieBastelnKreativesText }} </p></br>
               <a href="/basteln-kreatives" class="btn btn-outline-primary">Entdecken</a>
             </div>
           </div>
@@ -92,7 +96,7 @@
             <a href="/schmuckstuecke"><img class="homepage_card_img card-img-top" src="{{ homepageCategorieSchmuckstuecke }}" alt="Schmuckstücke"></a>
             <div class="homepage_card-block card-block">
               <h4 class="card-title">Schmuckstücke</h4>
-              <p class="card-text">Hier findest du einige Schmuckstücke.</p></br>
+              <p class="card-text"> {{ homepageCategorieSchmuckstueckeText }} </p></br>
               <a href="/schmuckstuecke" class="btn btn-outline-primary">Entdecken</a>
             </div>
           </div>

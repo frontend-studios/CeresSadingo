@@ -65,3 +65,31 @@
   .homepage_facebook:hover, .homepage_instagram:hover {
       font-size: 30px;
   }
+@media (max-width: 767px) {
+.homepage_row {
+    margin: 10px;
+  }
+  .homepage_row .col-md-3 {
+    margin-bottom: 110px;
+  }
+  .homepage_card {
+    border: none;
+  }
+  .homepage_card-block {
+    height: 35px;
+    padding: 0;
+  }
+  .homepage_card-block h4 {
+    background: #FF80AB;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+  }
+  .homepage_card-block p, .homepage_card-block a {
+    display: none;
+  }
+  .homepage_card_img:hover {
+    border: none;
+  }
+}
