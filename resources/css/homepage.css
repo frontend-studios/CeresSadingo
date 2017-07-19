@@ -16,20 +16,9 @@
   padding: 0;
   max-width: 1200px;
 }
-/*****Sale*****/
-.homepage_sale-row {
-  height: 50px;
-  background-color: #FD98BB;
-  text-align: center;
-  margin-top: 25px;
-}
-  .homepage_sale-row a {
-    font-size: 34px;
-    color: #FFF !important;
-    font-weight: bold;
-    display: block;
-  }
-  /*****Rows*****/
+/*****Top Content*****/
+
+/*****Rows*****/
 .homepage_row {
   margin-top: 25px;
 }
