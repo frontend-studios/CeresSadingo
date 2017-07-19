@@ -1,5 +1,4 @@
 {% extends 'Ceres::Homepage.Homepage' %}
-{% set lang = services.sessionStorage.getLang() %}
 
 {% set homepageSliderImg1  = config("CeresSadingo.homepage.homepageSliderImg1") %}
 {% set homepageSliderImg2  = config("CeresSadingo.homepage.homepageSliderImg2") %}
@@ -29,6 +28,7 @@
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
+{% set homepageTopsellerId = config("CeresDark.homepage.homepageTopsellerId") %}
 {% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageTopsellerId, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set itemListTop             = paginatedResultNew.documents %}
 
