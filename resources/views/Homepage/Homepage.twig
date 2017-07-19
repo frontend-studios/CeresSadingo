@@ -30,7 +30,7 @@
 
 {% set homepageTopsellerId = config("CeresSadingo.homepage.homepageTopsellerId") %}
 {% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageTopsellerId, 'page':1, 'items':4}) %}
-{% set itemListTop             = paginatedResultNew.documents %}
+{% set itemListTop             = paginatedResultTop.documents %}
 
 {% block ThemeHomepage %}
 
