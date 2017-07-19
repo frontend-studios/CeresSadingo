@@ -43,15 +43,43 @@
 	},
 	{
 		"tab"       : "Homepage",
-		"key"       : "homepage.homepageBannerLink",
-		"label"     : "Banner Link",
+		"key"       : "homepage.homepageTopLeftLink",
+		"label"     : "Oben links: Link",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
 		"tab"       : "Homepage",
-		"key"       : "homepage.homepageBannerText",
-		"label"     : "Banner Text",
+		"key"       : "homepage.homepageTopLeftImg",
+		"label"     : "Oben links: Bild",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageTopLeftText",
+		"label"     : "Oben link: Text",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageTopRightLink",
+		"label"     : "Oben rechts: Link",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageTopRightImg",
+		"label"     : "Oben rechts: Bild",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageTopRightText",
+		"label"     : "Oben rechts: Text",
 		"type"      : "text",
 		"default"   : "/"
 	},

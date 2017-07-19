@@ -11,6 +11,14 @@
 {% set homepageTitle  = config("CeresSadingo.homepage.homepageTitle") %}
 {% set homepageTitleText  = config("CeresSadingo.homepage.homepageTitleText") %}
 
+{% set homepageTopLeftLink  = config("CeresSadingo.homepage.homepageTopLeftLink") %}
+{% set homepageTopLeftImg  = config("CeresSadingo.homepage.homepageTopLeftImg") %}
+{% set homepageTopLeftText  = config("CeresSadingo.homepage.homepageTopLeftText") %}
+
+{% set homepageTopRightLink  = config("CeresSadingo.homepage.homepageTopRightLink") %}
+{% set homepageTopRightImg  = config("CeresSadingo.homepage.homepageTopRightImg") %}
+{% set homepageTopRightText  = config("CeresSadingo.homepage.homepageTopRightText") %}
+
 {% set homepageCategoriePerlenparadies  = config("CeresSadingo.homepage.homepagePerlenparadies") %}
 {% set homepageCategoriePerlenparadiesText  = config("CeresSadingo.homepage.homepagePerlenparadiesText") %}
 {% set homepageCategorieSchmuckmaterial  = config("CeresSadingo.homepage.homepageSchmuckmaterial") %}
@@ -19,8 +27,6 @@
 {% set homepageCategorieBastelnKreativesText  = config("CeresSadingo.homepage.homepageBastelnKreativesText") %}
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
-
-{% set homepageCategorieSale  = config("CeresSadingo.homepage.homepageSale") %}
 
 {% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageTopsellerId, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set itemListTop             = paginatedResultNew.documents %}
@@ -63,7 +69,38 @@
         </p>
       </div>
       <div class="homepage_sale-row">
-        <a href="{{ homepageBannerLink }}">{{ homepageBannerText }}</a>
+        <div class="homepage_row row">
+          <div class="col-xs-6">
+            <div class="prop-xs-6-4 prop-md-3-1">
+              <div class="prop-inner">
+                <a class="featured-sale-new" href="{{ homepageTopLeftLink }}">
+                  <img src="{{ homepageTopLeftImg }}" alt="New">
+                  <div class="featured-category-inner">
+                    <h4 class="featured-category-headline">
+                      <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      {{ homepageTopLeftText }}
+                    </h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="prop-xs-6-4 prop-md-3-1">
+              <div class="prop-inner">
+                <a class="featured-sale-new" href="{{ homepageTopRightLink }}">
+                  <img src="{{ homepageTopRightImg }}" alt="Sale">
+                  <div class="featured-category-inner">
+                    <h4 class="featured-category-headline">
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                      {{ homepageTopRightText }}
+                    </h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="homepage_row row">
         <div class="col-md-3">
@@ -164,46 +201,6 @@
           </div>
         </div> -->
       </div>
-
-
-    <div class="homepage_row row">
-      <div class="col-xs-6">
-        <div class="prop-xs-6-4 prop-md-3-1">
-          <div class="prop-inner">
-            <a class="featured-sale-new" href="/neuheit">
-              <img src="https://www.vimoda-homestyle.de/images/gallery/Ceres/modern-teppich-design-slider.png" alt="New">
-              <div class="featured-category-inner">
-                <h4 class="featured-category-headline">
-                  <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                  Neu
-                </h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6">
-        <div class="prop-xs-6-4 prop-md-3-1">
-          <div class="prop-inner">
-            <a class="featured-sale-new" href="{{ homepageCategorieSale }}">
-              <img src="/images/gallery/teppich-home/Shaggy-teppich-slider.jpg" alt="Sale">
-              <div class="featured-category-inner">
-                <h4 class="featured-category-headline">
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                Sale
-                </h4>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
     </div>
 </div><!--Ende des Containers-->
 {% endblock %}
