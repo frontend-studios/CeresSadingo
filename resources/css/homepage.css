@@ -6,9 +6,14 @@
 .homepage_carousel {
   margin-top: -15px;
 }
+@media (max-width: 767px) {
+  .homepage_carousel {
+    display: none;
+  }
+}
 /*****Title*****/
 .homepage_row-title {
-
+  margin-top: 5px !important;
 }
 /*****Container*****/
 .main_pagecontent {
