@@ -19,6 +19,7 @@
 {% set homepageTopRightImg  = config("CeresSadingo.homepage.homepageTopRightImg") %}
 {% set homepageTopRightText  = config("CeresSadingo.homepage.homepageTopRightText") %}
 
+{% set homepageTitleKategories  = config("CeresSadingo.homepage.homepageTitleKategories") %}
 {% set homepageCategoriePerlenparadies  = config("CeresSadingo.homepage.homepagePerlenparadies") %}
 {% set homepageCategoriePerlenparadiesText  = config("CeresSadingo.homepage.homepagePerlenparadiesText") %}
 {% set homepageCategorieSchmuckmaterial  = config("CeresSadingo.homepage.homepageSchmuckmaterial") %}
@@ -103,6 +104,7 @@
         </div>
       </div>
       <div class="homepage_row row">
+        <h3 style="text-align: center; margin-bottom: 25px;">{{ homepageTitleKategories }}</h3>
         <div class="col-md-3">
           <div class="homepage_card card" style="width: 20rem;">
             <a href="/perlenparadies"><img class="homepage_card_img card-img-top" src="{{ homepageCategoriePerlenparadies }}" alt="Perlenparadies"></a>
@@ -168,7 +170,7 @@
                   {% endfor %}
               </ul>
           </div>
-      </div>  
+      </div>
     </div>
 </div><!--Ende des Containers-->
 {% endblock %}

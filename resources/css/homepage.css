@@ -17,7 +17,12 @@
   max-width: 1200px;
 }
 /*****Top Content*****/
-
+.featured-sale-new:hover .featured-category-inner {
+  background-color: #ff80ab;
+}
+.featured-sale-new .featured-category-inner{
+  background: rgba(253, 152, 187, 0.6);
+}
 /*****Rows*****/
 .homepage_row {
   margin-top: 25px;

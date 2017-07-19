@@ -51,7 +51,7 @@
 	{
 		"tab"       : "Homepage",
 		"key"       : "homepage.homepageTopLeftImg",
-		"label"     : "Oben links: Bild",
+		"label"     : "Oben links: Bild(790x380)",
 		"type"      : "text",
 		"default"   : "/"
 	},
@@ -72,7 +72,7 @@
 	{
 		"tab"       : "Homepage",
 		"key"       : "homepage.homepageTopRightImg",
-		"label"     : "Oben rechts: Bild",
+		"label"     : "Oben rechts: Bild(790x380)",
 		"type"      : "text",
 		"default"   : "/"
 	},
@@ -80,6 +80,13 @@
 		"tab"       : "Homepage",
 		"key"       : "homepage.homepageTopRightText",
 		"label"     : "Oben rechts: Text",
+		"type"      : "text",
+		"default"   : "/"
+	},
+	{
+		"tab"       : "Homepage",
+		"key"       : "homepage.homepageTitleKategories",
+		"label"     : "Title der Kategorien",
 		"type"      : "text",
 		"default"   : "/"
 	},
