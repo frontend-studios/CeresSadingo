@@ -97,9 +97,15 @@ a {
 #mainNavbarCollapsable ul.mainmenu li.ddown>a:after {
   content: "\f105";
 }
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   #mainNavbarCollapsable ul.mainmenu>li.ddown>a:after {
       content: "\f107";
+  }
+}
+/*****Icon im Mobile Menu*****/
+@media (max-width: 991px) {
+  #mainNavbarCollapsable ul.mainmenu li.ddown>a:after {
+    display: none;
   }
 }
 /***** Menü Leiste (oben) *****************************************************/
