@@ -17,6 +17,10 @@
   max-width: 1200px;
 }
 /*****Top Content*****/
+/*breite*/
+.prop-inner {
+  padding: 15px 0;
+}
 .featured-sale-new:hover .featured-category-inner {
   background-color: #ff80ab;
 }
