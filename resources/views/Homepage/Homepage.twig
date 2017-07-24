@@ -10,17 +10,17 @@
 {% set homepageTitle  = config("CeresSadingo.homepage.homepageTitle") %}
 {% set homepageTitleText  = config("CeresSadingo.homepage.homepageTitleText") %}
 
-<!-- Top Banner (Links) ------------------------------------------------------->
+
 {% set homepageTopLeftLink  = config("CeresSadingo.homepage.homepageTopLeftLink") %}
 {% set homepageTopLeftImg  = config("CeresSadingo.homepage.homepageTopLeftImg") %}
 {% set homepageTopLeftText  = config("CeresSadingo.homepage.homepageTopLeftText") %}
 
-<!-- Top Banner (Rechts) ------------------------------------------------------>
+
 {% set homepageTopRightLink  = config("CeresSadingo.homepage.homepageTopRightLink") %}
 {% set homepageTopRightImg  = config("CeresSadingo.homepage.homepageTopRightImg") %}
 {% set homepageTopRightText  = config("CeresSadingo.homepage.homepageTopRightText") %}
 
-<!-- Kategorie Vorschau ------------------------------------------------------->
+
 {% set homepageTitleKategories  = config("CeresSadingo.homepage.homepageTitleKategories") %}
 {% set homepageCategoriePerlenparadies  = config("CeresSadingo.homepage.homepagePerlenparadies") %}
 {% set homepageCategoriePerlenparadiesText  = config("CeresSadingo.homepage.homepagePerlenparadiesText") %}
@@ -32,12 +32,11 @@
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
 
-<!-- Artikel Vorschau --------------------------------------------------------->
-<!-- 1 -->
+
 {% set homepageArticlePreview1 = config("CeresSadingo.homepage.homepageArticlePreview1") %}
 {% set ArticlePreview1Result   = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageArticlePreview1, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set ArticlePreview1         = ArticlePreview1Result.documents %}
-<!-- 2 -->
+
 {% set homepageArticlePreview2 = config("CeresSadingo.homepage.homepageArticlePreview2") %}
 {% set ArticlePreview2Result   = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageArticlePreview2, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set ArticlePreview2         = ArticlePreview2Result.documents %}
