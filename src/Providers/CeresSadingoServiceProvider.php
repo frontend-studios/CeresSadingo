@@ -14,11 +14,13 @@ use IO\Helper\ComponentContainer;
 
 class CeresSadingoServiceProvider extends ServiceProvider
 {
+	private static $templateKeyToViewMap = [
+		'tpl.category.item'      => 'Category.Item.CategoryItem',       // provide template to use for item categories
+];
 	/**
 	 * Register the service provider.
 	 */
-	public function register(){
-	}
+	public function register(){}
 
 	public function boot (Twig $twig, Dispatcher $eventDispatcher)
   {
