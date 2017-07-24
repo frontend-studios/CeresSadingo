@@ -149,8 +149,15 @@
 	{
 	    "tab"       : "Homepage",
 	    "key"       : "homepage.homepageTopsellerId",
-	    "label"     : "Categorie ID for topseller Products",
+	    "label"     : "Artikelvorschau 1 (Categorie ID) for topseller Products",
 	    "type"      : "text",
-	    "default"   : "19"
+	    "default"   : "/"
+	},
+	{
+			"tab"       : "Homepage",
+			"key"       : "homepage.homepageArticlePreview1",
+			"label"     : "Artikelvorschau 1 (Categorie ID) for topseller Products",
+			"type"      : "text",
+			"default"   : "/"
 	}
 ]

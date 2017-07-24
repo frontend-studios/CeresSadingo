@@ -28,13 +28,11 @@
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
-{% set homepageTopsellerId = config("CeresSadingo.homepage.homepageTopsellerId") %}
-{% set paginatedResultTop      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageTopsellerId, 'page':1, 'items':4}) %}
-{% set itemListTop             = paginatedResultTop.documents %}
+{% set homepageArticlePreview1 = config("CeresSadingo.homepage.homepageArticlePreview1") %}
+{% set ArticlePreview1Result   = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':homepageArticlePreview1, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
+{% set ArticlePreview1         = ArticlePreview1Result.documents %}
 
 {% block ThemeHomepage %}
-
-{{ component( "Ceres::ItemList.Components.ItemList") }}
 
 <div id="carouselExampleIndicators" class="carousel slide homepage_carousel" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -165,7 +163,7 @@
       <div class="homepage_row row">
           <div class="col-xs-12">
              <ul class="product-list row grid">
-                  {% for item in itemListTop %}
+                  {% for item in ArticlePreview1  %}
                       <li class="col-xs-12 col-sm-6 col-md-3">
                           {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
                       </li>
