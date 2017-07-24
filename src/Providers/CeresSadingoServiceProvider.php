@@ -36,6 +36,7 @@ class CeresSadingoServiceProvider extends ServiceProvider
 		{
 			 $partial->set('header', 'CeresSadingo::PageDesign.Partials.Header.Header');
 			 $partial->set('footer', 'CeresSadingo::PageDesign.Partials.Footer');
+			 $partial->set('category', 'CeresSadingo::Category.Item.CategoryItem');
 		}, 0);
 		return false;
 
