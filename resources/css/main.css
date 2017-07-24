@@ -44,6 +44,8 @@ a {
   float: left !important;
   font-size: 1.3rem;
   line-height: 30px;
+}
+.header_leftside a i {
   color: white !important;
 }
 /** Userbar Benutzer **********************************************************/
