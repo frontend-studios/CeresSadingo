@@ -180,7 +180,15 @@
                   {% endfor %}
               </ul>
           </div>
-
+          <div class="col-xs-12">
+             <ul class="product-list row grid">
+                  {% for item in ArticlePreview2  %}
+                      <li class="col-xs-12 col-sm-6 col-md-3">
+                          {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                      </li>
+                  {% endfor %}
+              </ul>
+          </div>
       </div>
     </div>
 </div><!--Ende des Containers-->
