@@ -34,7 +34,8 @@ class CeresSadingoServiceProvider extends ServiceProvider
 		// footer view
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
 		{
-			 $partial->set('footer', 'CeresSadingo::content.Footer');
+			 $partial->set('header', 'CeresSadingo::PageDesign.Partials.Header.Header');
+			 $partial->set('footer', 'CeresSadingo::PageDesign.Partials.Footer');
 		}, 0);
 		return false;
 
