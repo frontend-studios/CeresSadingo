@@ -151,5 +151,11 @@
 			"key"       : "homepage.homepageArticlePreview1",
 			"label"     : "Artikelvorschau 1 (Categorie ID)",
 			"type"      : "category_select"
+	},
+	{
+			"tab"       : "Homepage",
+			"key"       : "homepage.homepageArticlePreview2",
+			"label"     : "Artikelvorschau 2 (Categorie ID)",
+			"type"      : "category_select"
 	}
 ]
