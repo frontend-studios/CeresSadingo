@@ -47,6 +47,7 @@ a {
 }
 .header_leftside a i {
   color: white !important;
+  padding: 4px;
 }
 /** Userbar Benutzer **********************************************************/
 /*Farbe für das klicken auf den Benutzernamen*/
