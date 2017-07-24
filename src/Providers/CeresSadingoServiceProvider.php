@@ -2,15 +2,11 @@
 
 namespace CeresSadingo\Providers;
 
-use IO\Extensions\Functions\Partial;
-use IO\Helper\CategoryKey;
-use IO\Helper\CategoryMap;
 use IO\Helper\TemplateContainer;
+use IO\Extensions\Functions\Partial;
+use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
-use Plenty\Plugin\Events\Dispatcher;
-use Plenty\Plugin\ConfigRepository;
-use IO\Helper\ComponentContainer;
 
 class CeresSadingoServiceProvider extends ServiceProvider
 {
