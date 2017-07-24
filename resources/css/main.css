@@ -39,6 +39,10 @@ a {
 .account-menu a:hover{
   text-decoration: underline;
 }
+/***** Userbar (oben Links) Facebook/Instagram *****/
+.header_leftside {
+  float: left;
+}
 /** Userbar Benutzer **********************************************************/
 /*Farbe für das klicken auf den Benutzernamen*/
 .top-bar .controls-list > li a:hover, .top-bar .controls-list > li a[aria-expanded="true"] {
