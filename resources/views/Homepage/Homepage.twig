@@ -32,14 +32,14 @@
 {% set ArticlePreview1Result   = services.itemLoader.loadForTemplate(
                                  'Ceres::ItemList.ItemListView',
                                  itemLoaderPresets.categoryList,
-                                 {'categoryId': category6.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+                                 {'categoryId': homepageArticlePreview1, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
 {% set ArticlePreview1         = ArticlePreview1Result.documents %}
 
 {% set homepageArticlePreview2 = config("CeresSadingo.homepage.homepageArticlePreview2") %}
 {% set ArticlePreview2Result   = services.itemLoader.loadForTemplate(
                                  'Ceres::ItemList.ItemListView',
                                  itemLoaderPresets.categoryList,
-                                 {'categoryId': category6.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+                                 {'categoryId': homepageArticlePreview2, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
 {% set ArticlePreview2         = ArticlePreview2Result.documents %}
 
 {% block ThemeHomepage %}
