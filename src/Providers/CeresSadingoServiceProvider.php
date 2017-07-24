@@ -10,6 +10,9 @@ use Plenty\Plugin\Templates\Twig;
 
 class CeresSadingoServiceProvider extends ServiceProvider
 {
+	private static $templateKeyToViewMap = [
+        'tpl.category.item'      => 'Category.Item.CategoryItem',       // provide template to use for item categories
+    ];
 	/**
 	 * Register the service provider.
 	 */
@@ -18,7 +21,6 @@ class CeresSadingoServiceProvider extends ServiceProvider
 
 	public function boot (Twig $twig, Dispatcher $eventDispatcher)
   {
-
     // provide template to use for homepage
     $eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
         $container->setTemplate("CeresSadingo::Homepage.Homepage");
