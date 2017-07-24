@@ -147,17 +147,9 @@
 		"default"   : "/"
 	},
 	{
-	    "tab"       : "Homepage",
-	    "key"       : "homepage.homepageTopsellerId",
-	    "label"     : "Artikelvorschau 1 (Categorie ID) for topseller Products",
-	    "type"      : "text",
-	    "default"   : "/"
-	},
-	{
 			"tab"       : "Homepage",
 			"key"       : "homepage.homepageArticlePreview1",
-			"label"     : "Artikelvorschau 1 (Categorie ID) for topseller Products",
-			"type"      : "text",
-			"default"   : "/"
+			"label"     : "Artikelvorschau 1 (Categorie ID)",
+			"type"      : "category_select"
 	}
 ]
