@@ -41,7 +41,11 @@ a {
 }
 /***** Userbar (oben Links) Facebook/Instagram *****/
 .header_leftside {
-  float: left;
+  float: left !important;
+  font-size: 10px;
+}
+.header_leftside a {
+  color: white;
 }
 /** Userbar Benutzer **********************************************************/
 /*Farbe für das klicken auf den Benutzernamen*/
