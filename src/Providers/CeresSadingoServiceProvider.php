@@ -31,12 +31,11 @@ class CeresSadingoServiceProvider extends ServiceProvider
         return false;
     });
 
-		// footer view
+		// Überschreibt die Ceres Views
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
 		{
 			 $partial->set('header', 'CeresSadingo::PageDesign.Partials.Header.Header');
 			 $partial->set('footer', 'CeresSadingo::PageDesign.Partials.Footer');
-			 $partial->set('category', 'CeresSadingo::Category.Item.CategoryItem');
 		}, 0);
 		return false;
 
