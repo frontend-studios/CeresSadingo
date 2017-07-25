@@ -9,7 +9,7 @@
   top: 0;
   z-index: 5;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .homepage_carousel {
     display: none;
   }
@@ -20,11 +20,16 @@
   max-width: 1200px;
 }
 .homepage_container {
-  margin-top: 466px;
+  margin-top: 25%;
   max-width: 100%;
   position: relative;
   width: 100%;
   z-index: 999;
+}
+@media (max-width: 991px) {
+  .homepage_container {
+    margin-top: 0;
+  }
 }
 /*****Top Content*****/
 /*breite*/
