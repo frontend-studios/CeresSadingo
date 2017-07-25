@@ -31,6 +31,12 @@ class CeresSadingoServiceProvider extends ServiceProvider
         return false;
     });
 
+		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData)
+		{
+			$container->setTemplate('CeresSadingo::Category.Item.CategoryItem');
+			return false;
+		}, 0)
+
 		// Überschreibt die Ceres Views
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
 		{
