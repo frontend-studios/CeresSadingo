@@ -10,7 +10,7 @@
     {% for i in 3 %}
     <div class="col-xs-6 col-sm-3 col-lg-2">
         <nav class="footer-column m-b-2">
-            <h5>{{ config('Ceres.footer.col_' ~ i ~ '_title') }}</h5>
+            <h5>{{ footerTab1Title }}</h5>
             <ul class="list-unstyled">
 
                 {% set footerCategories = config('CeresSadingo.footerTab1Links') | find("[0-9]+") %}
