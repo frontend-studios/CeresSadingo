@@ -25,7 +25,8 @@ class CeresSadingoServiceProvider extends ServiceProvider
   {
 
     // überschreibt die Startseiten View
-    $eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData) {
+    $eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData)
+		{
         $container->setTemplate("CeresSadingo::Homepage.Homepage");
         return false;
     });
@@ -35,7 +36,7 @@ class CeresSadingoServiceProvider extends ServiceProvider
 		{
 			$container->setTemplate('CeresSadingo::Category.Item.CategoryItem');
 			return false;
-		}, 0)
+		}, 0);
 
 		// Überschreibt Ceres Views
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
