@@ -5,6 +5,9 @@
 }
 .homepage_carousel {
   margin-top: -15px;
+  position: fixed;
+  top: 0;
+  z-index: 5;
 }
 @media (max-width: 767px) {
   .homepage_carousel {
@@ -15,6 +18,13 @@
 .main_pagecontent {
   padding: 0;
   max-width: 1200px;
+}
+.homepage_container {
+  margin-top: 466px;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 999;
 }
 /*****Top Content*****/
 /*breite*/
