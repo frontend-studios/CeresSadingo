@@ -3,8 +3,6 @@
 {% set colSize = (12 / (numberOfCols + 1)) %}
 {% set displayedCategories = [] %}
 
-{% set footerTab1Title  = config("CeresSadingo.footer.footerTab1Title") %}
-{% set footerTab2Title  = config("CeresSadingo.footer.footerTab2Title") %}
 
 
 <div class="footer">
@@ -13,10 +11,10 @@
     {% for i in 1..numberOfCols %}
     <div class="col-xs-6 col-sm-3 col-lg-2">
         <nav class="footer-column m-b-2">
-            <h5>{{ footerTab1Title }}</h5>
+            <h5>{{ config('CeresSadingo.footer.footerCol_' ~ i ~ '_title') }}</h5>
             <ul class="list-unstyled">
 
-                {% set footerCategories = config('CeresSadingo.footerTab1Links') | find("[0-9]+") %}
+                {% set footerCategories = config('CeresSadingo.footerCol_' ~ i ~ '_categories') | find("[0-9]+") %}
                 {% for catID in footerCategories %}
 
                     {% set cat = services.category.get(catID) %}

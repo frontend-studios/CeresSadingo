@@ -181,17 +181,18 @@
 	},
 	{
 			"tab"       : "Footer",
-			"key"       : "footer.footerTab1Title",
+			"key"       : "footer.footerCol_1_title",
 			"label"     : "Title der ersten Spalte",
 			"type"      : "text",
 			"default"   : "Sadingo Info"
 	},
 	{
 			"tab"       : "Footer",
-			"key"       : "footer.footerTab1Links",
+			"key"       : "footer.footerCol_1_categories",
 			"label"     : "Links der ersten Spalte (Kategorie IDs: 31, 40, 128...)",
 			"type"      : "text",
 			"default"   : "31, 40, 128"
 	}
+
 
 ]
