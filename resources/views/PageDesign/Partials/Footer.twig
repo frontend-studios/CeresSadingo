@@ -16,8 +16,20 @@
 
           <ul class="list-unstyled">
 
-              {% set footerCategories = config('CeresSadingo.footerCol_' ~ i ~ '_categories') | find("[0-9]+") %}
-              <h6>{{ footerCategories }}</h6>
+              {% set footerCategories = config('CeresSadingo.footer.footerCol_' ~ i ~ '_categories') | find("[0-9]+") %}
+              {% for catID in footerCategories %}
+
+              {% set cat = services.category.get(catID) %}
+
+              {% if cat is not null %}
+                  {% set displayedCategories = displayedCategories | merge([catID]) %}
+                  <li>
+                      <a href="{{ services.category.getURL( cat ) }}">
+                          {{ cat.details.first.name }}</a>
+                  </li>
+              {% endif %}
+
+            {% endfor %}
 
           </ul>
 
@@ -27,7 +39,7 @@
 
     <div class="row">
       <div class="col-md-3">
-        <h4> Sadingo Ingos </h4>
+        <h4> Sadingo Infos </h4>
         </br>
         <ul>
           <li><a href="https://www.sadingo.de/kontakt/">Kontakt</a></li>
