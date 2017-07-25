@@ -166,13 +166,6 @@
 			"default"   : "/"
 	},
 	{
-			"tab"       : "Footer",
-			"key"       : "footer.footerTab1Title",
-			"label"     : "Tab 1 Title",
-			"type"      : "text",
-			"default"   : "Tab 1 Title"
-	},
-	{
 		"tab"           : "Footer",
 		"key"           : "footer.number_of_cols",
 		"label"         : "Number of columns",
