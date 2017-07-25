@@ -173,6 +173,20 @@
 			"default"   : "Tab 1 Title"
 	},
 	{
+		"tab"           : "Footer",
+		"key"           : "footer.number_of_cols",
+		"label"         : "Number of columns",
+		"type"          : "dropdown",
+		"possibleValues":
+		{
+				"1"         : "1",
+				"2"         : "2",
+				"3"         : "3",
+				"3"         : "4"
+		},
+		"default"       : "4"
+	},
+	{
 			"tab"       : "Footer",
 			"key"       : "footer.footerTab1Title",
 			"label"     : "Title der ersten Spalte",
