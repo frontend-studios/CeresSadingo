@@ -161,8 +161,8 @@
 	},
 	{
 			"tab"       : "Kategorien",
-			"key"       : "homepage.homepageArticlePreview2",
-			"label"     : "Artikelvorschau 2 (Categorie ID)",
+			"key"       : "category.categoryItemInfo",
+			"label"     : "TEST Category",
 			"type"      : "text",
 			"default"   : "/"
 	}
