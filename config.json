@@ -7,153 +7,160 @@
 	    "default"   : "/images/gallery/Template Vorlagen/logo.png"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSliderImg1",
 		"label"     : "Erstes Slider Bild",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSliderImg2",
 		"label"     : "Zweites Slider Bild",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSliderImg3",
 		"label"     : "Drittes Slider Bild",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTitle",
 		"label"     : "Title der Startseite",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTitleText",
 		"label"     : "Text unter dem Title",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopLeftLink",
 		"label"     : "Oben links: Link",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopLeftImg",
 		"label"     : "Oben links: Bild(790x380)",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopLeftText",
 		"label"     : "Oben link: Text",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopRightLink",
 		"label"     : "Oben rechts: Link",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopRightImg",
 		"label"     : "Oben rechts: Bild(790x380)",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopRightText",
 		"label"     : "Oben rechts: Text",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTitleKategories",
 		"label"     : "Title der Kategorien",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepagePerlenparadies",
 		"label"     : "Perlenparadies",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepagePerlenparadiesText",
 		"label"     : "Perlenparadies Text",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckmaterial",
 		"label"     : "Schmuckmaterial",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckmaterialText",
 		"label"     : "Schmuckmaterial Text",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageBastelnKreatives",
 		"label"     : "Basteln & Kreatives",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageBastelnKreativesText",
 		"label"     : "Basteln & Kreatives Text",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckstuecke",
 		"label"     : "Schmuckstücke",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-		"tab"       : "Homepage",
+		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckstueckeText",
 		"label"     : "Schmuckstücke Text",
 		"type"      : "text",
 		"default"   : "/"
 	},
 	{
-			"tab"       : "Homepage",
+			"tab"       : "Startseite",
 			"key"       : "homepage.homepageArticlePreview1",
 			"label"     : "Artikelvorschau 1 (Categorie ID)",
 			"type"      : "category_select"
 	},
 	{
-			"tab"       : "Homepage",
+			"tab"       : "Startseite",
+			"key"       : "homepage.homepageArticlePreview2",
+			"label"     : "Artikelvorschau 2 (Categorie ID)",
+			"type"      : "text",
+			"default"   : "/"
+	},
+	{
+			"tab"       : "Kategorien",
 			"key"       : "homepage.homepageArticlePreview2",
 			"label"     : "Artikelvorschau 2 (Categorie ID)",
 			"type"      : "text",

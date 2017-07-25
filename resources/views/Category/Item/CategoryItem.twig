@@ -34,6 +34,10 @@
 
 {% set loadingAnimationType = config("Ceres.item.loading_animation_type") %}
 
+{% set categoryItemInfo  = config("CeresSadingo.category.categoryItemInfo") %}
+
+
+
 {% block PageBody %}
 
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterList") }}
@@ -51,11 +55,14 @@
     <div class="categoriegrid page-content container-max">
         <div class="row m-t-1">
             <div class="col-xs-12">
-                <h1 class="h4">{{ category.details.first.name }}</h1>
-                <h2> SadingoCategoryItem </h2>
+                <h2 >{{ category.details.first.name }}</h2>
             </div>
         </div>
-
+        <div class="row m-t-1">
+            <div class="col-xs-12">
+                <h2 >{{  }}</h2>
+            </div>
+        </div>
         <div class="list-controls m-b-3">
             <div class="list-controls-inner">
                 <div class="row">
