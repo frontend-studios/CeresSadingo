@@ -168,7 +168,7 @@
 	{
 		"tab"           : "Footer",
 		"key"           : "footer.number_of_cols",
-		"label"         : "Number of columns",
+		"label"         : "Anzahl der im Footer darzustellenden Spalten",
 		"type"          : "dropdown",
 		"possibleValues":
 		{
@@ -184,7 +184,7 @@
 			"key"       : "footer.footerTab1Title",
 			"label"     : "Title der ersten Spalte",
 			"type"      : "text",
-			"default"   : "Tab 1 Title"
+			"default"   : "Sadingo Info"
 	},
 	{
 			"tab"       : "Footer",
