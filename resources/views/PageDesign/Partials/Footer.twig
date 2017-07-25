@@ -17,19 +17,7 @@
           <ul class="list-unstyled">
 
               {% set footerCategories = config('CeresSadingo.footer.footerCol_' ~ i ~ '_categories') | find("[0-9]+") %}
-              {% for catID in footerCategories %}
-
-              {% set cat = services.category.get(catID) %}
-
-              {% if cat is not null %}
-                  {% set displayedCategories = displayedCategories | merge([catID]) %}
-                  <li>
-                      <a href="{{ services.category.getURL( cat ) }}">
-                          {{ cat.details.first.name }}</a>
-                  </li>
-              {% endif %}
-
-            {% endfor %}
+              <p>{{ footerCategories }}</p>
 
           </ul>
 
