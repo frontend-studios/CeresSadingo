@@ -164,5 +164,13 @@
 			"label"     : "TEST Category",
 			"type"      : "text",
 			"default"   : "/"
+	},
+	{
+			"tab"       : "Footer",
+			"key"       : "footer.footerTab1Title",
+			"label"     : "Tab 1 Title",
+			"type"      : "text",
+			"default"   : "Tab 1 Title"
 	}
+
 ]
