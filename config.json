@@ -171,13 +171,13 @@
 		"label"         : "Anzahl der im Footer darzustellenden Spalten",
 		"type"          : "dropdown",
 		"possibleValues":
-		{
-				"1"         : "1",
-				"2"         : "2",
-				"3"         : "3",
-				"4"         : "4"
-		},
-		"default"       : "4"
+			{
+					"1"         : "1",
+					"2"         : "2",
+					"3"         : "3",
+					"4"         : "4"
+			},
+			"default"       : "4"
 	},
 	{
 			"tab"       : "Footer",
@@ -193,6 +193,4 @@
 			"type"      : "text",
 			"default"   : "31, 40, 128"
 	}
-
-
 ]
