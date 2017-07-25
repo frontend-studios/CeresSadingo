@@ -13,6 +13,14 @@
       <nav class="footer-column m-b-2">
           <h5>{{ config('CeresSadingo.footer.footerCol_' ~ i ~ '_title') }}</h5>
 
+
+          <ul class="list-unstyled">
+
+              {% set footerCategories = config('CeresSadingo.footerCol_' ~ i ~ '_categories') | find("[0-9]+") %}
+              <h6>{{ footerCategories }}</h6>
+
+          </ul>
+
       </nav>
     </div>
 {% endfor %}
