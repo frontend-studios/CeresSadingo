@@ -200,6 +200,12 @@ a {
 /***** Warenkorb **************************************************************/
 /*Name des Produktes*/
 /***** Artikel Seite (Category View) ******************************************/
+.category_infoBox {
+  margin-bottom: 10px;
+}
+.category_title {
+  margin-top: 10px;
+}
 .owl-theme .owl-nav [class*=owl-] {
   background-color: #FD98BB;
   color: #fff;
