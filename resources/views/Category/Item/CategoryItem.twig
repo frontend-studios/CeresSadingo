@@ -74,13 +74,14 @@
                             <item-list-sorting template="#vue-item-list-sorting" :sort-data="{{ config("Ceres.sort.data") | split(', ') | json_encode() }}"></item-list-sorting>
                             <items-per-page
                                 template="#vue-items-per-page"
-                                :columns-per-page=4
+                                :columns-per-page="{{ config("Ceres.pagination.columnsPerPage") | json_encode() }}"
                                 :rows-per-page="{{ config("Ceres.pagination.rowsPerPage") | split(', ') | json_encode() }}"></items-per-page>
                             <item-filter-list :facets="{{ paginatedResult.facets | json_encode }}"></item-filter-list>
                         </div>
                     </div>
                 </div>
             </div>
+
             {# TAGS #}
             <item-filter-tag-list></item-filter-tag-list>
         </div>
