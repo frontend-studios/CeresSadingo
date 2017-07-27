@@ -38,6 +38,13 @@ class CeresSadingoServiceProvider extends ServiceProvider
 			return false;
 		}, 0);
 
+		// Überschreibt die Item View
+		$eventDispatcher->listen('IO.tpl.item', function(TemplateContainer $container, $templateData)
+		{
+			$container->setTemplate('CeresSadingo::Item.SingleItem');
+			return false;
+		}, 0);
+
 		// Überschreibt Ceres Views
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
 		{
