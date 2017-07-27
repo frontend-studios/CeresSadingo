@@ -4,7 +4,7 @@
   margin-top: -14px;
 }
 .homepage_carousel {
-  margin-top: -15px;
+  margin-top: 15px;
   position: fixed;
   top: 0;
   z-index: 5;
@@ -68,9 +68,15 @@
   width: 100%;
   background-color: #e878aa;
 }
-  .homepage_card_img:hover {
-    border: 2px solid #FF80AB;
+  .homepage_card_img:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
+.homepage_card_imgBox {
+  overflow: hidden;
+}
+
 /*****Sozial*****/
   .homepage_instagram, .homepage_facebook {
     height: 120px;
