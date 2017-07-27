@@ -89,6 +89,13 @@
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
 
                 <div class="prices">
+
+                    <a href="{{ itemUrl }}">
+                        <div class="price">
+                            {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }} *
+                        </div>
+                    </a>
+
                     {% if item.data.calculatedPrices.rrp.price != item.data.calculatedPrices.default.price %}
                         <a href="{{ itemUrl }}" class="price-view-port">
                             <del class="crossprice">
@@ -97,11 +104,6 @@
                         </a>
                     {% endif %}
 
-                    <a href="{{ itemUrl }}">
-                        <div class="price">
-                            {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }} *
-                        </div>
-                    </a>
                 </div>
 
                 {{ LayoutContainer.show("Ceres::CategoryItem.AfterPrices", item.data) }}
