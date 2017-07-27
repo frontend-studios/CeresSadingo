@@ -87,9 +87,9 @@
             </a>
             <div class="thumb-meta">
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
-                <p>{{item.data.calculatedPrices}}</p>
+
                 <div class="prices">
-                    {% if item.data.calculatedPrices.rrp.price != '0' %}
+                    {% if item.data.calculatedPrices.rrp.price != item.data.calculatedPrices.default.price %}
                         <a href="{{ itemUrl }}" class="price-view-port">
                             <del class="crossprice">
                                 {{ item.data.calculatedPrices.rrp.price | formatMonetary(item.data.calculatedPrices.rrp.currency) }}
