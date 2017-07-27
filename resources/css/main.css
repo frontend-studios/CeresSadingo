@@ -122,7 +122,6 @@ a {
     width: 33.3333%;
     text-align: left;
     float: left;
-    display: none;
   }
   #mainNavbarCollapsable ul.mainmenu>li.ddown>a:after {
       content: "\f107";
