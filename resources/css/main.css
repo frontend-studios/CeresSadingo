@@ -219,12 +219,9 @@ a {
   .single-rightside {
     float: right;
   }
-  .crossprice {
-
-  }
   /*Porto Info*/
   .vat-porto-info {
-      font-size: 10px !important;
+      font-size: 9px !important;
   }
   .single-leftside {
     height: 500px;
@@ -256,6 +253,9 @@ a {
 }
 .articlenumber {
   display: none;
+}
+.crosspreis {
+  color: rgba(217, 84, 79, 0.92);
 }
 .single-rightside .m-b-3 {
   display: none;
