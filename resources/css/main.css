@@ -182,8 +182,9 @@ a {
     }
 }
 /*Links der Menü Leiste*/
-.wrapper-main .navbar{
+.wrapper-main .navbar {
   font-family: 'Muli', sans-serif !important;
+  border-bottom: none;
 }
 
 .wrapper-main .navbar a {
