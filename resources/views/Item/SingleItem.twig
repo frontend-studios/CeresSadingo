@@ -63,7 +63,7 @@
                 <div class="m-b-3">
                     <span class="articlenumber small text-muted">
                         <b>{{ trans("Ceres::Template.itemNumber") }}</b>
-                        <span>{{ item.documents[0].data }}</span>
+                        <span>{{ item.documents[0].data.article.number }}</span>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>
                     </span>
                 </div>
