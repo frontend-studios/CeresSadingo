@@ -260,6 +260,7 @@ a {
 /*.single-rightside .m-b-3 {
   display: none;
 }*/
+
 /* Artikelseite Mobile */
 @media (max-width: 767px) {
   /*Mobile höhe des Carousel*/
