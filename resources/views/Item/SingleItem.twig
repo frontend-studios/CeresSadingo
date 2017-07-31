@@ -67,6 +67,9 @@
                         <span v-resource-bind:currentVariation="documents.0.data">{{ item.documents[0].data.length }}</span>
                         <span v-resource-bind:currentVariation="documents.0.data">{{ item }}</span>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>
+                        <script>
+                        alert(Object.values(item));
+                        </script>
                     </span>
                 </div>
 
