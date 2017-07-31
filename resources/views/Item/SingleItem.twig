@@ -66,8 +66,8 @@
                         <span>{{ item.documents[0].data.article.id }}</span>
                         <span>{{ item.documents[0].data.variation }}</span>
                         <span>{{ item.documents[0].data }}</span>
-                        <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data }}</span>
-                        <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation }}</span>
+                        <span v-resource-bind:currentVariation="documents.0.data">{{ item.documents[0].data }}</span>
+                        <span v-resource-bind:currentVariation="documents.0.data">{{ item.documents[0].data.variation }}</span>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>
                     </span>
                 </div>
