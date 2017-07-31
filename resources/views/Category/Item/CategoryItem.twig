@@ -61,7 +61,7 @@
             </div>
         </div>
 
-        {% if category.details.first.shortDescription != "" %}
+        {% if !category.details.first.shortDescription %}
           <div class="category_infoBox">
               <div class="row">
                   <div class="col-xs-12">
