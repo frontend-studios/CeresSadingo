@@ -81,7 +81,7 @@
 
                 {% if item.documents[0].data.calculatedPrices.formatted.rrpPrice != item.documents[0].data.calculatedPrices.formatted.defaultPrice %}
                     <a href="{{ itemUrl }}" class="price-view-port">
-                        <del class="crossprice">
+                        <del class="crossprice maxicrossprice">
                             {{ item.documents[0].data.calculatedPrices.formatted.rrpPrice }}
                         </del>
                     </a>
