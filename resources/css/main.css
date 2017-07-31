@@ -251,9 +251,6 @@ a {
 .cmp-product-thumb .add-to-basket-lg-container:hover {
   border-color: transparent #FF80AB transparent transparent;
 }
-.articlenumber {
-
-}
 .cmp-product-thumb .crossprice {
   color: rgba(217, 84, 79, 0.92);
 }
@@ -280,6 +277,10 @@ a {
   .single-rightside div:last-child {
     display: none;
   }
+}
+/***** Einzel Artikel Seite (SingleItem View) *********************************/
+.base-price-amount {
+  display: inline !important;
 }
 /* Setzt "In den Warenkorb" mittig in derDesktop Ansicht */
 @media (min-width: 992px){
