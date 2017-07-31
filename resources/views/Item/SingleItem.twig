@@ -82,10 +82,9 @@
                 {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
 
                 {% if ('item.recommendedPrice' in itemData or 'all' in itemData) %}
-                    <div class="crossprice" v-resource-if:currentVariation="documents[0].data.calculatedPrices.rrp.price != item.documents[0].data.calculatedPrices.formatted.rrpPrice">
+                    <div class="crossprice" v-resource-if:currentVariation="item.documents[0].data.calculatedPrices.rrp.price != item.documents[0].data.calculatedPrices.formatted.rrpPrice">
                         <del class="text-muted small" v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.rrpPrice">
                             {{ item.documents[0].data.calculatedPrices.formatted.rrpPrice }}
-                            {{ documents[0].data.calculatedPrices.rrp.price }}
                         </del>
                     </div>
                 {% endif %}
