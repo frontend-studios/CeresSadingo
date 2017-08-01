@@ -55,12 +55,6 @@ class CeresSadingoServiceProvider extends ServiceProvider
     });
 
 		// Überschreibt die PageDesign View
-		$eventDispatcher->listen('IO.tpl.category.container', function(TemplateContainer $container, $templateData)
-		{
-			$container->setTemplate('CeresSadingo::PageDesign.PageDesign');
-			return false;
-		}, 0);
-		// Überschreibt die PageDesign View
 		$eventDispatcher->listen('IO.tpl.category.blog', function(TemplateContainer $container, $templateData)
 		{
 			$container->setTemplate('CeresSadingo::PageDesign.PageDesign');
