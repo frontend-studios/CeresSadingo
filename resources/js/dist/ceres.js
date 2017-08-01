@@ -580,6 +580,8 @@ Vue.component("add-to-basket", {
          * add an item to basket-resource
          */
         addToBasket: function addToBasket() {
+            alert("jo");
+            console.log("ja");
             var basketObject = {
                 variationId: this.variationId,
                 quantity: this.quantity,
@@ -6767,7 +6769,7 @@ module.exports = function ($) {
 	 * Alias: `accounting.parse(string)`
 	 *
 	 * Decimal must be included in the regular expression to match floats (defaults to
-	 * accounting.settings.number.decimal), so if the number uses a non-standard decimal 
+	 * accounting.settings.number.decimal), so if the number uses a non-standard decimal
 	 * separator, provide it as the second argument.
 	 *
 	 * Also matches bracketed negatives (eg. "$ (1.99)" => -1.99)
@@ -17183,5 +17185,3 @@ var init = (function($, window, document)
     window.CeresMain = new CeresMain();
 
 })(jQuery, window, document);
-
-
