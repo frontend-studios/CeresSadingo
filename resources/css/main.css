@@ -211,13 +211,13 @@ a {
     top: 0px;
     position: absolute;
     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
+    -webkit-transition-duration: 5s;
     -webkit-transition-timing-function: linear;
     transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
+    transition-duration: 5s;
     transition-timing-function: linear;
 }
-.box1{
+.thumb-image-Animation-add{
     width: 50px;
     height: 50px;
     background-color: blue;
@@ -228,10 +228,10 @@ a {
     opacity: 0;
     position: absolute;
     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration: 2s;
+    -webkit-transition-duration: 5s;
     -webkit-transition-timing-function: linear;
     transition-property: width height background-color font-size left top color;
-    transition-duration: 2s;
+    transition-duration: 5s;
     transition-timing-function: linear;
 }
 

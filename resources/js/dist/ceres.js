@@ -605,9 +605,9 @@ Vue.component("add-to-basket", {
           var el = document.querySelector("div.thumb-image-Animation");
 
           if (el) {
-            el.className = "box1";
+            el.className = "thumb-image-Animation-add";
           } else {
-            el = document.querySelector("div.box1");
+            el = document.querySelector("div.thumb-image-Animation-add");
             el.className = "thumb-image-Animation";
           }
 
