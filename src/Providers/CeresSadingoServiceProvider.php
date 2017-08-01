@@ -54,13 +54,6 @@ class CeresSadingoServiceProvider extends ServiceProvider
         return false;
     });
 
-		// Überschreibt die PageDesign View
-		$eventDispatcher->listen('IO.tpl.category.blog', function(TemplateContainer $container, $templateData)
-		{
-			$container->setTemplate('CeresSadingo::PageDesign.PageDesign');
-			return false;
-		}, 0);
-
 		// Überschreibt die Category View
 		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData)
 		{
@@ -82,6 +75,7 @@ class CeresSadingoServiceProvider extends ServiceProvider
 
 			 $partial->set('header', 'CeresSadingo::PageDesign.Partials.Header.Header');
 			 $partial->set('footer', 'CeresSadingo::PageDesign.Partials.Footer');
+			 $partial->set('page-design', 'CeresSadingo::PageDesign.PageDesign');
 		}, 0);
 
 		return false;
