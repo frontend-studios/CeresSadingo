@@ -72,6 +72,7 @@
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    transition: all ease 1.5s;
   }
 .homepage_card_imgBox {
   overflow: hidden;
