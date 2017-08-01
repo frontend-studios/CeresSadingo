@@ -2,23 +2,9 @@
 
 <script type="x/template" id="vue-add-to-basket">
 
-    function addtobasketAnimation() {
-      alert("jo");
-      // var el = document.querySelector("div.box");
-      //
-      // if (el) {
-      //   el.className = "box1";
-      // } else {
-      //   el = document.querySelector("div.box1");
-      //   el.className = "box";
-      // }
-      //
-      // return el;
-    }
-
     <div>
         <div class="add-to-basket-lg-container hidden-md-down" v-if="(!showQuantity && useLargeScale)"
-             v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.addToBasket") }}" @click="addToBasket(); addtobasketAnimation();">
+             v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.addToBasket") }}" @click="addToBasket()">
             <i class="fa fa-cart-plus fa-lg mobile-icon-right"></i>
         </div>
 
