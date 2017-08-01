@@ -254,9 +254,6 @@ a {
 .cmp-product-thumb .crossprice {
   color: rgba(217, 84, 79, 0.92);
 }
-/*.single-rightside .m-b-3 {
-  display: none;
-}*/
 
 /* Artikelseite Mobile */
 @media (max-width: 767px) {
@@ -277,10 +274,6 @@ a {
   .single-rightside div:last-child {
     display: none;
   }
-}
-/***** Einzel Artikel Seite (SingleItem View) *********************************/
-.base-price-amount {
-  display: inline !important;
 }
 /* Setzt "In den Warenkorb" mittig in derDesktop Ansicht */
 @media (min-width: 992px){
@@ -320,6 +313,10 @@ a {
   .sidebar-categories ul li.active ul li a {
       padding-left: 2.5rem;
   }
+/***** Einzel Artikel Seite (SingleItem View) *********************************/
+.base-price-amount {
+  display: inline !important;
+}
 /***** Button *****/
 /*ausgefüllter Button*/
 .btn-primary {

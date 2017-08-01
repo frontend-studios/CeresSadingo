@@ -16,7 +16,8 @@
 
 {% set page = request.get("page") | default(1) %}
 
-{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId':category.id, 'page':page, 'items':itemsPerPage, 'facets': facetParams, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::
+.ItemListView', itemLoaderPresets.categoryList, {'categoryId':category.id, 'page':page, 'items':itemsPerPage, 'facets': facetParams, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
 
 {% set pageMax = (paginatedResult.total / itemsPerPage) | round %}
 {% set query  = { 'items' : itemsPerPage, 'sorting' : itemSort } %}
@@ -38,7 +39,7 @@
 
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterList") }}
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterTagList") }}
-    {{ component( "Ceres::ItemList.Components.ItemList") }}
+    {{ component( "CeresSadingo::ItemList.Components.ItemList") }}
     {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
     {{ component( "Ceres::ItemList.Components.ItemListSorting") }}
     {{ component( "Ceres::ItemList.Components.ItemsPerPage") }}
