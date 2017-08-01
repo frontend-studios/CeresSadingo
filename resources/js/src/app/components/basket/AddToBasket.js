@@ -34,7 +34,6 @@ Vue.component("add-to-basket", {
          */
         addToBasket()
         {
-            var Maxitest = 1337;
             const basketObject =
                 {
                     variationId             :   this.variationId,

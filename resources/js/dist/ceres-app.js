@@ -171,7 +171,6 @@ Vue.component("add-to-basket", {
          * add an item to basket-resource
          */
         addToBasket: function addToBasket() {
-            console.log("Artikel dem Warenkorb hinzugefügt");
             var basketObject = {
                 variationId: this.variationId,
                 quantity: this.quantity,
