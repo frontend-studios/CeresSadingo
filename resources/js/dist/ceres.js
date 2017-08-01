@@ -602,13 +602,13 @@ Vue.component("add-to-basket", {
         openAddToBasketAnimation: function openAddToBasketAnimation() {
           alert("Animationsfunktion");
 
-          var el = document.querySelector("div.box");
+          var el = document.querySelector("div.thumb-image-Animation");
 
           if (el) {
             el.className = "box1";
           } else {
             el = document.querySelector("div.box1");
-            el.className = "box";
+            el.className = "thumb-image-Animation";
           }
 
           return el;
