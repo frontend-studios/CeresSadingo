@@ -18,7 +18,7 @@
 
     <div>
         <div class="add-to-basket-lg-container hidden-md-down" v-if="(!showQuantity && useLargeScale)"
-             v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.addToBasket") }}" @click="addToBasket(), addtobasketAnimation()">
+             v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.addToBasket") }}" @click="addToBasket(); addtobasketAnimation();">
             <i class="fa fa-cart-plus fa-lg mobile-icon-right"></i>
         </div>
 
