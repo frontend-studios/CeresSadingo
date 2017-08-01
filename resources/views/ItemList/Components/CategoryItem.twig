@@ -60,10 +60,7 @@
                                 </div>
                             </a>
 
-                            <p>${ recommendedRetailPrice | currency itemData.calculatedPrices.rrp.currency }</p>
-                            <p>${ variationRetailPrice | currency itemData.calculatedPrices.default.currency } *</p>
-
-                            {% if itemData.calculatedPrices.rrp.currency != itemData.calculatedPrices.default.currency %}
+                            {% if ${ recommendedRetailPrice | currency itemData.calculatedPrices.rrp.currency } != ${ variationRetailPrice | currency itemData.calculatedPrices.default.currency } * %}
                               <a href="${ itemData | itemURL }" v-if="recommendedRetailPrice > 0" class="price-view-port">
                                   <del class="crossprice">
                                       ${ recommendedRetailPrice | currency itemData.calculatedPrices.rrp.currency }
