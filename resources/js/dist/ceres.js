@@ -580,8 +580,7 @@ Vue.component("add-to-basket", {
          * add an item to basket-resource
          */
         addToBasket: function addToBasket() {
-            alert("jo");
-            console.log("ja");
+
             var basketObject = {
                 variationId: this.variationId,
                 quantity: this.quantity,
@@ -590,7 +589,7 @@ Vue.component("add-to-basket", {
 
             ResourceService.getResource("basketItems").push(basketObject);
 
-            this.openAddToBasketOverlay();
+            // this.openAddToBasketOverlay();
         },
         directToItem: function directToItem() {
             window.location.assign(this.itemUrl);
