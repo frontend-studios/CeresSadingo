@@ -96,7 +96,7 @@
                         </div>
                     </a>
 
-                    {% if item.data.calculatedPrices.rrp.price >= item.data.calculatedPrices.default.price %}
+                    {% if item.data.calculatedPrices.rrp.price >= item.data.calculatedPrices.default.price && item.data.calculatedPrices.rrp.price != item.data.calculatedPrices.default.price %}
                         <a href="{{ itemUrl }}" class="price-view-port">
                             <del class="crossprice">
                                 {{ item.data.calculatedPrices.rrp.price | formatMonetary(item.data.calculatedPrices.rrp.currency) }}
