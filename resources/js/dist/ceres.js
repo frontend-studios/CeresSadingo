@@ -601,10 +601,10 @@ Vue.component("add-to-basket", {
 
         openAddToBasketAnimation: function openAddToBasketAnimation() {
 
-          var el = document.querySelector("div.thumb-image-Animation");
+          var el = document.querySelector(".owl-item.active");
 
           if (el) {
-            el.className = "thumb-image-Animation-add";
+            el.className = "owl-item active addtobasketAnimation";
           } else {
             el = document.querySelector("div.thumb-image-Animation-add");
             el.className = "thumb-image-Animation";
