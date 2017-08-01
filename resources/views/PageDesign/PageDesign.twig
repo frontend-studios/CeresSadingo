@@ -30,7 +30,7 @@
         {% endblock %}
     </head>
 
-    <body class="maxisBody">
+    <body>
         <resource name="user" :data="{ isLoggedIn: {{ frontend.Account.getIsAccountLoggedIn | json_encode() }} }" ></resource>
         <resource name="basket" route="/rest/io/basket/" data="{{ services.basket.getBasket() | json_encode() }}" :events="['AfterBasketChanged!basket']"></resource>
         <resource name="itemSearch" :data="{}"></resource>
@@ -50,7 +50,7 @@
         <div class="wrapper wrapper-left">
           <!-- filters -->
         </div>
-
+        <p>maxi test</p>
         <div class="wrapper wrapper-main {% if fixNavBarPos == 'true' %}isSticky{% endif %}">
 
             {% include getPartial('header') %}
