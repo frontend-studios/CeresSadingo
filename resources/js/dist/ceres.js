@@ -601,6 +601,7 @@ Vue.component("add-to-basket", {
 
         openAddToBasketAnimation: function openAddToBasketAnimation() {
           alert("Animationsfunktion");
+
           var el = document.querySelector("div.box");
 
           if (el) {
