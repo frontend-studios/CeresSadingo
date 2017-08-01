@@ -34,7 +34,7 @@ Vue.component("add-to-basket", {
          */
         addToBasket()
         {
-            alert("MeinejsDatei");
+            console.log("MeinejsDatei");
             const basketObject =
                 {
                     variationId             :   this.variationId,
