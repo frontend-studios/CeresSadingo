@@ -589,6 +589,7 @@ Vue.component("add-to-basket", {
 
             ResourceService.getResource("basketItems").push(basketObject);
 
+            this.openAddToBasketAnimation();
             // this.openAddToBasketOverlay();
         },
         directToItem: function directToItem() {
@@ -596,6 +597,20 @@ Vue.component("add-to-basket", {
         },
         handleButtonState: function handleButtonState(value) {
             this.buttonLockState = value;
+        },
+
+        openAddToBasketAnimation: function openAddToBasketAnimation() {
+          alert("Animationsfunktion");
+          var el = document.querySelector("div.box");
+
+          if (el) {
+            el.className = "box1";
+          } else {
+            el = document.querySelector("div.box1");
+            el.className = "box";
+          }
+
+          return el;
         },
 
 
