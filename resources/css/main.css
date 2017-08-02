@@ -229,10 +229,18 @@ a {
     transition-duration: 5s;
     transition-timing-function: linear;
 }
-.testanimation{
-  height: 100px;
-  width: 100px;
-  background-color: red;
+a.btn-lg {
+  padding: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+}
+
+a.fly-to-basket {
+  margin: 30px;
+  display: block;
+  float: left;
 }
 /*Name des Produktes*/
 /***** Artikel Seite (Category View) ******************************************/
