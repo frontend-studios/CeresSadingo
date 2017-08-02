@@ -587,38 +587,92 @@ Vue.component("add-to-basket", {
                 basketItemOrderParams: this.item.properties
             };
 
-            var cart = $('.toggle-basket-preview');
-            var imgtodrag = $('.owl-stage').find(".active").eq(0);
+            // var cart = $('.toggle-basket-preview');
+            // var imgtodrag = $('.owl-stage').find(".active").eq(0);
+            //
+            // if (imgtodrag) {
+            //   var imgclone = imgtodrag.clone()
+            //     .offset({
+            //       top: imgtodrag.offset().top,
+            //       left: imgtodrag.offset().left
+            //     })
+            //     .css({
+            //       'opacity': '0.5',
+            //       'position': 'absolute',
+            //       'height': '150px',
+            //       'width': '150px',
+            //       'z-index': '99999'
+            //     })
+            //     .appendTo($('body'))
+            //     .animate({
+            //       'top': cart.offset().top + 10,
+            //       'left': cart.offset().left + 10,
+            //       'width': 75,
+            //       'height': 75
+            //     }, 1000, 'easeInOutExpo');
+            //
+            //     imgclone.animate({
+            //       'width': 0,
+            //       'height': 0
+            //     }, function () {
+            //         $(this).detach()
+            //     });
+            //   }
 
-            if (imgtodrag) {
-              var imgclone = imgtodrag.clone()
-                .offset({
-                  top: imgtodrag.offset().top,
-                  left: imgtodrag.offset().left
-                })
-                .css({
-                  'opacity': '0.5',
-                  'position': 'absolute',
-                  'height': '150px',
-                  'width': '150px',
-                  'z-index': '99999'
-                })
-                .appendTo($('body'))
-                .animate({
-                  'top': cart.offset().top + 10,
-                  'left': cart.offset().left + 10,
-                  'width': 75,
-                  'height': 75
-                }, 1000, 'easeInOutExpo');
+                    var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
+                    console.log(cartElem);
+                    var offsetTopCart = cartElem.prop('offsetTop');
+                    var offsetLeftCart = cartElem.prop('offsetLeft');
+                    var widthCart = cartElem.prop('offsetWidth');
+                    var heightCart = cartElem.prop('offsetHeight');
+                    var imgElem = angular.element(event.target.parentNode.parentNode.childNodes[1]);
+                    var parentElem = angular.element(event.target.parentNode.parentNode);
+                    var offsetLeft = imgElem.prop("offsetLeft");
+                    var offsetTop = imgElem.prop("offsetTop");
+                    var imgSrc = imgElem.prop("currentSrc");
+                    console.log(offsetLeft + ' ' + offsetTop + ' ' + imgSrc);
+                    var imgClone = angular.element('<img src="' + imgSrc + '"/>');
+                    imgClone.css({
+                      'height': '150px',
+                      'position': 'absolute',
+                      'top': offsetTop + 'px',
+                      'left': offsetLeft + 'px',
+                      'opacity': 0.5
+                    });
+                    imgClone.addClass('itemaddedanimate');
+                    parentElem.append(imgClone);
+                    setTimeout(function () {
+                      imgClone.css({
+                        'height': '75px',
+                        'top': (offsetTopCart+heightCart/2)+'px',
+                        'left': (offsetLeftCart+widthCart/2)+'px',
+                        'opacity': 0.5
+                      });
+                    }, 500);
+                    setTimeout(function () {
+                      imgClone.css({
+                        'height': 0,
+                        'opacity': 0.5
 
-                imgclone.animate({
-                  'width': 0,
-                  'height': 0
-                }, function () {
-                    $(this).detach()
-                });
-              }
+                      });
+                      cartElem.addClass('shakeit');
+                    }, 1000);
+                    setTimeout(function () {
+                      cartElem.removeClass('shakeit');
+                      imgClone.remove();
+                    }, 1500);
 
+
+
+                return {
+                  restrict: 'E',
+                  link: link,
+              		transclude: true,
+                  replace: true,
+                  scope: {},
+                  template: '<button class="add-to-cart" ng-transclude></button>'
+                };
+              });
 
 
 
