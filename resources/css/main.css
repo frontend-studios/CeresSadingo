@@ -229,7 +229,11 @@ a {
     transition-duration: 5s;
     transition-timing-function: linear;
 }
-
+.testanimation{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
 /*Name des Produktes*/
 /***** Artikel Seite (Category View) ******************************************/
 .category_infoBox {

@@ -601,13 +601,13 @@ Vue.component("add-to-basket", {
 
         openAddToBasketAnimation: function openAddToBasketAnimation() {
 
-          var el = document.querySelector(".owl-item.active");
+          var el = document.querySelector("div.testanimation");
 
           if (el) {
-            el.className = "owl-item active addtobasketAnimation";
+            el.className = "testanimation addtobasketAnimation";
           } else {
-            el = document.querySelector("div.thumb-image-Animation-add");
-            el.className = "thumb-image-Animation";
+            el = document.querySelector("div.addtobasketAnimation");
+            el.className = "testanimation";
           }
 
           return el;
