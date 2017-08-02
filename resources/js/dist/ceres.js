@@ -618,7 +618,7 @@ Vue.component("add-to-basket", {
             //         $(this).detach()
             //     });
             //   }
-                    alert(imgId);
+                    alert(imgId[0]);
                     alert("imgId");
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                     var offsetTopCart = cartElem.prop('offsetTop');
