@@ -626,6 +626,7 @@ Vue.component("add-to-basket", {
                     var widthCart = cartElem.prop('offsetWidth');
                     var heightCart = cartElem.prop('offsetHeight');
                     var imgElem = angular.element(event.target.parentNode.parentNode.childNodes[1]);
+                    alert(imgElem);
                     var parentElem = angular.element(event.target.parentNode.parentNode);
                     var offsetLeft = imgElem.prop("offsetLeft");
                     var offsetTop = imgElem.prop("offsetTop");
