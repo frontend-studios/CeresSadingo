@@ -611,12 +611,12 @@ Vue.component("add-to-basket", {
                         'height': 75
                 }, 1000, 'easeInOutExpo');
 
-                imgclone.animate({
-                    'width': 0,
-                        'height': 0
-                }, function () {
-                    $(this).detach()
-                });
+                // imgclone.animate({
+                //     'width': 0,
+                //         'height': 0
+                // }, function () {
+                //     $(this).detach()
+                // });
             }
 
 
