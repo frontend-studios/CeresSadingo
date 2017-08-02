@@ -609,19 +609,19 @@ Vue.component("add-to-basket", {
                 //         'width': 75,
                 //         'height': 75
                 // }, 1000, 'easeInOutExpo');
-                //
-                // setTimeout(function () {
-                //     cart.effect("shake", {
-                //         times: 2
-                //     }, 200);
-                // }, 1500);
-                //
-                // imgclone.animate({
-                //     'width': 0,
-                //         'height': 0
-                // }, function () {
-                //     $(this).detach()
-                // });
+
+                setTimeout(function () {
+                    cart.effect("shake", {
+                        times: 2
+                    }, 200);
+                }, 1500);
+
+                imgclone.animate({
+                    'width': 0,
+                        'height': 0
+                }, function () {
+                    $(this).detach()
+                });
             }
 
 
