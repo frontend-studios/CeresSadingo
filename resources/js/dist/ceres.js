@@ -620,18 +620,17 @@ Vue.component("add-to-basket", {
             //   }
 
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
-                    console.log(cartElem);
                     var offsetTopCart = cartElem.prop('offsetTop');
                     var offsetLeftCart = cartElem.prop('offsetLeft');
                     var widthCart = cartElem.prop('offsetWidth');
                     var heightCart = cartElem.prop('offsetHeight');
-                    var imgElem = angular.element(event.target.parentNode.parentNode.childNodes[1]);
+
+                    var imgElem = angular.element(document.getElementsByClassName("owl-stage active"));
                     alert(imgElem);
                     var parentElem = angular.element(event.target.parentNode.parentNode);
                     var offsetLeft = imgElem.prop("offsetLeft");
                     var offsetTop = imgElem.prop("offsetTop");
                     var imgSrc = imgElem.prop("currentSrc");
-                    console.log(offsetLeft + ' ' + offsetTop + ' ' + imgSrc);
                     var imgClone = angular.element('<img src="' + imgSrc + '"/>');
                     imgClone.css({
                       'height': '150px',
@@ -654,7 +653,6 @@ Vue.component("add-to-basket", {
                       imgClone.css({
                         'height': 0,
                         'opacity': 0.5
-
                       });
                       cartElem.addClass('shakeit');
                     }, 1000);
@@ -673,7 +671,6 @@ Vue.component("add-to-basket", {
                   scope: {},
                   template: '<button class="add-to-cart" ng-transclude></button>'
                 };
-              });
 
 
 
