@@ -573,7 +573,7 @@ $('.add-to-cart').on('click', function () {
                     'height': '150px',
                     'width': '150px',
                     'z-index': '100'
-
+            })
                 .animate({
                 'top': cart.offset().top + 10,
                     'left': cart.offset().left + 10,
