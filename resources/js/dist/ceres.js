@@ -604,7 +604,7 @@ Vue.component("add-to-basket", {
           var el = document.querySelector("div.testanimation");
 
           if (el) {
-            el.className = "testanimation addtobasketAnimation";
+            el.className = "addtobasketAnimation";
           } else {
             el = document.querySelector("div.addtobasketAnimation");
             el.className = "testanimation";
