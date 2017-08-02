@@ -588,7 +588,7 @@ Vue.component("add-to-basket", {
             };
 
             var cart = $('.toggle-basket-preview');
-            var imgtodrag = $(this).parent('.owl-stage').find(".active").eq(0);
+            var imgtodrag = $('.owl-stage').find(".active").eq(0);
             if (imgtodrag) {
                 var imgclone = imgtodrag.clone()
                     .offset({
@@ -632,7 +632,6 @@ Vue.component("add-to-basket", {
 
             ResourceService.getResource("basketItems").push(basketObject);
 
-            this.openAddToBasketAnimation();
             // this.openAddToBasketOverlay();
 
         },
@@ -642,22 +641,6 @@ Vue.component("add-to-basket", {
         handleButtonState: function handleButtonState(value) {
             this.buttonLockState = value;
         },
-
-        openAddToBasketAnimation: function openAddToBasketAnimation() {
-
-          var el = document.querySelector("div.testanimation");
-
-          if (el) {
-            el.className = "addtobasketAnimation";
-          } else {
-            el = document.querySelector("div.addtobasketAnimation");
-            el.className = "testanimation";
-          }
-
-          return el;
-        },
-
-
         /**
          * open the AddItemToBasketOverlay
          */
