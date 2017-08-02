@@ -589,6 +589,7 @@ Vue.component("add-to-basket", {
 
             var cart = $('.toggle-basket-preview');
             var imgtodrag = $('.owl-stage').find(".active").eq(0);
+            
             if (imgtodrag) {
                 var imgclone = imgtodrag.clone()
                     .offset({
