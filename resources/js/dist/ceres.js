@@ -619,57 +619,60 @@ Vue.component("add-to-basket", {
             //     });
             //   }
 
-                    var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
-                    var offsetTopCart = cartElem.prop('offsetTop');
-                    var offsetLeftCart = cartElem.prop('offsetLeft');
-                    var widthCart = cartElem.prop('offsetWidth');
-                    var heightCart = cartElem.prop('offsetHeight');
+  
+                    function link(scope, element, attributes) {
+                      element.on('click', function(event){
+                        var id = '1';
+                        var cartElem = angular.element(document.getElementsByClassName("shopping-cart"));
+                        var offsetTopCart = cartElem.prop('offsetTop');
+                        var offsetLeftCart = cartElem.prop('offsetLeft');
+                        var widthCart = cartElem.prop('offsetWidth');
+                        var heightCart = cartElem.prop('offsetHeight');
+                        var idclass = 'img-fluid lazy ' + id;
 
-                    var imgClass = 'img-fluid lazy ';
-                    var imgElem = angular.element(document.getElementsByClassName(imgClass));
+                        var imgElem = angular.element(document.getElementsByClassName(idclass));
 
-                    var offsetLeft = imgElem.prop("offsetLeft");
-                    var offsetTop = imgElem.prop("offsetTop");
-                    var imgSrc = imgElem.prop("currentSrc");
-                    var imgClone = angular.element('<img src="' + imgSrc + '"/>');
-                    alert(imgClone);
-                    imgClone.css({
-                      'height': '150px',
-                      'position': 'absolute',
-                      'top': offsetTop + 'px',
-                      'left': offsetLeft + 'px',
-                      'opacity': 0.5
-                    });
-                    imgClone.addClass('itemaddedanimate');
-                    imgElem.append(imgClone);
-                    setTimeout(function () {
-                      imgClone.css({
-                        'height': '75px',
-                        'top': (offsetTopCart+heightCart/2)+'px',
-                        'left': (offsetLeftCart+widthCart/2)+'px',
-                        'opacity': 0.5
+
+                        var parentElem = angular.element(event.target.parentNode.parentNode);
+
+
+                        var offsetLeft = imgElem.prop("offsetLeft");
+                        var offsetTop = imgElem.prop("offsetTop");
+                        var imgSrc = imgElem.prop("currentSrc");
+                        var imgClone = angular.element('<img class="troll" src="' + imgSrc + '"/>');
+                        imgClone.css({
+                          'height': '150px',
+                          'position': 'absolute',
+                          'top': offsetTop + 'px',
+                          'left': offsetLeft + 'px',
+                          'opacity': 0.5
+                        });
+                        imgClone.addClass('itemaddedanimate');
+
+                        parentElem.append(imgClone);
+
+                        setTimeout(function () {
+                          imgClone.css({
+                            'height': '75px',
+                            'top': (offsetTopCart+heightCart/2)+'px',
+                            'left': (offsetLeftCart+widthCart/2)+'px',
+                            'opacity': 0.5
+                          });
+                        }, 500);
+                        setTimeout(function () {
+                          imgClone.css({
+                            'height': 0,
+                            'opacity': 0.5
+
+                          });
+                          cartElem.addClass('shakeit');
+                        }, 1000);
+                        setTimeout(function () {
+                          cartElem.removeClass('shakeit');
+                          imgClone.remove();
+                        }, 1500);
                       });
-                    }, 500);
-                    setTimeout(function () {
-                      imgClone.css({
-                        'height': 0,
-                        'opacity': 0.5
-                      });
-                      cartElem.addClass('shakeit');
-                    }, 1000);
-                    setTimeout(function () {
-                      cartElem.removeClass('shakeit');
-                      imgClone.remove();
-                    }, 1500);
-
-                return {
-                  restrict: 'E',
-                  link: link,
-              		transclude: true,
-                  replace: true,
-                  scope: {},
-                  template: '<button class="add-to-cart" ng-transclude></button>'
-                };
+                    };
 
 
 
