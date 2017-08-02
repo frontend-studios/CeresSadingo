@@ -593,15 +593,15 @@ Vue.component("add-to-basket", {
             if (imgtodrag) {
                 var imgclone = imgtodrag.clone()
                     .offset({
-                    top: 0,
-                    right: imgtodrag.offset().top
+                      top: imgtodrag.offset().top,
+                      left: imgtodrag.offset().left
                 })
                     .css({
-                    'opacity': '0.5',
-                        'position': 'absolute',
-                        'height': '150px',
-                        'width': '150px',
-                        'z-index': '99999'
+                      'opacity': '0.5',
+                      'position': 'absolute',
+                      'height': '150px',
+                      'width': '150px',
+                      'z-index': '99999'
                 })
                     .appendTo($('body'))
                     .animate({
