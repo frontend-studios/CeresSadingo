@@ -559,63 +559,44 @@ Vue.component("add-item-to-basket-overlay", {
 var ResourceService = require("services/ResourceService");
 
 
-  $('.fly-to-basket').on('click', function (e) {
+$('.add-to-cart').on('click', function () {
+        var cart = $('.shopping-cart');
+        var imgtodrag = $(this).parent('.item').find("img").eq(0);
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.5',
+                    'position': 'absolute',
+                    'height': '150px',
+                    'width': '150px',
+                    'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 75,
+                    'height': 75
+            }, 1000, 'easeInOutExpo');
 
-    var elements = {
-      flyer  : $( $(this).attr('data-fly-to-basket') ), // get element to fly
-      basket : $('#basket') // get destination
-    };
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
+            }, 1500);
 
-    var options = {
-      position : {
-        origin: {
-            // get initial position on document
-          initial: elements.flyer.offset(),
-            // amout of pixels to move the cloned element from the original before flying to the basket
-          offset: { x: 5, y: 15 }
-        },
-        destination: {
-            // get initial position on document
-          initial: elements.basket.offset()
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
         }
-      }
-    };
-
-    if ( elements.flyer.length && elements.basket.length )
-    {
-      // allow only 1 cloned element
-      if ( $('#fly-to-basket').length )
-      {
-        $('#fly-to-basket').remove();
-      }
-
-      // clone original element and set initial position
-      elements.flyer
-      .clone()
-      .attr('id','fly-to-basket')
-      .appendTo('body')
-      .css('box-shadow','0px 1px 10px 5px rgba(0,0,0,.15)')
-      .css('position','absolute')
-      .css('top',options.position.origin.initial.top)
-      .css('left',options.position.origin.initial.left);
-
-      // make it fly!
-      $('#fly-to-basket').animate(
-        { top: options.position.origin.initial.top - options.position.origin.offset.y, left: options.position.origin.initial.left - options.position.origin.offset.x }, 400,
-        function(){
-          $('#fly-to-basket').delay(100).animate(
-            { top: options.position.destination.initial.top, left: options.position.destination.initial.left, width: '20px', height: '20px' }, 750, 'easeInOutExpo',
-            function(){
-              $('#fly-to-basket').fadeOut(500, function(){
-                elements.basket.effect( "bounce", "slow" );
-              });
-            }
-          );
-        }
-      );
-    }
-  });
-
+    });
 
 Vue.component("add-to-basket", {
 

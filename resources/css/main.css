@@ -229,18 +229,12 @@ a {
     transition-duration: 5s;
     transition-timing-function: linear;
 }
-a.btn-lg {
-  padding: 20px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 20px;
-}
-
-a.fly-to-basket {
-  margin: 30px;
-  display: block;
-  float: left;
+.shopping-cart {
+    display: inline-block;
+    background: url('http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png') no-repeat 0 0;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px 0 0;
 }
 /*Name des Produktes*/
 /***** Artikel Seite (Category View) ******************************************/
