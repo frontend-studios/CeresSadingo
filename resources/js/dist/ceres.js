@@ -619,6 +619,7 @@ Vue.component("add-to-basket", {
             //     });
             //   }
               element.on('click', function(event){
+                alert("Animation");
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                     var offsetTopCart = cartElem.prop('offsetTop');
                     var offsetLeftCart = cartElem.prop('offsetLeft');
