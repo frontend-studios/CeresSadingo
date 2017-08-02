@@ -2,6 +2,8 @@
     <div id="owl-carousel-${_uid}" v-if="enableCarousel" class="owl-carousel owl-theme">
         <a v-for="imageUrl in imageUrls | orderBy 'position'" :href="itemUrl">
 
+          <div>{{ item }}</div>
+            
             <item-lazy-img template="#vue-item-lazy-img" v-if="$index === 0 && !disableLazyLoad" :image-url="imageUrl.url"
                         :alt="altText"></item-lazy-img>
 
