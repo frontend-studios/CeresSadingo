@@ -619,7 +619,6 @@ Vue.component("add-to-basket", {
             //     });
             //   }
 
-                    alert(imgId);
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                     var offsetTopCart = cartElem.prop('offsetTop');
                     var offsetLeftCart = cartElem.prop('offsetLeft');
@@ -628,12 +627,12 @@ Vue.component("add-to-basket", {
 
                     var imgClass = 'img-fluid lazy ';
                     var imgElem = angular.element(document.getElementsByClassName(imgClass));
-                    alert(imgElem);
 
                     var offsetLeft = imgElem.prop("offsetLeft");
                     var offsetTop = imgElem.prop("offsetTop");
                     var imgSrc = imgElem.prop("currentSrc");
                     var imgClone = angular.element('<img src="' + imgSrc + '"/>');
+                    alert(imgClone);
                     imgClone.css({
                       'height': '150px',
                       'position': 'absolute',
