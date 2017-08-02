@@ -559,8 +559,6 @@ Vue.component("add-item-to-basket-overlay", {
 var ResourceService = require("services/ResourceService");
 
 
-$(function(){
-
   $('.fly-to-basket').on('click', function (e) {
 
     var elements = {
@@ -617,7 +615,6 @@ $(function(){
       );
     }
   });
-});
 
 
 Vue.component("add-to-basket", {
