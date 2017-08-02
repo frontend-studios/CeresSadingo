@@ -625,7 +625,7 @@ Vue.component("add-to-basket", {
                     var widthCart = cartElem.prop('offsetWidth');
                     var heightCart = cartElem.prop('offsetHeight');
 
-                    var imgClass = 'img-fluid lazy ' + imgId;
+                    var imgClass = 'img-fluid lazy ';
                     var imgElem = angular.element(document.getElementsByClassName(imgClass));
                     alert(imgElem);
                     var parentElem = angular.element(event.target.parentNode.parentNode);
