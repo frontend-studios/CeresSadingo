@@ -622,14 +622,14 @@ Vue.component("add-to-basket", {
 
                     function link(scope, element, attributes) {
                       element.on('click', function(event){
-                        var id = '1';
+                        var id = '82';
                         var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                         var offsetTopCart = cartElem.prop('offsetTop');
                         var offsetLeftCart = cartElem.prop('offsetLeft');
                         var widthCart = cartElem.prop('offsetWidth');
                         var heightCart = cartElem.prop('offsetHeight');
                         var imgElemClass = 'img-fluid lazy ' + id;
-                        var parentElemClass = 'owl-item active ' + id;
+                        var parentElemClass = 'owl-carousel ' + id - 1;
 
                         var imgElem = angular.element(document.getElementsByClassName(imgElemClass));
                         var parentElem = angular.element(document.getElementsByClassName(parentElemClass));
