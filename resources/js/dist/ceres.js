@@ -629,7 +629,8 @@ Vue.component("add-to-basket", {
                     var imgClass = 'img-fluid lazy ';
                     var imgElem = angular.element(document.getElementsByClassName(imgClass));
                     alert(imgElem);
-                    var parentElem = angular.element(event.target.parentNode.parentNode);
+
+                    var parentElem = angular.element(document.getElementsByClassName(owl-item active));
                     var offsetLeft = imgElem.prop("offsetLeft");
                     var offsetTop = imgElem.prop("offsetTop");
                     var imgSrc = imgElem.prop("currentSrc");
