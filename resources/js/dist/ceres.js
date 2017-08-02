@@ -630,7 +630,7 @@ Vue.component("add-to-basket", {
                     var imgElem = angular.element(document.getElementsByClassName(imgClass));
                     alert(imgElem);
 
-                    var parentElem = angular.element(document.getElementsByClassName(owl-item active));
+                    var parentElem = angular.element(document.getElementsByClassName("owl-item active"));
                     var offsetLeft = imgElem.prop("offsetLeft");
                     var offsetTop = imgElem.prop("offsetTop");
                     var imgSrc = imgElem.prop("currentSrc");
