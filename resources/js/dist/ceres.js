@@ -591,33 +591,33 @@ Vue.component("add-to-basket", {
             var imgtodrag = $('.owl-stage').find(".active").eq(0);
 
             if (imgtodrag) {
-                var imgclone = imgtodrag.clone()
-                    .offset({
-                      top: imgtodrag.offset().top,
-                      left: imgtodrag.offset().left
+              var imgclone = imgtodrag.clone()
+                .offset({
+                  top: imgtodrag.offset().top,
+                  left: imgtodrag.offset().left
                 })
-                    .css({
-                      'opacity': '0.5',
-                      'position': 'absolute',
-                      'height': '150px',
-                      'width': '150px',
-                      'z-index': '99999'
+                .css({
+                  'opacity': '0.5',
+                  'position': 'absolute',
+                  'height': '150px',
+                  'width': '150px',
+                  'z-index': '99999'
                 })
-                    .appendTo($('body'))
-                    .animate({
-                      'top': cart.offset().top + 10,
-                      'left': cart.offset().left + 10,
-                      'width': 75,
-                      'height': 75
+                .appendTo($('body'))
+                .animate({
+                  'top': cart.offset().top + 10,
+                  'left': cart.offset().left + 10,
+                  'width': 75,
+                  'height': 75
                 }, 1000, 'easeInOutExpo');
 
-                // imgclone.animate({
-                //     'width': 0,
-                //         'height': 0
-                // }, function () {
-                //     $(this).detach()
-                // });
-            }
+                imgclone.animate({
+                  'width': 0,
+                  'height': 0
+                }, function () {
+                    $(this).detach()
+                });
+              }
 
 
 
