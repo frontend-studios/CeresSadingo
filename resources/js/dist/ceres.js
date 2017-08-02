@@ -619,21 +619,20 @@ Vue.component("add-to-basket", {
             //     });
             //   }
 
-  
+
                     function link(scope, element, attributes) {
                       element.on('click', function(event){
                         var id = '1';
-                        var cartElem = angular.element(document.getElementsByClassName("shopping-cart"));
+                        var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                         var offsetTopCart = cartElem.prop('offsetTop');
                         var offsetLeftCart = cartElem.prop('offsetLeft');
                         var widthCart = cartElem.prop('offsetWidth');
                         var heightCart = cartElem.prop('offsetHeight');
-                        var idclass = 'img-fluid lazy ' + id;
+                        var imgElemClass = 'img-fluid lazy ' + id;
+                        var parentElemClass = 'owl-item active';
 
-                        var imgElem = angular.element(document.getElementsByClassName(idclass));
-
-
-                        var parentElem = angular.element(event.target.parentNode.parentNode);
+                        var imgElem = angular.element(document.getElementsByClassName(imgElemClass));
+                        var parentElem = angular.element(document.getElementsByClassName(parentElemClass));
 
 
                         var offsetLeft = imgElem.prop("offsetLeft");
