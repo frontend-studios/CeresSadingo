@@ -602,7 +602,7 @@ Vue.component("add-to-basket", {
                         'width': '150px',
                         'z-index': '100'
                 })
-                //     .appendTo($('body'))
+                       .appendTo($('body'))
                 //     .animate({
                 //     'top': cart.offset().top + 10,
                 //         'left': cart.offset().left + 10,
