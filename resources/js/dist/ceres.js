@@ -593,8 +593,8 @@ Vue.component("add-to-basket", {
             if (imgtodrag) {
                 var imgclone = imgtodrag.clone()
                     .offset({
-                    top: imgtodrag.offset().top,
-                    left: imgtodrag.offset().left
+                    top: 0,
+                    right: imgtodrag.offset().top
                 })
                     .css({
                     'opacity': '0.5',
@@ -605,10 +605,10 @@ Vue.component("add-to-basket", {
                 })
                     .appendTo($('body'))
                     .animate({
-                        'top': 0,
-                        'right': cart.offset().left + 10,
-                        'width': 75,
-                        'height': 75
+                      'top': cart.offset().top + 10,
+                      'left': cart.offset().left + 10,
+                      'width': 75,
+                      'height': 75
                 }, 1000, 'easeInOutExpo');
 
                 // imgclone.animate({
