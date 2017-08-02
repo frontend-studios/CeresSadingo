@@ -579,7 +579,7 @@ Vue.component("add-to-basket", {
         /**
          * add an item to basket-resource
          */
-        addToBasket: function addToBasket() {
+        addToBasket: function addToBasket(scope, element, attributes) {
 
             var basketObject = {
                 variationId: this.variationId,
@@ -618,7 +618,6 @@ Vue.component("add-to-basket", {
             //         $(this).detach()
             //     });
             //   }
-            function link(scope, element, attributes) {
               element.on('click', function(event){
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                     var offsetTopCart = cartElem.prop('offsetTop');
@@ -662,8 +661,6 @@ Vue.component("add-to-basket", {
                       imgClone.remove();
                     }, 1500);
                   });
-                };
-
 
                 return {
                   restrict: 'E',
