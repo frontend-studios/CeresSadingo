@@ -144,8 +144,10 @@
             <script src="{{ plugin_path('Ceres') }}/js/dist/ceres-vendor.js"></script>
             <script src="{{ plugin_path('Ceres') }}/js/src/app.config.js"></script>
             <script src="{{ plugin_path('CeresSadingo') }}/js/dist/ceres-app.js"></script>
+            <script src="{{ plugin_path('CeresSadingo') }}/js/jquery/jquery-ui.min.js"></script>
         {% else %}
             {# TODO remove douplicate import #}
+            <script src="{{ plugin_path('CeresSadingo') }}/js/jquery/jquery-ui.min.js"></script>
             <script src="{{ plugin_path('Ceres') }}/js/lang/{{ lang }}.js"></script>
             <script>var Translations = Languages['{{ lang }}'];</script>
 
