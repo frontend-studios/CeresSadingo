@@ -601,12 +601,12 @@ Vue.component("add-to-basket", {
                         'position': 'absolute',
                         'height': '150px',
                         'width': '150px',
-                        'z-index': '100'
+                        'z-index': '99999'
                 })
                     .appendTo($('body'))
                     .animate({
-                        'top': cart.offset().top + 10,
-                        'left': cart.offset().left + 10,
+                        'top': 0,
+                        'right': cart.offset().left + 10,
                         'width': 75,
                         'height': 75
                 }, 1000, 'easeInOutExpo');
