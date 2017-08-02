@@ -618,14 +618,15 @@ Vue.component("add-to-basket", {
             //         $(this).detach()
             //     });
             //   }
-
+            function link(scope, element, attributes) {
+              element.on('click', function(event){
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                     var offsetTopCart = cartElem.prop('offsetTop');
                     var offsetLeftCart = cartElem.prop('offsetLeft');
                     var widthCart = cartElem.prop('offsetWidth');
                     var heightCart = cartElem.prop('offsetHeight');
 
-                    var imgElem = angular.element(document.getElementsByClassName("owl-stage active"));
+                    var imgElem = angular.element(document.getElementsByClassName("active"));
                     alert(imgElem);
                     var parentElem = angular.element(event.target.parentNode.parentNode);
                     var offsetLeft = imgElem.prop("offsetLeft");
@@ -660,7 +661,8 @@ Vue.component("add-to-basket", {
                       cartElem.removeClass('shakeit');
                       imgClone.remove();
                     }, 1500);
-
+                  });
+                };
 
 
                 return {
