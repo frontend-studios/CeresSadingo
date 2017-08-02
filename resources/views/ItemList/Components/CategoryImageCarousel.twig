@@ -5,7 +5,7 @@
             <item-lazy-img template="#vue-item-lazy-img" v-if="$index === 0 && !disableLazyLoad" :image-url="imageUrl.url"
                         :alt="altText"></item-lazy-img>
 
-            <img v-if="$index !== 0 && !disableLazyLoad" class="img-fluid owl-lazy MaxisCarousel" :data-src="imageUrl.url" :alt="altText">
+            <img v-if="$index !== 0 && !disableLazyLoad" class="img-fluid owl-lazy ${_uid}" :data-src="imageUrl.url" :alt="altText">
 
             <img v-else class="img-fluid" :src="imageUrl.url" :alt="altText">
 
