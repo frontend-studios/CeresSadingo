@@ -229,11 +229,7 @@ a {
     transition-duration: 5s;
     transition-timing-function: linear;
 }
-.wrapper {
-    width: 705px;
-    margin: 20px auto;
-    padding: 20px;
-}
+
 .clear {
     clear: both;
 }
