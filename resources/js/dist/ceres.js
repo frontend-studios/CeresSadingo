@@ -589,7 +589,7 @@ Vue.component("add-to-basket", {
 
             var cart = $('.toggle-basket-preview');
             var imgtodrag = $('.owl-stage').find(".active").eq(0);
-            
+
             if (imgtodrag) {
                 var imgclone = imgtodrag.clone()
                     .offset({
@@ -603,13 +603,13 @@ Vue.component("add-to-basket", {
                         'width': '150px',
                         'z-index': '100'
                 })
-                       .appendTo($('body'))
-                //     .animate({
-                //     'top': cart.offset().top + 10,
-                //         'left': cart.offset().left + 10,
-                //         'width': 75,
-                //         'height': 75
-                // }, 1000, 'easeInOutExpo');
+                    .appendTo($('body'))
+                    .animate({
+                    'top': cart.offset().top + 10,
+                        'left': cart.offset().left + 10,
+                        'width': 75,
+                        'height': 75
+                }, 1000, 'easeInOutExpo');
 
                 setTimeout(function () {
                     cart.effect("shake", {
