@@ -293,6 +293,11 @@ a {
 .product-list li {
   padding: 0;
 }
+/*Farbe für die Tab Links*/
+.nav-tabs a {
+  color: #FF80AB;
+}
+
 
 /* Artikelseite Mobile */
 @media (max-width: 767px) {
