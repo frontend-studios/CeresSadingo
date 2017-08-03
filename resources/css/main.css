@@ -198,7 +198,7 @@ a {
     border: none !important;
 }
 /***** Warenkorb **************************************************************/
-.basket-item-infos a {
+.basket-item-infos a, .item-details a {
   color:#FD98BB;
 }
 /*Warenkorb Animation*/
