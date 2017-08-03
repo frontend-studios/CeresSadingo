@@ -587,100 +587,10 @@ Vue.component("add-to-basket", {
                 basketItemOrderParams: this.item.properties
             };
 
-            // var cart = $('.toggle-basket-preview');
-            // var imgtodrag = $('.owl-stage').find(".active").eq(0);
-            //
-            // if (imgtodrag) {
-            //   var imgclone = imgtodrag.clone()
-            //     .offset({
-            //       top: imgtodrag.offset().top,
-            //       left: imgtodrag.offset().left
-            //     })
-            //     .css({
-            //       'opacity': '0.5',
-            //       'position': 'absolute',
-            //       'height': '150px',
-            //       'width': '150px',
-            //       'z-index': '99999'
-            //     })
-            //     .appendTo($('body'))
-            //     .animate({
-            //       'top': cart.offset().top + 10,
-            //       'left': cart.offset().left + 10,
-            //       'width': 75,
-            //       'height': 75
-            //     }, 1000, 'easeInOutExpo');
-            //
-            //     imgclone.animate({
-            //       'width': 0,
-            //       'height': 0
-            //     }, function () {
-            //         $(this).detach()
-            //     });
-            //   }
-
-
-                    function link(scope, element, attributes) {
-                      element.on('click', function(event){
-                        var id = '82';
-                        var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
-                        var offsetTopCart = cartElem.prop('offsetTop');
-                        var offsetLeftCart = cartElem.prop('offsetLeft');
-                        var widthCart = cartElem.prop('offsetWidth');
-                        var heightCart = cartElem.prop('offsetHeight');
-                        var imgElemClass = 'img-fluid lazy ' + id;
-                        var parentElemClass = 'owl-carousel ' + id - 1;
-
-                        var imgElem = angular.element(document.getElementsByClassName(imgElemClass));
-                        var parentElem = angular.element(document.getElementsByClassName(parentElemClass));
-
-
-                        var offsetLeft = imgElem.prop("offsetLeft");
-                        var offsetTop = imgElem.prop("offsetTop");
-                        var imgSrc = imgElem.prop("currentSrc");
-                        var imgClone = angular.element('<img class="troll" src="' + imgSrc + '"/>');
-                        imgClone.css({
-                          'height': '150px',
-                          'position': 'absolute',
-                          'top': offsetTop + 'px',
-                          'left': offsetLeft + 'px',
-                          'opacity': 0.5
-                        });
-                        imgClone.addClass('itemaddedanimate');
-
-                        parentElem.append(imgClone);
-
-                        setTimeout(function () {
-                          imgClone.css({
-                            'height': '75px',
-                            'top': (offsetTopCart+heightCart/2)+'px',
-                            'left': (offsetLeftCart+widthCart/2)+'px',
-                            'opacity': 0.5
-                          });
-                        }, 500);
-                        setTimeout(function () {
-                          imgClone.css({
-                            'height': 0,
-                            'opacity': 0.5
-
-                          });
-                          cartElem.addClass('shakeit');
-                        }, 1000);
-                        setTimeout(function () {
-                          cartElem.removeClass('shakeit');
-                          imgClone.remove();
-                        }, 1500);
-                      });
-                    };
-
-
-
-
-
 
             ResourceService.getResource("basketItems").push(basketObject);
 
-            // this.openAddToBasketOverlay();
+             this.openAddToBasketOverlay();
 
         },
         directToItem: function directToItem() {
