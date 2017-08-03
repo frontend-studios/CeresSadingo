@@ -579,7 +579,7 @@ Vue.component("add-to-basket", {
         /**
          * add an item to basket-resource
          */
-        addToBasket: function addToBasket(imgId) {
+        addToBasket: function addToBasket(itemId) {
 
             var basketObject = {
                 variationId: this.variationId,
@@ -587,7 +587,7 @@ Vue.component("add-to-basket", {
                 basketItemOrderParams: this.item.properties
             };
 
-
+            alert(itemId);
             ResourceService.getResource("basketItems").push(basketObject);
 
              this.openAddToBasketOverlay();
