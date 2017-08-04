@@ -28,7 +28,7 @@
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
-{% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
+{% set category3 = services.category.get(config("CeresSadingo.homepage.homepageCategory3"), lang) %}
 {% set paginatedCategoryList1 =
   services.itemLoader.loadForTemplate(
   'Ceres::ItemList.ItemListView',
