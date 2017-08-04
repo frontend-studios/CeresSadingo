@@ -35,6 +35,8 @@
 
 {% set loadingAnimationType = config("Ceres.item.loading_animation_type") %}
 
+{% set shippingscostsUrl =  config("CeresSadingo.category.shippingscostsUrl") %}
+
 {% block PageBody %}
 
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterList") }}

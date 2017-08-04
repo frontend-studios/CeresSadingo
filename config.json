@@ -160,6 +160,13 @@
 	},
 	{
 			"tab"       : "Kategorien",
+			"key"       : "category.shippingscostsUrl",
+			"label"     : "Versandkosten Link",
+			"type"      : "text",
+			"default"   : "/"
+	},
+	{
+			"tab"       : "Kategorien",
 			"key"       : "category.categoryItemInfo",
 			"label"     : "TEST Category",
 			"type"      : "text",
