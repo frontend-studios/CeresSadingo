@@ -87,14 +87,26 @@ a {
 .cmp-address-list .item-edit .fa:hover {
   color: #4d4f4d;
 }
-.cmp-address-list .item input:checked + .item-inner {
-  background-color: #FCA9C6;
-}
 .add-item .fa:hover {
   color: #fd98bb;
 }
 .card .item-edit .fa:hover, .cmp-address-list .items > div:first-child .item-edit .fa:hover {
   color: #fd98bb;
+}
+
+.cmp-method-list .method-list-item input:checked+label {
+  box-shadow: inset 0 0 0 0.1rem #FF80AB;
+  border: none;
+}
+.cmp-address-list .dropdown-menu .item-inner .text-muted {
+  color: #fff !important;
+}
+.cmp-address-list .item input:checked + .item-inner {
+  background-color: #FF80AB;
+  box-shadow: 0px 2px 1px #888888;
+}
+.cmp-address-list  .fa-close:before, .cmp-address-list  .fa-remove:before, .cmp-address-list  .fa-times:before {
+  color: #d9534f
 }
 /*Bestelldetails*/
 .loading-animation > div {
