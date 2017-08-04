@@ -77,6 +77,10 @@
 .homepage_card_imgBox {
   overflow: hidden;
 }
+/*****Artikel Preview*****/
+.homepage_articlePreview .product-list li {
+  padding: 0 15px;
+}
 
 /*****Sozial*****/
   .homepage_instagram, .homepage_facebook {
