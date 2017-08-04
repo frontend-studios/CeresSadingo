@@ -160,12 +160,6 @@
 			"default"   : "/"
 	},
 	{
-		"tab"       : "Startseite",
-		"key"       : "homepage.homepageCategory3",
-		"label"     : "Category to display in the first list of items",
-		"type"      : "category_select"
-	},
-	{
 			"tab"       : "Kategorien",
 			"key"       : "category.categoryItemInfo",
 			"label"     : "TEST Category",

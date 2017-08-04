@@ -29,10 +29,7 @@
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
 {% set homepageArticlePreview1 = config("CeresSadingo.homepage.homepageArticlePreview1") %}
-{% set ArticlePreview1Result   = services.itemLoader.loadForTemplate(
-                                 'CeresSadingo::ItemList.ItemListView',
-                                 itemLoaderPresets.categoryList,
-                                 {'categoryId': homepageArticlePreview1, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+{% set ArticlePreview1Result   = services.itemLoader.loadForTemplate('CeresSadingo::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': homepageArticlePreview1, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
 {% set ArticlePreview1         = ArticlePreview1Result.documents %}
 
 {% set homepageArticlePreview2 = config("CeresSadingo.homepage.homepageArticlePreview2") %}
