@@ -28,6 +28,14 @@
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
+{% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
+{% set paginatedCategoryList1 =
+  services.itemLoader.loadForTemplate(
+  'Ceres::ItemList.ItemListView',
+  itemLoaderPresets.categoryList,
+  {'categoryId': category3.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+{% set categoryList1 = paginatedCategoryList1.documents %}
+
 {% set homepageArticlePreview1 = config("CeresSadingo.homepage.homepageArticlePreview1") %}
 {% set ArticlePreview1Result   = services.itemLoader.loadForTemplate(
                                  'Ceres::ItemList.ItemListView',
@@ -156,6 +164,32 @@
           </div>
       </div>
     </div>
+
+
+    {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
+      <div class="m-b-2 clearfix">
+          {% if homepageContainer6 | trim is empty %}
+              <div class="section-header m-b-1">
+                  <h4>{{ category3.details[0].name }}</h4>
+                  <a href="{{ services.category.getURL(category3, lang) }}"
+                     class="section-link-all"><i
+                              class="fa fa-angle-double-right"
+                              aria-hidden="true"></i> {{ trans("Ceres::Template.homepageShowAll") }}</a>
+              </div>
+              <ul class="product-list row grid">
+                  {% for item in categoryList1 %}
+                      <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                          {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                      </li>
+                  {% endfor %}
+              </ul>
+          {% else %}
+              {{ homepageContainer6 }}
+          {% endif %}
+      </div>
+  {% endif %}
+
+
 </div><!--Ende des Containers-->
 
 <div id="carouselExampleIndicators" class="carousel slide homepage_carousel" data-ride="carousel">
