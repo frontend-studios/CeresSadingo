@@ -257,6 +257,7 @@ a {
   /*Porto Info*/
   .vat-porto-info {
       font-size: 9px !important;
+      color: #FF80AB;
   }
   .single-leftside {
     height: 500px;
