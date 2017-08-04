@@ -7,6 +7,9 @@ body {
 a {
   color: #7a7f7f;
 }
+a:hover {
+  color: #7a7f7f;
+}
 /*Text größe Artikelübersicht Breadcrumb*/
 .basket-preview .totals, .btn-labeled, .small, small {
   font-size: 100% !important;
