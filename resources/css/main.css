@@ -33,7 +33,7 @@ a:hover {
   border-left: 1px solid;
 }
 .control-user a:first-child {
-  margin-right: -3px;
+  /*margin-right: -3px;*/
   border-right: 1px solid;
 }
 .control-user .pipe {
