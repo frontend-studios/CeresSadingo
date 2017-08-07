@@ -54,6 +54,13 @@ class CeresSadingoServiceProvider extends ServiceProvider
         return false;
     });
 
+		// überschreibt des Search Templates
+		$eventDispatcher->listen('IO.tpl.search', function(TemplateContainer $container, $templateData)
+		{
+				$container->setTemplate("CeresSadingo::ItemList.ItemListView");
+				return false;
+		});
+
 		// Überschreibt die Category View
 		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData)
 		{
