@@ -375,6 +375,10 @@ a:hover {
   .sidebar-categories ul li.active ul li a {
       padding-left: 2.5rem;
   }
+/***** Kasse (Checkout View) *********************************/
+.form-check a {
+  color: #FF80AB;
+}
 /***** Einzel Artikel Seite (SingleItem View) *********************************/
 .base-price-amount {
   display: inline !important;
