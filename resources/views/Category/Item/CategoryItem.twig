@@ -16,7 +16,7 @@
 
 {% set page = request.get("page") | default(1) %}
 
-{% set paginatedResult      = services.itemLoader.loadForTemplate('Ceres::
+{% set paginatedResult      = services.itemLoader.loadForTemplate('CeresSadingo::
 .ItemListView', itemLoaderPresets.categoryList, {'categoryId':category.id, 'page':page, 'items':itemsPerPage, 'facets': facetParams, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
 
 {% set pageMax = (paginatedResult.total / itemsPerPage) | round %}
