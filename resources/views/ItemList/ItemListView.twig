@@ -67,7 +67,14 @@
 
         <div class="row">
 
-          {% if items %}
+          {{ items }}
+          {{ itemsPerPage }} 
+          {{ itemsPerPage.items }}
+          {{ sorting }}
+          {{ sorting.config }}
+
+          {% if itemsPerPage %}
+
             <p> Items ja oder nein</p>
 
           {% endif %}
