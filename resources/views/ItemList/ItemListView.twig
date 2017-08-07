@@ -5,6 +5,8 @@
     {% set page = request.get("page") %}
 {% endif %}
 
+{% set itemsforSearch = request.get("items") %}
+
 {% set rowsPerPage = config('Ceres.pagination.rowsPerPage') | split(', ') %}
 {% set columnsPerPage = config('Ceres.pagination.columnsPerPage') %}
 {% set itemsPerPage = rowsPerPage[0] * columnsPerPage %}
@@ -67,12 +69,7 @@
 
         <div class="row">
 
-          {{ item }}
-          {{ itemData }}
-          {{ itemList }}
-          
-          {{ sorting }}
-          {{ sorting.config }}
+          <p>{{ itemsforSearch }}</p>
 
           {% if itemsPerPage %}
 
