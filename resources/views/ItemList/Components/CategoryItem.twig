@@ -19,9 +19,8 @@
 <script type="x/template" id="vue-category-item">
     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
-        <itemid >{{ item }}</itemid>
-        <itemdataj >{{ itemDataJ.images }}</itemdataj>
-        <span v-resource-bind:currentVariation="item.documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>
+        <div>${ itemData.calculatedPrices.default.currency }</div>
+        <div>${ itemData.id }</div>
 
         <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
             <div class="thumb-inner">
