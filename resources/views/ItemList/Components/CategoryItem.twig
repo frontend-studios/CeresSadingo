@@ -21,6 +21,7 @@
 
         <itemid >{{ item }}</itemid>
         <itemdataj >{{ itemDataJ.images }}</itemdataj>
+        <span v-resource-bind:currentVariation="item.documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>
 
         <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
             <div class="thumb-inner">
