@@ -7,7 +7,7 @@
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
 
 {% if enableCarousel is not defined %}
-    {% if config("Ceres.item.enable_image_carousel") == "true" %}itemData.
+    {% if config("Ceres.item.enable_image_carousel") == "true" %}
         {% set enableCarousel = "true" %}
     {% else %}
         {% set enableCarousel = "false" %}
