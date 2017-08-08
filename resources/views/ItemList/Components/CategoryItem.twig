@@ -2,7 +2,7 @@
 
 {% set showHeaderNavBar = config("Ceres.header.show_navbars") %}
 {% set configItemName = config("Ceres.item.name") %}
-{% set itemId = config("Ceres.item") %}
+{% set itemId = config("Ceres.item.id") %}
 
 {% set lang = services.sessionStorage.getLang() %}
 {% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
@@ -19,11 +19,6 @@
     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
         <itemid >{{ itemId }}</itemid>
-        <itemdata> {{ itemData }}</itemdata>
-
-
-        <itemid2>${ {{ itemId }} }</itemid2>
-        <itemdata2>${  {{ itemData }} }</itemdata2>
 
         <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
             <div class="thumb-inner">
