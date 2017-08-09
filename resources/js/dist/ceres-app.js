@@ -187,10 +187,13 @@ Vue.component("add-to-basket", {
                 var offsetLeftCart = cartElem.prop('offsetLeft');
                 var widthCart = cartElem.prop('offsetWidth');
                 var heightCart = cartElem.prop('offsetHeight');
-                var idclass = 'square-inner main-image ' + id;
+                var idclass = 'square-inner main-image ' + itemid;
 
-                var imgElem = angular.element(document.getElementsByClassName(idclass));
+                alert(idclass);
 
+                var imgElemA = angular.element(document.getElementsByClassName(idclass));
+                var imgElemB = angular.element(imgElemA[0].getElementsByClassName('owl-item active'));
+                var imgElem angular.element(imgElemB[0].getElementsByClassName('img-fluid owl-lazy'));
 
                 var parentElem = angular.element(event.target.parentNode.parentNode);
 
