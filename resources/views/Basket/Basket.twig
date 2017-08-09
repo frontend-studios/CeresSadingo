@@ -1,6 +1,8 @@
 {% extends getPartial('page-design') %}
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
+{% set basketInformation  = config("CeresSadingo.basket.basketInformation") %}
+
 {% block PageBody %}
 
     {{ component( "Ceres::Basket.Components.BasketList" ) }}
@@ -33,6 +35,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-7 m-b-1">
                 <coupon template="#vue-coupon"></coupon>
+            </div>
+            <div class="col-xs-12 col-sm-7 m-b-1">
+                {{ basketInformation }}
             </div>
             <div class="col-xs-12 col-md-5">
                 <basket-totals template="#vue-basket-totals" :config="{{ config("Ceres.basket.data")|split(', ')|json_encode() }}"></basket-totals>

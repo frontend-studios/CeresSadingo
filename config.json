@@ -166,10 +166,10 @@
 			"default"   : "/"
 	},
 	{
-			"tab"       : "Kategorien",
-			"key"       : "category.categoryItemInfo",
-			"label"     : "TEST Category",
+			"tab"       : "Warenkorb",
+			"key"       : "basket.basketInformation",
+			"label"     : "Informations Feld (unter dem Gutschein)",
 			"type"      : "text",
-			"default"   : "/"
+			"default"   : "*sofern Sie ein anderes Lieferland als Deutschland auswählen, passen sich die Versandkosten im Bestellablauf entsprechend an."
 	}
 ]
