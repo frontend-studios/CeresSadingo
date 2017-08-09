@@ -54,7 +54,14 @@ class CeresSadingoServiceProvider extends ServiceProvider
         return false;
     });
 
-		// überschreibt des Search Templates
+		// überschreibt das Basket Templates
+		$eventDispatcher->listen('IO.tpl.basket', function(TemplateContainer $container, $templateData)
+		{
+				$container->setTemplate("CeresSadingo::Basket.Basket");
+				return false;
+		});
+
+		// überschreibt das Search Templates
 		$eventDispatcher->listen('IO.tpl.search', function(TemplateContainer $container, $templateData)
 		{
 				$container->setTemplate("CeresSadingo::ItemList.ItemListView");
