@@ -586,6 +586,8 @@ Vue.component("add-to-basket", {
                 basketItemOrderParams: this.item.properties
             };
 
+            alert("test");
+
             ResourceService.getResource("basketItems").push(basketObject);
 
             // this.openAddToBasketOverlay();
