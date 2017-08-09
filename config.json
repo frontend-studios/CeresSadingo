@@ -168,7 +168,7 @@
 	{
 			"tab"       : "Warenkorb",
 			"key"       : "basket.basketInformation",
-			"label"     : "Informations Feld (unter dem Gutschein)",
+			"label"     : "Informations Feld",
 			"type"      : "text",
 			"default"   : "*sofern Sie ein anderes Lieferland als Deutschland auswählen, passen sich die Versandkosten im Bestellablauf entsprechend an."
 	}
