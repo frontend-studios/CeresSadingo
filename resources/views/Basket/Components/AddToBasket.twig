@@ -3,11 +3,8 @@
 <script type="x/template" id="vue-add-to-basket">
 
     <div>
-        <p>${ item.variation }</p>
-        <p2>${ item.variation.data.item.id }</p2>
-        <p3>${ item.item.id }</p3>
         <div class="add-to-basket-lg-container hidden-md-down" v-if="(!showQuantity && useLargeScale)"
-             v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.addToBasket") }}" @click="addToBasket(item.variation.id)">
+             v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.addToBasket") }}" @click="addToBasket(item.item.id)">
             <i class="fa fa-cart-plus fa-lg mobile-icon-right"></i>
         </div>
 
