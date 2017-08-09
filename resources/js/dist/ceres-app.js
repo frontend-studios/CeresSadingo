@@ -170,14 +170,14 @@ Vue.component("add-to-basket", {
         /**
          * add an item to basket-resource
          */
-        addToBasket: function addToBasket() {
+        addToBasket: function addToBasket(itemid) {
             var basketObject = {
                 variationId: this.variationId,
                 quantity: this.quantity,
                 basketItemOrderParams: this.item.properties
             };
 
-            alert("test");
+            alert(itemid);
 
             ResourceService.getResource("basketItems").push(basketObject);
 
