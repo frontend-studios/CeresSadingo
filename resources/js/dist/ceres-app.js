@@ -187,7 +187,7 @@ Vue.component("add-to-basket", {
                 var offsetLeftCart = cartElem.prop('offsetLeft');
                 var widthCart = cartElem.prop('offsetWidth');
                 var heightCart = cartElem.prop('offsetHeight');
-                var idclass = 'img-fluid lazy ' + id;
+                var idclass = 'square-inner main-image ' + id;
 
                 var imgElem = angular.element(document.getElementsByClassName(idclass));
 
