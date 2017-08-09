@@ -62,7 +62,7 @@
 
                 <div class="m-b-3">
                     <span class="articlenumber small text-muted">
-                        <b>{{ trans("Ceres::Template.itemNumber") }}</b>
+                        <b>{{ trans("Ceres::Template.itemId") }}</b>
                         <span v-resource-bind:currentVariation="item.documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>
                     </span>
                 </div>
@@ -187,7 +187,7 @@
                                 <tbody>
                                 {% if 'item.id' in itemData or 'all' in itemData %}
                                     <tr>
-                                        <td>{{ trans("Ceres::Template.itemNumber") }}</td>
+                                        <td>{{ trans("Ceres::Template.itemId") }}</td>
                                         <td>{{ item.documents[0].data.item.id }}</td>
                                     </tr>
                                 {% endif %}
