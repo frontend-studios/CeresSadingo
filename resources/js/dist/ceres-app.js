@@ -179,7 +179,7 @@ Vue.component("add-to-basket", {
 
             ResourceService.getResource("basketItems").push(basketObject);
 
-            this.openAddToBasketOverlay();
+            // this.openAddToBasketOverlay();
         },
         directToItem: function directToItem() {
             window.location.assign(this.itemUrl);
