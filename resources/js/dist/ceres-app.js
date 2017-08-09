@@ -179,8 +179,6 @@ Vue.component("add-to-basket", {
 
             alert(itemid);
 
-            function link(scope, element, attributes) {
-              element.on('click', function(event){
                 var id = '1';
                 var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                 var offsetTopCart = cartElem.prop('offsetTop');
@@ -233,8 +231,7 @@ Vue.component("add-to-basket", {
                   cartElem.removeClass('shakeit');
                   imgClone.remove();
                 }, 1500);
-              });
-            };
+
 
 
 
