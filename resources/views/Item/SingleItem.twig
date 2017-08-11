@@ -67,6 +67,10 @@
                     </span>
                 </div>
 
+                <div class="row m-b-1">
+                    <p>{{ item.documents[0].data }}</p>
+                </div>
+
                 {% if variations is not null %}
                 <div class="row m-b-1">
                     <variation-select template="#vue-variation-select" :attributes="{{ attributeNameMap | json_encode() }}" :variations="{{ variations | json_encode() }}" preselect="{{ item.documents[0].data.variation.id }}"></variation-select>
