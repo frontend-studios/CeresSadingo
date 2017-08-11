@@ -63,7 +63,10 @@
                 <hr>
 
                 <div class="row m-b-1">
-                    <p>{{ item.documents[0].data.item }}</p>
+                    <p>{{ item.documents[0].data.all }}</p>
+                    <p2>{{ item.documents[0] }}</p2>
+                    <p3>{{ item.documents[0].data.duration }}</p3>
+                    <p4>{{ item.documents[0].data.unit }}</p4>
                 </div>
 
                 {% if variations is not null %}
