@@ -180,13 +180,38 @@ Vue.component("add-to-basket", {
         /**
          * add an item to basket-resource
          */
-        addToBasket: function addToBasket() {
+        addToBasket: function addToBasket(itemid) {
             if (this.item.filter.isSalable) {
                 var basketObject = {
                     variationId: this.variationId,
                     quantity: this.quantity,
                     basketItemOrderParams: this.item.properties
                 };
+
+                  alert(itemid);
+
+                    var id = '1';
+                    var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
+                    var offsetTopCart = cartElem.prop('offsetTop');
+                    var offsetLeftCart = cartElem.prop('offsetLeft');
+                    var widthCart = cartElem.prop('offsetWidth');
+                    var heightCart = cartElem.prop('offsetHeight');
+                    var idclass = 'square-inner main-image ' + itemid;
+
+                    alert(idclass);
+
+                    var imgElemA = angular.element(document.getElementsByClassName(idclass));
+                    var imgElemB = angular.element(imgElemA[0].getElementsByClassName('owl-item active'));
+                    var imgElem = angular.element(imgElemB[0].getElementsByClassName('img-fluid owl-lazy'));
+
+                    // var parentElem = angular.element(event.target.parentNode.parentNode);
+
+
+                    var offsetLeft = imgElem.prop("offsetLeft");
+                    var offsetTop = imgElem.prop("offsetTop");
+                    var imgSrc = imgElem.prop("currentSrc");
+                    alert(imgSrc);
+
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
                     this.openAddToBasketOverlay();
@@ -6821,7 +6846,7 @@ module.exports = function ($) {
 	 * Alias: `accounting.parse(string)`
 	 *
 	 * Decimal must be included in the regular expression to match floats (defaults to
-	 * accounting.settings.number.decimal), so if the number uses a non-standard decimal 
+	 * accounting.settings.number.decimal), so if the number uses a non-standard decimal
 	 * separator, provide it as the second argument.
 	 *
 	 * Also matches bracketed negatives (eg. "$ (1.99)" => -1.99)
