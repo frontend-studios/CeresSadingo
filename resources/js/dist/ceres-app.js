@@ -193,44 +193,46 @@ Vue.component("add-to-basket", {
                 var imgElemB = angular.element(imgElemA[0].getElementsByClassName('owl-item active'));
                 var imgElem = angular.element(imgElemB[0].getElementsByClassName('img-fluid owl-lazy'));
 
-                var parentElem = angular.element(event.target.parentNode.parentNode);
+                // var parentElem = angular.element(event.target.parentNode.parentNode);
 
 
                 var offsetLeft = imgElem.prop("offsetLeft");
                 var offsetTop = imgElem.prop("offsetTop");
                 var imgSrc = imgElem.prop("currentSrc");
-                var imgClone = angular.element('<img class="troll" src="' + imgSrc + '"/>');
-                imgClone.css({
-                  'height': '150px',
-                  'position': 'absolute',
-                  'top': offsetTop + 'px',
-                  'left': offsetLeft + 'px',
-                  'opacity': 0.5
-                });
-                imgClone.addClass('itemaddedanimate');
+                alert(imgSrc);
 
-                parentElem.append(imgClone);
-
-                setTimeout(function () {
-                  imgClone.css({
-                    'height': '75px',
-                    'top': (offsetTopCart+heightCart/2)+'px',
-                    'left': (offsetLeftCart+widthCart/2)+'px',
-                    'opacity': 0.5
-                  });
-                }, 500);
-                setTimeout(function () {
-                  imgClone.css({
-                    'height': 0,
-                    'opacity': 0.5
-
-                  });
-                  cartElem.addClass('shakeit');
-                }, 1000);
-                setTimeout(function () {
-                  cartElem.removeClass('shakeit');
-                  imgClone.remove();
-                }, 1500);
+                // var imgClone = angular.element('<img class="troll" src="' + imgSrc + '"/>');
+                // imgClone.css({
+                //   'height': '150px',
+                //   'position': 'absolute',
+                //   'top': offsetTop + 'px',
+                //   'left': offsetLeft + 'px',
+                //   'opacity': 0.5
+                // });
+                // imgClone.addClass('itemaddedanimate');
+                //
+                // parentElem.append(imgClone);
+                //
+                // setTimeout(function () {
+                //   imgClone.css({
+                //     'height': '75px',
+                //     'top': (offsetTopCart+heightCart/2)+'px',
+                //     'left': (offsetLeftCart+widthCart/2)+'px',
+                //     'opacity': 0.5
+                //   });
+                // }, 500);
+                // setTimeout(function () {
+                //   imgClone.css({
+                //     'height': 0,
+                //     'opacity': 0.5
+                //
+                //   });
+                //   cartElem.addClass('shakeit');
+                // }, 1000);
+                // setTimeout(function () {
+                //   cartElem.removeClass('shakeit');
+                //   imgClone.remove();
+                // }, 1500);
 
 
 
