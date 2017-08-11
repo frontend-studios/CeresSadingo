@@ -191,7 +191,7 @@ Vue.component("add-to-basket", {
 
                 var imgElemA = angular.element(document.getElementsByClassName(idclass));
                 var imgElemB = angular.element(imgElemA[0].getElementsByClassName('owl-item active'));
-                var imgElem angular.element(imgElemB[0].getElementsByClassName('img-fluid owl-lazy'));
+                var imgElem = angular.element(imgElemB[0].getElementsByClassName('img-fluid owl-lazy'));
 
                 var parentElem = angular.element(event.target.parentNode.parentNode);
 
