@@ -203,6 +203,12 @@ Vue.component("add-to-basket", {
                     if (!imgElemDiv[0].innerHTML){
                       alert("imgElemDiv ist leer");
                     }
+                    if (imgElemDiv[0].innerHTML == undefined){
+                      alert("imgElemDiv ist undefined");
+                    }
+                    if (!imgElemDiv){
+                      alert("imgElemDiv ist leer 3");
+                    }
 
                     var offsetTop = imgElemDiv.prop("offsetTop");
                     var offsetLeft = imgElemDiv.prop("offsetLeft");
