@@ -199,7 +199,7 @@ Vue.component("add-to-basket", {
                     alert(parentElem[0].innerHTML);
                     var imgElemDiv = angular.element(parentElem[0].getElementsByClassName('owl-item active'));
                     alert(imgElemDiv[0].innerHTML);
-                    var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
+                    var imgElem = imgElemDiv[0].getElementsByClassName('img-fluid lazy');
                     alert(imgElem[0].innerHTML);
 
                     var offsetLeft = imgElemDiv.prop("offsetLeft");
