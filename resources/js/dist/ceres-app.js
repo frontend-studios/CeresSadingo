@@ -232,7 +232,7 @@ Vue.component("add-to-basket", {
                     }, 1500);
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
-                    this.openAddToBasketOverlay();
+                    // this.openAddToBasketOverlay();
                 }.bind(this)).fail(function (response) {
                     NotificationService.error(Translations.Template[_ExceptionMap2.default.get(response.data.exceptionCode.toString())]).closeAfter(5000);
                 });
