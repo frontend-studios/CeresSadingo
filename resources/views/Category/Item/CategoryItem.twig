@@ -68,25 +68,25 @@
             </div>
         {% endif %}
 
-      <div class="list-controls m-b-3">
-          <div class="list-controls-inner">
-              <div class="row">
-                  <div class="col-xs-12">
-                      <div class="list-wrapper">
-                          <item-list-sorting template="#vue-item-list-sorting" :sort-data="{{ config("Ceres.sort.data") | split(', ') | json_encode() }}"></item-list-sorting>
-                          <items-per-page
-                              template="#vue-items-per-page"
-                              :columns-per-page="{{ config("Ceres.pagination.columnsPerPage") | json_encode() }}"
-                              :rows-per-page="{{ config("Ceres.pagination.rowsPerPage") | split(', ') | json_encode() }}"></items-per-page>
-                          <item-filter-list :facets="{{ paginatedResult.facets | json_encode }}"></item-filter-list>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <div class="list-controls m-b-3">
+            <div class="list-controls-inner">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="list-wrapper">
+                            <item-list-sorting template="#vue-item-list-sorting" :sort-data="{{ config("Ceres.sort.data") | split(', ') | json_encode() }}"></item-list-sorting>
+                            <items-per-page
+                                template="#vue-items-per-page"
+                                :columns-per-page="{{ config("Ceres.pagination.columnsPerPage") | json_encode() }}"
+                                :rows-per-page="{{ config("Ceres.pagination.rowsPerPage") | split(', ') | json_encode() }}"></items-per-page>
+                            <item-filter-list :facets="{{ paginatedResult.facets | json_encode }}"></item-filter-list>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-          {# TAGS #}
-          <item-filter-tag-list></item-filter-tag-list>
-      </div>
+            {# TAGS #}
+            <item-filter-tag-list></item-filter-tag-list>
+        </div>
 
         <div class="row">
 
@@ -149,4 +149,6 @@
     {% if page+1 <= pageMax %}
         <link rel=“next“ href=“{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}?{{ query | merge({'page' : page+1 }) | url_encode }}“ />
     {% endif %}
+
+    <title>{{ category.details.first.name }} | {{ config("Ceres.header.company_name") }}</title>
 {% endblock %}
