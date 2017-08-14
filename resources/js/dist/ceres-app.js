@@ -197,9 +197,8 @@ Vue.component("add-to-basket", {
 
                     var parentElem = angular.element(document.getElementsByClassName(idclass));
                     var imgElemDiv = angular.element(parentElem[0].getElementsByClassName('owl-item active'));
-                    var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
 
-
+                    var offsetTop = imgElem.prop("offsetTop");
                     var offsetLeft = imgElemDiv.prop("offsetLeft");
                     var imgSrc = imgElemDiv.prop("currentSrc");
                     var imgClone = angular.element('<img class="owl-item-clone" src="' + imgSrc + '"/>');
