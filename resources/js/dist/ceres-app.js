@@ -204,8 +204,10 @@ Vue.component("add-to-basket", {
                     var offsetTop = imgElem.prop("offsetTop");
                     var imgSrc = imgElem.prop("currentSrc");
 
+                    alert(offsetLeft);
+                    alert(offsetTop);
+
                     var imgClone = angular.element('<img class="troll maxibild22" src="' + imgSrc + '"/>');
-                    alert(imgClone);
                     imgClone.css({
                       'height': '150px',
                       'position': 'absolute',
