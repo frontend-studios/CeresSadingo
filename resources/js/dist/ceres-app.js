@@ -200,15 +200,10 @@ Vue.component("add-to-basket", {
                     var imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
                     var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
 
-                    if (!imgElemDiv[0].innerHTML){
-                      alert("imgElemDiv ist leer");
-                    }
-                    if (imgElemDiv[0].innerHTML == undefined){
+                    if (imgElemDiv[0].innerHTML !== 'undefined'){
                       alert("imgElemDiv ist undefined");
                     }
-                    if (!imgElemDiv){
-                      alert("imgElemDiv ist leer 3");
-                    }
+
 
                     var offsetTop = imgElemDiv.prop("offsetTop");
                     var offsetLeft = imgElemDiv.prop("offsetLeft");
