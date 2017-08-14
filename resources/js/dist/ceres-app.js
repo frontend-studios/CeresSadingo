@@ -197,19 +197,22 @@ Vue.component("add-to-basket", {
 
                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
                     var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
-                    alert(imgElemParentDiv);
+                    alert(imgElemParentDiv[0].innerHTML);
                     var imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
-                    alert(imgElemDiv);
+                    alert(imgElemDiv[0].innerHTML);
                     var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
-                    alert(imgElem);
+                    alert(imgElem[0].innerHTML);
 
                     if (!imgElemDiv){
                       alert("imgElemDiv ist leer");
                     }
 
                     var offsetTop = imgElem.prop("offsetTop");
-                    var offsetLeft = imgElemDiv.prop("offsetLeft");
-                    var imgSrc = imgElemDiv.prop("currentSrc");
+                    var offsetLeft = imgElem.prop("offsetLeft");
+                    alert(offsetTop);
+                    alert(offsetLeft);
+                    
+                    var imgSrc = imgElem.prop("currentSrc");
                     var imgClone = angular.element('<img class="owl-item-clone" src="' + imgSrc + '"/>');
                     imgClone.css({
                       'height': '150px',
