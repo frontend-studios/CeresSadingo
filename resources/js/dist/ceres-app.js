@@ -228,8 +228,8 @@ Vue.component("add-to-basket", {
                       imgClone.css({
                         'height': 0,
                         'opacity': 0.5
-
                       });
+                    }, 1500);
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
                     this.openAddToBasketOverlay();
