@@ -204,7 +204,7 @@ Vue.component("add-to-basket", {
                     var offsetTop = imgElem.prop("offsetTop");
                     var imgSrc = imgElem.prop("currentSrc");
 
-                    var imgClone = angular.element('<img class="troll" src="' + imgSrc + '"/>');
+                    var imgClone = angular.element('<img class="troll maxibild22" src="' + imgSrc + '"/>');
                     imgClone.css({
                       'height': '150px',
                       'position': 'absolute',
@@ -214,22 +214,22 @@ Vue.component("add-to-basket", {
                     });
                     imgClone.addClass('itemaddedanimate');
 
-                    parentElem.append(imgClone);
-
-                    setTimeout(function () {
-                      imgClone.css({
-                        'height': '75px',
-                        'top': (offsetTopCart+heightCart/2)+'px',
-                        'left': (offsetLeftCart+widthCart/2)+'px',
-                        'opacity': 0.5
-                      });
-                    }, 500);
-                    setTimeout(function () {
-                      imgClone.css({
-                        'height': 0,
-                        'opacity': 0.5
-
-                      });
+                    // parentElem.append(imgClone);
+                    //
+                    // setTimeout(function () {
+                    //   imgClone.css({
+                    //     'height': '75px',
+                    //     'top': (offsetTopCart+heightCart/2)+'px',
+                    //     'left': (offsetLeftCart+widthCart/2)+'px',
+                    //     'opacity': 0.5
+                    //   });
+                    // }, 500);
+                    // setTimeout(function () {
+                    //   imgClone.css({
+                    //     'height': 0,
+                    //     'opacity': 0.5
+                    //
+                    //   });
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
                     this.openAddToBasketOverlay();
