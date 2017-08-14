@@ -204,16 +204,8 @@ Vue.component("add-to-basket", {
                       alert("imgElemDiv ist leer");
                     }
 
-                    var offsetTop = imgElemParentDiv.prop("offsetTop");
-                    var offsetLeft = imgElemParentDiv.prop("offsetLeft");
-
-                    var offsetTop2 = imgElem.prop("offsetTop");
-                    var offsetLeft2 = imgElem.prop("offsetLeft");
-                    alert("Position imgElem:" + offsetLeft2 + " " + offsetTop2);
-
-                    var offsetTop3 = imgElemDiv.prop("offsetTop");
-                    var offsetLeft3 = imgElemDiv.prop("offsetLeft");
-                    alert("Position imgElemDiv:" + offsetLeft3 + " " + offsetTop3);
+                    var offsetTop = imgElemDiv.prop("offsetTop");
+                    var offsetLeft = imgElemDiv.prop("offsetLeft");
 
                     var imgSrc = imgElem.prop("currentSrc");
                     var imgClone = angular.element('<img class="owl-item-clone" src="' + imgSrc + '"/>');
