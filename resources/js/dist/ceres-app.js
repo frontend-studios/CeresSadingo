@@ -198,12 +198,14 @@ Vue.component("add-to-basket", {
                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
                     var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
                     var imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
-                    var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
+                    var imgElem;
 
                     if (imgElemDiv[0].innerHTML !== 'undefined'){
-                      alert("imgElemDiv ist undefined");
+                       imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
                     }
-
+                    else {
+                      imgElem = imgElemParentDiv;
+                    }
 
                     var offsetTop = imgElemDiv.prop("offsetTop");
                     var offsetLeft = imgElemDiv.prop("offsetLeft");
