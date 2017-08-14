@@ -201,9 +201,7 @@ Vue.component("add-to-basket", {
                     var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
 
                     var offsetLeft = imgElemDiv.prop("offsetLeft");
-                    var offsetTop = imgElemDiv.prop("offsetTop");
-                    var imgSrc = imgElem.prop("currentSrc");
-
+                    var imgSrc = imgElemDiv.prop("currentSrc");
                     var imgClone = angular.element('<img class="owl-item-clone" src="' + imgSrc + '"/>');
                     imgClone.css({
                       'height': '150px',
@@ -231,7 +229,7 @@ Vue.component("add-to-basket", {
                       });
                     }, 1000);
                     setTimeout(function () {
-                      imgClone.remove();
+                      // imgClone.remove();
                     }, 1500);
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
