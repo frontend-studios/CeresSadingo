@@ -196,21 +196,40 @@ Vue.component("add-to-basket", {
                     var heightCart = cartElem.prop('offsetHeight');
                     var idclass = 'square-inner main-image ' + itemid;
 
-                    var imgElemA = angular.element(document.getElementsByClassName(idclass));
-                    alert(imgElemA);
-                    var imgElemB = angular.element(imgElemA[0].getElementsByClassName('owl-item active'));
-                    alert(imgElemB);
-                    var imgElem = angular.element(imgElemB[0].getElementsByClassName('img-fluid lazy'));
-                    alert(imgElem);
-
-                    // var parentElem = angular.element(event.target.parentNode.parentNode);
-
+                    var parentElem = angular.element(document.getElementsByClassName(idclass));
+                    var imgElemDiv = angular.element(parentElem[0].getElementsByClassName('owl-item active'));
+                    var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
 
                     var offsetLeft = imgElem.prop("offsetLeft");
                     var offsetTop = imgElem.prop("offsetTop");
                     var imgSrc = imgElem.prop("currentSrc");
-                    alert(imgSrc);
 
+                    var imgClone = angular.element('<img class="troll" src="' + imgSrc + '"/>');
+                    imgClone.css({
+                      'height': '150px',
+                      'position': 'absolute',
+                      'top': offsetTop + 'px',
+                      'left': offsetLeft + 'px',
+                      'opacity': 0.5
+                    });
+                    imgClone.addClass('itemaddedanimate');
+
+                    parentElem.append(imgClone);
+
+                    setTimeout(function () {
+                      imgClone.css({
+                        'height': '75px',
+                        'top': (offsetTopCart+heightCart/2)+'px',
+                        'left': (offsetLeftCart+widthCart/2)+'px',
+                        'opacity': 0.5
+                      });
+                    }, 500);
+                    setTimeout(function () {
+                      imgClone.css({
+                        'height': 0,
+                        'opacity': 0.5
+
+                      });
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
                     this.openAddToBasketOverlay();
