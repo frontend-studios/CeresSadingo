@@ -188,7 +188,6 @@ Vue.component("add-to-basket", {
                     basketItemOrderParams: this.item.properties
                 };
 
-                    var id = '1';
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
                     var offsetTopCart = cartElem.prop('offsetTop');
                     var offsetLeftCart = cartElem.prop('offsetLeft');
@@ -197,6 +196,7 @@ Vue.component("add-to-basket", {
                     var idclass = 'square-inner main-image ' + itemid;
 
                     var parentElem = angular.element(document.getElementsByClassName(idclass));
+                    alert(parentElem[0].innerHTML);
                     var imgElemDiv = angular.element(parentElem[0].getElementsByClassName('owl-item active'));
                     var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
 
