@@ -197,8 +197,11 @@ Vue.component("add-to-basket", {
 
                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
                     var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
+                    alert(imgElemParentDiv);
                     var imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
+                    alert(imgElemDiv);
                     var imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
+                    alert(imgElem);
 
                     if (!imgElemDiv){
                       alert("imgElemDiv ist leer");
