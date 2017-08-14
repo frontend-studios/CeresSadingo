@@ -217,6 +217,9 @@ a:hover {
   color:#FD98BB;
 }
 /*Warenkorb Animation*/
+.owl-item-clone {
+  z-index: 3000;
+}
 .itemaddedanimate {
   -webkit-transition: all ease-in-out 0.5s;
 }
