@@ -63,9 +63,11 @@
                 <hr>
 
                 <div class="row m-b-1">
-                    <p2>{{ item.documents[0].data }}</p2>
-
-                    <div ng-repeat="data in item.documents[0]">
+                    <p1>{{ item.documents[0].data.length }}</p1>
+                    <p2>{{ item.documents[0].data.0 }}</p2>
+                    <p3>{{ item.documents[0].data.1 }}</p3>
+                    <p4>{{ item.documents[0].data.2 }}</p4>
+                    <div ng-repeat="item.documents[0]">
                       {{data}}
                     </div>
                 </div>
