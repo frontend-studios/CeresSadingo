@@ -207,7 +207,7 @@ Vue.component("add-to-basket", {
                       imgElem = imgElemParentDiv;
                     }
 
-                    var imgElemPosition = angular.element(parentElem[0].getElementsByClassName("col-xs-12 col-sm-6 col-md-4 col-lg-3" + itemid));
+                    var imgElemPosition = angular.element(parentElem[0].getElementsByClassName("col-xs-12 col-sm-6 col-md-4 col-lg-3 " + itemid));
                     var offsetTop = imgElemPosition.prop("offsetTop") + 315;
                     var offsetLeft = imgElemPosition.prop("offsetLeft") + 665;
 
