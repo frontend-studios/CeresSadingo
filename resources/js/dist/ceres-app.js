@@ -239,7 +239,7 @@ Vue.component("add-to-basket", {
                       });
                     }, 1000);
                     setTimeout(function () {
-                      // imgClone.remove();
+                      imgClone.remove();
                     }, 1500);
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
