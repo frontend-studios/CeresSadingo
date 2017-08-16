@@ -63,13 +63,7 @@
                 <hr>
 
                 <div class="row m-b-1">
-                    <p1>{{ item.documents[0].data.length }}</p1>
-                    <p2>{{ item.documents[0].data.0 }}</p2>
-                    <p3>{{ item.documents[0].data.1 }}</p3>
-                    <p4>{{ item.documents[0].data.2 }}</p4>
-                    <div ng-repeat="item.documents[0]">
-                      {{data}}
-                    </div>
+                    <p>{{ item.documents[0].data | json_encode() }}</p>
                 </div>
 
                 {% if variations is not null %}
