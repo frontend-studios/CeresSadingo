@@ -3,7 +3,7 @@
 <script type="x/template" id="vue-add-to-basket">
 
     <div>
-        <div class="add-to-basket-lg-container hidden-md-down" v-if="(!showQuantity && useLargeScale)"
+        <div class="add-to-basket-lg-container hidden-md-down maxisWarenkorb" v-if="(!showQuantity && useLargeScale)"
              v-tooltip data-toggle="tooltip" data-placement="top" title="{{ trans("Ceres::Template.addToBasket") }}" @click="addToBasket(item.item.id)">
             <i class="fa fa-cart-plus fa-lg mobile-icon-right"></i>
         </div>
