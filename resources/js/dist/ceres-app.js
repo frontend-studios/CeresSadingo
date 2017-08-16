@@ -188,15 +188,17 @@ Vue.component("add-to-basket", {
                     basketItemOrderParams: this.item.properties
                 };
 
+                    var scrollElem = document.documentElement;
+                    var scrollElemY = scrollElem.scrollTop;
+
                     var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
-                    var offsetTopCart = cartElem.prop('offsetTop');
+                    var offsetTopCart = cartElem.prop('offsetTop') + scrollElemY;;
                     var offsetLeftCart = cartElem.prop('offsetLeft');
                     var widthCart = cartElem.prop('offsetWidth');
                     var heightCart = cartElem.prop('offsetHeight');
                     var idclass = 'square-inner main-image ' + itemid;
 
                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
-                    var animationContent = angular.element(document.getElementsByClassName('animation-content'));
                     var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
                     var imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
                     var imgElem;
@@ -223,7 +225,7 @@ Vue.component("add-to-basket", {
                     });
                     imgClone.addClass('itemaddedanimate');
 
-                    animationContent.append(imgClone);
+                    parentElem.append(imgClone);
 
                     setTimeout(function () {
                       imgClone.css({
