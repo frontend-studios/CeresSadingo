@@ -63,7 +63,10 @@
                 <hr>
 
                 <div class="row m-b-1">
-                    <div>{{ itemData | json_encode() }}</div>
+                    <div>{{ itemData.condition | json_encode() }}</div>
+                    <div>{{ itemData.variationBase_content | json_encode() }}</div>
+                    <div>{{ itemData.manufacturer | json_encode() }}</div>
+                    <div>{{ itemData.description | json_encode() }}</div>
                 </div>
 
                 {% if variations is not null %}
