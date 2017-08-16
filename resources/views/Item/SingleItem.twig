@@ -2,6 +2,7 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set itemData = config("Ceres.item.data") | split(', ') %}
+{% set itemTest = config("Ceres.item") | split(', ') %}
 {% set configItemName = config("Ceres.item.name") %}
 {% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
 {% set variations = services.item.getVariationAttributeMap( item.documents[0].data.item.id  ) %}
@@ -63,7 +64,8 @@
                 <hr>
 
                 <div class="row m-b-1">
-                    <div>{{ item.documents[0].data | json_encode() }}</div>
+                    <div1>{{ item.documents[0].data | json_encode() }}</div1>
+                    <div2>{{ itemTest | json_encode() }}</div2>
                 </div>
 
                 {% if variations is not null %}
