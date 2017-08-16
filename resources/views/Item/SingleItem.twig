@@ -63,8 +63,7 @@
                 <hr>
 
                 <div class="row m-b-1">
-                    <p>{{ item.documents[0].data | json_encode() }}</p>
-                    <div>{{ item | json_encode() }}</div>
+                    <div>{{ itemData | json_encode() }}</div>
                 </div>
 
                 {% if variations is not null %}
