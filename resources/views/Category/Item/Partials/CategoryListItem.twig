@@ -24,12 +24,7 @@
 
         <div class="thumb-image">
             <div class="square-container">
-                <div class="square-inner main-image {{ item.data.id }}">
-
-                  <div>
-                  {{ item.data.id }}
-                  {{ item.data | json_encode() }}
-                  </div>
+                <div class="square-inner main-image {{ item.data.variation.id }}">
 
                     <category-image-carousel template="#vue-category-image-carousel"
                                              :image-urls="{{ item.data.images | json_encode() }} | itemImages 'urlMiddle'"
