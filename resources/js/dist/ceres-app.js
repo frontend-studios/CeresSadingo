@@ -196,6 +196,7 @@ Vue.component("add-to-basket", {
                     var idclass = 'square-inner main-image ' + itemid;
 
                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
+                    var animationContent = angular.element(document.getElementsByClassName('animation-content'));
                     var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
                     var imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
                     var imgElem;
@@ -222,7 +223,7 @@ Vue.component("add-to-basket", {
                     });
                     imgClone.addClass('itemaddedanimate');
 
-                    parentElem.append(imgClone);
+                    animationContent.append(imgClone);
 
                     setTimeout(function () {
                       imgClone.css({
