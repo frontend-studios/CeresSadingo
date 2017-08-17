@@ -180,14 +180,14 @@ Vue.component("add-to-basket", {
         /**
          * add an item to basket-resource
          */
-        addToBasket: function addToBasket(itemid) {
+        addToBasket: function addToBasket() {
             if (this.item.filter.isSalable) {
                 var basketObject = {
                     variationId: this.variationId,
                     quantity: this.quantity,
                     basketItemOrderParams: this.item.properties
                 };
-                    alert(this.variationId);
+                    alert(this.id);
                     var scrollElem = document.documentElement;
                     var scrollElemY = scrollElem.scrollTop;
 
@@ -196,7 +196,7 @@ Vue.component("add-to-basket", {
                     var offsetLeftCart = cartElem.prop('offsetLeft');
                     var widthCart = cartElem.prop('offsetWidth');
                     var heightCart = cartElem.prop('offsetHeight');
-                    var idclass = 'square-inner main-image ' + itemid;
+                    var idclass = 'square-inner main-image ';
 
                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
                     var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
