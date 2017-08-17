@@ -231,6 +231,9 @@ a:hover {
 .category_title {
   margin-top: 10px;
 }
+.categoriegrid .col-xs-12 .col-lg-9 {
+  padding-left: 0px;
+}
 .categoriegrid .item-list-frame {
   padding-right: 13px;
 }
