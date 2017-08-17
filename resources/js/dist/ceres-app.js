@@ -187,7 +187,7 @@ Vue.component("add-to-basket", {
                     quantity: this.quantity,
                     basketItemOrderParams: this.item.properties
                 };
-                    alert(this.id);
+                    alert(this.item.id);
                     var scrollElem = document.documentElement;
                     var scrollElemY = scrollElem.scrollTop;
 
