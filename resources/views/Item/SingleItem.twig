@@ -2,7 +2,6 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set itemData = config("Ceres.item.data") | split(', ') %}
-{% set itemTest = config("Ceres.item") | split(', ') %}
 {% set configItemName = config("Ceres.item.name") %}
 {% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
 {% set variations = services.item.getVariationAttributeMap( item.documents[0].data.item.id  ) %}
@@ -28,7 +27,7 @@
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
     {{ component( "Ceres::Item.Components.AddToWishList" ) }}
-    {{ component( "CeresSadingo::Basket.Components.AddToBasket" ) }}
+    {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
@@ -49,7 +48,7 @@
                     <a href="#" class="producer text-muted">{{ item.documents[0].data.item.manufacturer.externalName }}</a>
                 </h6>
 
-                <h1 class="h3 title">
+                <h1 class="h2 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name" v-resource-if:currentVariation="documents[0].data.variation.name != ''">
                         {{ item.documents[0].data.texts | itemName(configItemName) }}
                     </span>
@@ -65,11 +64,10 @@
 
                 <hr>
 
-
                 <div class="m-b-3">
                     <span class="articlenumber small text-muted">
-                        <b>{{ trans("Ceres::Template.itemId") }}</b>
-                        <span v-resource-bind:currentVariation="item.documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>
+                        <b>{{ trans("Ceres::Template.itemNumber") }}</b>
+                        <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>
                     </span>
                 </div>
 
@@ -81,12 +79,12 @@
 
                 {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
 
-                {% if item.documents[0].data.calculatedPrices.formatted.rrpPrice != item.documents[0].data.calculatedPrices.formatted.defaultPrice %}
-                  <div class="crossprice" v-resource-if:currentVariation="documents[0].data.calculatedPrices.rrp.price > 0">
-                      <del class="text-muted small" v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.rrpPrice">
-                          {{ item.documents[0].data.calculatedPrices.formatted.rrpPrice }}
-                      </del>
-                  </div>
+                {% if ('item.recommendedPrice' in itemData or 'all' in itemData) %}
+                    <div class="crossprice" v-resource-if:currentVariation="documents[0].data.calculatedPrices.rrp.price > 0">
+                        <del class="text-muted small" v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.rrpPrice">
+                            {{ item.documents[0].data.calculatedPrices.formatted.rrpPrice }}
+                        </del>
+                    </div>
                 {% endif %}
 
                 <span class="price h1" >
@@ -120,8 +118,10 @@
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
 
                     <add-to-basket template="#vue-add-to-basket" v-resource-if:currentVariation="documents[0].data.filter.isSalable" v-resource-push:item data-accessor="true"
+                                   resource="currentVariation" :show-quantity="true" :show-order-properties="true"></add-to-basket>
 
-                    <!-- {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }} -->
+
+                    {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
                 </div>
 
                 {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}
