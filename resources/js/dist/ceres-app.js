@@ -187,7 +187,7 @@ Vue.component("add-to-basket", {
                     quantity: this.quantity,
                     basketItemOrderParams: this.item.properties
                 };
-                    alert(this.item.item.id);
+
                     var scrollElem = document.documentElement;
                     var scrollElemY = scrollElem.scrollTop;
 
@@ -196,7 +196,7 @@ Vue.component("add-to-basket", {
                     var offsetLeftCart = cartElem.prop('offsetLeft');
                     var widthCart = cartElem.prop('offsetWidth');
                     var heightCart = cartElem.prop('offsetHeight');
-                    var idclass = 'square-inner main-image ';
+                    var idclass = 'square-inner main-image ' + this.item.item.id;
 
                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
                     var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
@@ -210,7 +210,7 @@ Vue.component("add-to-basket", {
                       imgElem = imgElemParentDiv;
                     }
 
-                    var imgElemPosition = angular.element(parentElem[0].getElementsByClassName("col-xs-12 col-sm-6 col-md-4 col-lg-3 " + itemid));
+                    var imgElemPosition = angular.element(parentElem[0].getElementsByClassName("col-xs-12 col-sm-6 col-md-4 col-lg-3 " + this.item.item.id));
                     var offsetTop = imgElemPosition.prop("offsetTop") + 315;
                     var offsetLeft = imgElemPosition.prop("offsetLeft") + 665;
 
