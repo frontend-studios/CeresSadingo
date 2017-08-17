@@ -231,6 +231,9 @@ a:hover {
 .category_title {
   margin-top: 10px;
 }
+.categoriegrid .item-list-frame {
+  padding-right: 13px;
+}
 .owl-theme .owl-nav [class*=owl-] {
   background-color: #FD98BB;
   color: #fff;
