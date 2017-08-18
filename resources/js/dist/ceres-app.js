@@ -203,6 +203,14 @@ Vue.component("add-to-basket", {
                     var imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
                     var imgElem;
 
+                    /*Bedingung wenn nur ein Bild vorhanden ist*/
+                    if (angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active')).length == 0){
+                      alert("0");
+                    }
+                    else {
+                      alert("nicht 0");
+                    }
+
                     var imgElemPosition = angular.element(parentElem[0].getElementsByClassName("col-xs-12 col-sm-6 col-md-4 col-lg-3 " + this.item.item.id));
                     var offsetTop = imgElemPosition.prop("offsetTop") + 315;
                     var offsetLeft = imgElemPosition.prop("offsetLeft") + 665;
