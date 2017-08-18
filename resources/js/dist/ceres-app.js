@@ -199,7 +199,7 @@ Vue.component("add-to-basket", {
                                     var idclass = 'square-inner main-image ' + this.item.item.id;
 
                                     var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
-                                    var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));                    
+                                    var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
                                     var imgElemDiv;
                                     var imgElem;
 
@@ -5552,7 +5552,7 @@ module.exports = function ($) {
 
             var url = searchParams.categoryId ? "/rest/io/category" : "/rest/io/item/search";
 
-            searchParams.template = "Ceres::ItemList.ItemListView";
+            searchParams.template = "CeresSadingo::ItemList.ItemListView";
 
             _setIsLoading(true);
 
