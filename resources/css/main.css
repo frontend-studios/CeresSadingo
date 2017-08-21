@@ -29,13 +29,12 @@ a:hover {
 .controls-list a:hover {
   background: rgb(51, 51, 51) !important;
 }
-.control-user {
+/*.control-user {
   border-left: 1px solid;
 }
 .control-user a:first-child {
-  /*margin-right: -3px;*/
   border-right: 1px solid;
-}
+}*/
 .control-user .pipe {
   display: none;
 }
