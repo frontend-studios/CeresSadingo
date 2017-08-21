@@ -28,6 +28,17 @@
     margin-right: 10px;
     vertical-align: middle;
 }
+/*Footer immer am Boden*/
+html, body {
+  height: 100%;
+}
+.wrapper-main {
+  overflow-y: hidden;
+  min-height: 80%;
+}
+.footer {
+   bottom: 0;
+}
 
 /*Footer Mobile****************************************************************/
 @media (max-width: 767px) {
