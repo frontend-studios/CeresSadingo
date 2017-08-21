@@ -22,12 +22,12 @@ a:hover {
   background-color: rgb(51, 51, 51);
 }
 .top-bar .controls-list .control-basket .toggle-basket-preview {
-  background: #FD98BB !important;
+  background: #FD98BB;
   border-bottom: solid 1px;
   padding-bottom: 6px;
 }
 .controls-list a:hover {
-  background: rgb(51, 51, 51) !important;
+  background: #FF80AB !important;
 }
 /*.control-user {
   border-left: 1px solid;
