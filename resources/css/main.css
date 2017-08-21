@@ -375,14 +375,24 @@ a:hover {
     background-color: #FF80AB;
     border-color: #FF80AB;
   }
-  .btn-primary:active:hover {
-    background-color: #FF80AB;
-    border-color: #FF80AB;
-  }
   .btn-primary:focus {
     background-color: #FF80AB;
     border-color: #FF80AB;
   }
+  .btn-primary.active.focus,
+  .btn-primary.active:focus,
+  .btn-primary.active:hover,
+  .btn-primary.focus:active,
+  .btn-primary:active:focus,
+  .btn-primary:active:hover,
+  .open > .btn-primary.dropdown-toggle.focus,
+  .open > .btn-primary.dropdown-toggle:focus,
+  .open > .btn-primary.dropdown-toggle:hover {
+    background-color: #FF80AB;
+    border-color: #FF80AB;
+  }
+
+
 .btn-danger {
     color: #fff !important;
 }
