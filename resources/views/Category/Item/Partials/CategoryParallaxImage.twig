@@ -1,3 +1,8 @@
 <div class="parallax-img-container"{% if category.details[0].imagePath is not empty %} style="background-image: url(/documents/{{ category.details[0].imagePath }});"{% endif %}>
-  <h1 class="h2">{{ category.details[0].name | raw }}</h1>
+  <div class="col-xs-12">
+    <h1 class="h2">{{ category.details[0].name | raw }}</h1>
+  </div>
+  <div class="col-xs-12 category_infoBox">
+    <h5>{{ category.details.first.shortDescription }}</h5>
+  </div>
 </div>
