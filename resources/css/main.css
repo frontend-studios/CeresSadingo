@@ -300,6 +300,9 @@ a:hover {
   color: #FF80AB;
   text-decoration: none;
 }
+.filter-wrapper .page-content {
+  border: 1px solid #eee;
+}
 
 /* Artikelseite Mobile */
 @media (max-width: 767px) {
