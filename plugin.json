@@ -1,7 +1,7 @@
 {
-      "version"               : "1.0.0",
+      "version"               : "1.4.1",
       "name"                  :"CeresSadingo",
-      "description"           :"Dies ist ein Theme für das Ceres Plugin",
+      "description"           :"Dies ist ein Theme für das Ceres Plugin. CeresSadingo 1.4.1 ist für die Ceres Version 1.4.1",
       "namespace"             :"CeresSadingo",
       "author"                :"m.huch",
       "license"               : "non-license",
