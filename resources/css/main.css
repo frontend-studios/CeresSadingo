@@ -240,9 +240,9 @@ a:hover {
   background-color: #FD98BB;
   color: #fff;
 }
-.col-md-7 {
+/*.col-md-7 {
   z-index: 999;
-}
+}*/
   .owl-theme .owl-nav [class*=owl-]:hover {
     background-color: #FF80AB;
   }
