@@ -295,7 +295,11 @@ a:hover {
 .nav-tabs a {
   color: #FF80AB;
 }
-
+/*toggle Filter*/
+.filter-wrapper .filter-toggle {
+  color: #FF80AB;
+  text-decoration: none;
+}
 
 /* Artikelseite Mobile */
 @media (max-width: 767px) {
