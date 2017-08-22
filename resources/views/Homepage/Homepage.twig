@@ -141,12 +141,12 @@
              <ul class="product-list row grid">
                   {% for item in ArticlePreview1  %}
                       <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 {{item.id}}">
-                          {% include "CeresSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                          {% include "CeresSadingo::Category.Item.Partials.CategoryItem" with { 'item': item } %}
                       </li>
                   {% endfor %}
                   {% for item in ArticlePreview2  %}
                       <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 {{item.id}}">
-                          {% include "CeresSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                          {% include "CeresSadingo::Category.Item.Partials.CategoryItem" with { 'item': item } %}
                       </li>
                   {% endfor %}
               </ul>
