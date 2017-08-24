@@ -61,7 +61,7 @@
                     </a>
                 </li>
 
-                <li class="list-inline-item control-basket">                  
+                <li class="list-inline-item control-basket">
                   <a href="#" id="toggleBasketPreview" class="toggle-basket-preview">
                       {% if config("Ceres.header.basket_values") != "sum" %}
                           <span class="badge-right" v-resource-bind:basket="itemQuantity">0</span>
@@ -85,7 +85,7 @@
     {% include "Ceres::PageDesign.Partials.Header.Breadcrumb" %}
 {% endif %}
 
-<mobile-navigation template="#vue-mobile-navigation"></mobile-navigation>
+<mobile-navigation :category-breadcrumbs="{{ categoryBreadcrumbs | json_encode }}" template="#vue-mobile-navigation"></mobile-navigation>
 
 <div class="container-max page-header">
     <div class="row">
@@ -113,7 +113,6 @@
                 </div>
             </div>
         </div>
-
 
 
 
