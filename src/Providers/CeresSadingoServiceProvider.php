@@ -18,6 +18,8 @@ use Plenty\Plugin\ConfigRepository;
 class CeresSadingoServiceProvider extends ServiceProvider
 {
 
+	const EVENT_LISTENER_PRIORITY = 99;
+
 	private static $templateKeyToViewMap = [
 		'tpl.home'               => 'Homepage.Homepage',                // provide template to use for homepage
 		'tpl.category.content'   => 'Category.Content.CategoryContent', // provide template to use for content categories
@@ -46,9 +48,8 @@ class CeresSadingoServiceProvider extends ServiceProvider
 	public function register(){
 	}
 
-	public function boot (Twig $twig, Dispatcher $eventDispatcher)
+	public function boot(Twig $twig, Dispatcher $eventDispatcher, ConfigRepository $config)
   {
-
     // überschreibt die Startseiten View
     $eventDispatcher->listen('IO.tpl.home', function(TemplateContainer $container, $templateData)
 		{
