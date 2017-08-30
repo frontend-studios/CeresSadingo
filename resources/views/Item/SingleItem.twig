@@ -105,6 +105,8 @@
                         <span v-if="true" class="base-price-amount" v-resource-bind:currentVariation="documents.0.data.unit.content" v-resource-if:currentVariation="documents[0].data.unit.content > 1">{{ item.documents[0].data.unit.content }}</span>
 
                         <span class="base-price-amount" v-resource-bind:currentVariation="documents.0.data.unit.names.name">{{ item.documents[0].data.unit.names.name }}</span>
+
+                        <p class="numberofPieces_test">{{ item.documents[0].data.calculatedPrices.formatted.defaultUnitPrice / item.documents[0].data.unit.content }}</p>
                 </div>
 
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
