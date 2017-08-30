@@ -101,7 +101,7 @@
                 <div class="base-price text-muted m-y-1">
                         {{ trans("Ceres::Template.itemUnitPrice") }}
                         {% set numberofPieces = item.documents[0].data.calculatedPrices.default.price / item.documents[0].data.unit.content %}
-                        <span class="base-price-value" v-resource-bind:currentVariation="documents.0.data.calculatedPrices.default.price"> {{  numberofPieces|number_format(2, '.', ',')}} </span> /
+                        <span class="base-price-value" v-resource-bind:currentVariation="documents.0.data.calculatedPrices.default.price"> {{  numberofPieces|number_format(2, '.', ',')}} </span>\u00a0\u20ac /
                         <span v-if="true" class="base-price-amount">1</span>
                         <span class="base-price-amount" v-resource-bind:currentVariation="documents.0.data.unit.names.name">{{ item.documents[0].data.unit.names.name }}</span>
                 </div>
