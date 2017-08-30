@@ -362,9 +362,13 @@ a:hover {
   .sidebar-categories ul li.active ul li a {
       padding-left: 2.5rem;
   }
-/***** Kasse (Checkout View) *********************************/
+/***** Kasse (Checkout View) **************************************************/
 .form-check a {
   color: #FF80AB;
+}
+/** Kontakt Seite *************************************************************/
+.cmp-contact #contact-map {
+  display: none;
 }
 /***** Einzel Artikel Seite (SingleItem View) *********************************/
 .base-price-amount {
