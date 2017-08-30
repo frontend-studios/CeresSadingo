@@ -104,7 +104,6 @@
                         <span class="base-price-value" v-resource-bind:currentVariation="documents.0.data.calculatedPrices.default.price"> {{  numberofPieces|number_format(2, '.', ',')}} </span> /
                         <span v-if="true" class="base-price-amount">1</span>
                         <span class="base-price-amount" v-resource-bind:currentVariation="documents.0.data.unit.names.name">{{ item.documents[0].data.unit.names.name }}</span>
-                        <p class="numberofPieces_test">{{ item.documents[0].data.calculatedPrices.default.price }} durch {{ item.documents[0].data.unit.content }} = {{ item.documents[0].data.calculatedPrices.default.price / item.documents[0].data.unit.content }}</p>
                 </div>
 
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
