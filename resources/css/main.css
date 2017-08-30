@@ -397,7 +397,15 @@ a:hover {
     background-color: #FF80AB;
     border-color: #FF80AB;
   }
-
+  .btn-primary.disabled.focus,
+  .btn-primary.disabled:focus,
+  .btn-primary.disabled:hover,
+  .btn-primary:disabled.focus,
+  .btn-primary:disabled:focus,
+  .btn-primary:disabled:hover {
+     background-color: #FF80AB;
+     border-color: #FF80AB;
+  }
 
 .btn-danger {
     color: #fff !important;
