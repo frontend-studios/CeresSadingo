@@ -10579,67 +10579,67 @@ Vue.component("add-to-basket", {
                     basketItemOrderParams: this.item.properties
                 };
 
-								var scrollElem = document.documentElement;
-                var scrollElemY = scrollElem.scrollTop;
-
-                var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
-                var offsetTopCart = cartElem.prop('offsetTop') + scrollElemY;;
-                var offsetLeftCart = cartElem.prop('offsetLeft');
-                var widthCart = cartElem.prop('offsetWidth');
-                var heightCart = cartElem.prop('offsetHeight');
-                var idclass = 'square-inner main-image ' + this.item.item.id;
-
-                var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
-                var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
-                var imgElemDiv;
-                var imgElem;
-
-                /*Bedingung wenn nur ein Bild vorhanden ist*/
-                if (angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active')).length == 0){
-                  imgElem = angular.element(imgElemParentDiv[0].getElementsByClassName('img-fluid lazy'));
-                }
-                else {
-                  imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
-                  imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
-                }
-
-                var imgElemPosition = angular.element(parentElem[0].getElementsByClassName("col-xs-12 col-sm-6 col-md-4 col-lg-3 " + this.item.item.id));
-                var offsetTop = imgElemPosition.prop("offsetTop") + 315;
-                var offsetLeft = imgElemPosition.prop("offsetLeft") + 665;
-
-                var imgSrc = imgElem.prop("currentSrc");
-                var imgClone = angular.element('<img class="owl-item-clone" src="' + imgSrc + '"/>');
-                imgClone.css({
-                  'height': '150px',
-                  'position': 'absolute',
-                  'top': offsetTop + 'px',
-                  'left': offsetLeft + 'px',
-                  'opacity': 0.5
-                });
-                imgClone.addClass('itemaddedanimate');
-
-                parentElem.append(imgClone);
-
-                setTimeout(function () {
-                  imgClone.css({
-                    'height': '75px',
-                    'top': (offsetTopCart+heightCart/2)+'px',
-                    'left': (offsetLeftCart+widthCart/2)+'px',
-                    'opacity': 0.5
-                  });
-                }, 500);
-                setTimeout(function () {
-                  imgClone.css({
-                    'height': 0,
-                    'opacity': 0.5
-                  });
-                }, 1000);
-                setTimeout(function () {
-                  imgClone.remove();
-                }, 1500);
+								// var scrollElem = document.documentElement;
+                // var scrollElemY = scrollElem.scrollTop;
+								//
+                // var cartElem = angular.element(document.getElementsByClassName("toggle-basket-preview"));
+                // var offsetTopCart = cartElem.prop('offsetTop') + scrollElemY;;
+                // var offsetLeftCart = cartElem.prop('offsetLeft');
+                // var widthCart = cartElem.prop('offsetWidth');
+                // var heightCart = cartElem.prop('offsetHeight');
+                // var idclass = 'square-inner main-image ' + this.item.item.id;
+								//
+                // var parentElem = angular.element(document.getElementsByClassName('wrapper-main'));
+                // var imgElemParentDiv = angular.element(parentElem[0].getElementsByClassName(idclass));
+                // var imgElemDiv;
+                // var imgElem;
+								//
+                // /*Bedingung wenn nur ein Bild vorhanden ist*/
+                // if (angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active')).length == 0){
+                //   imgElem = angular.element(imgElemParentDiv[0].getElementsByClassName('img-fluid lazy'));
+                // }
+                // else {
+                //   imgElemDiv = angular.element(imgElemParentDiv[0].getElementsByClassName('owl-item active'));
+                //   imgElem = angular.element(imgElemDiv[0].getElementsByClassName('img-fluid lazy'));
+                // }
+								//
+                // var imgElemPosition = angular.element(parentElem[0].getElementsByClassName("col-xs-12 col-sm-6 col-md-4 col-lg-3 " + this.item.item.id));
+                // var offsetTop = imgElemPosition.prop("offsetTop") + 315;
+                // var offsetLeft = imgElemPosition.prop("offsetLeft") + 665;
+								//
+                // var imgSrc = imgElem.prop("currentSrc");
+                // var imgClone = angular.element('<img class="owl-item-clone" src="' + imgSrc + '"/>');
+                // imgClone.css({
+                //   'height': '150px',
+                //   'position': 'absolute',
+                //   'top': offsetTop + 'px',
+                //   'left': offsetLeft + 'px',
+                //   'opacity': 0.5
+                // });
+                // imgClone.addClass('itemaddedanimate');
+								//
+                // parentElem.append(imgClone);
+								//
+                // setTimeout(function () {
+                //   imgClone.css({
+                //     'height': '75px',
+                //     'top': (offsetTopCart+heightCart/2)+'px',
+                //     'left': (offsetLeftCart+widthCart/2)+'px',
+                //     'opacity': 0.5
+                //   });
+                // }, 500);
+                // setTimeout(function () {
+                //   imgClone.css({
+                //     'height': 0,
+                //     'opacity': 0.5
+                //   });
+                // }, 1000);
+                // setTimeout(function () {
+                //   imgClone.remove();
+                // }, 1500);
 
                 ResourceService.getResource("basketItems").push(basketObject).done(function () {
-                    // this.openAddToBasketOverlay();
+                    this.openAddToBasketOverlay();
                 }.bind(this)).fail(function (response) {
                     NotificationService.error(Translations.Template[_ExceptionMap2.default.get(response.data.exceptionCode.toString())]).closeAfter(5000);
                 });
