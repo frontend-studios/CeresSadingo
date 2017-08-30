@@ -24,18 +24,18 @@
 <html lang="{{ lang }}" data-framework="vue" prefix="og: http://ogp.me/ns#">
 
     <head>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
-      <!-- Schriftart -->
-      <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-      <!-- Eigenes Design -->
-      <link rel="stylesheet" href="{{ plugin_path('CeresSadingo') }}/css/main.css">
-      <link rel="stylesheet" href="{{ plugin_path('CeresSadingo') }}/css/homepage.css">
-      <link rel="stylesheet" href="{{ plugin_path('CeresSadingo') }}/css/footer.css">
-
         {% include getPartial('head') %}
 
         {% block PartialHead %}
         {% endblock %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+        <!-- Schriftart -->
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+        <!-- Eigenes Design -->
+        <link rel="stylesheet" href="{{ plugin_path('CeresSadingo') }}/css/main.css">
+        <link rel="stylesheet" href="{{ plugin_path('CeresSadingo') }}/css/homepage.css">
+        <link rel="stylesheet" href="{{ plugin_path('CeresSadingo') }}/css/footer.css">
     </head>
 
     <body>
