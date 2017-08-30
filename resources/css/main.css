@@ -370,6 +370,9 @@ a:hover {
 .cmp-contact #contact-map {
   display: none;
 }
+.cmp-contact p  {
+  margin: 0 !important;
+}
 /***** Einzel Artikel Seite (SingleItem View) *********************************/
 .base-price-amount {
   display: inline !important;
