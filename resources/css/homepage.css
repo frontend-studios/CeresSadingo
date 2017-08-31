@@ -55,6 +55,17 @@
   margin-bottom: 15px;
   text-align: center;
 }
+/*****Sale Banner*****/
+@media (max-width: 767px) {
+  .homepage_sale-row .col-xs-6 {
+    float: none;
+    width: 100%;
+    max-height: 150px;
+  }
+  .homepage_sale-row .prop-xs-6-4 {
+    position: initial;
+  }
+}
 /*****Cards*****/
 .homepage_card {
   width: 100% !important;
@@ -104,7 +115,7 @@
   }
 @media (max-width: 767px) {
 .homepage_row {
-    margin: 10px;
+    /*margin: 10px;*/
   }
   .homepage_row .col-md-3 {
     height: 100%;
