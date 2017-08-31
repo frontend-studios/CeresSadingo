@@ -183,7 +183,11 @@ a:hover {
 #mainNavbarCollapsable ul.mainmenu>li:hover {
   background: #FD98BB !important;
 }
-/***** Mobile *****/
+
+/***** Mobile *****************************************************************/
+.mobile-navigation {
+  background-color: #FF80AB;
+}
 .navbar-toggler{
   color: #fff;
 }
