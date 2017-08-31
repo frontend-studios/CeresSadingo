@@ -13,7 +13,7 @@
 
 <script type="x/template" id="vue-item-list">
     <div id="vue-rendered-item-list"
-         class="item-list-frame{% if loadingAnimationType == "blur" %} blur-effect{% endif %}"
+         class="item-list-frame-main item-list-frame{% if loadingAnimationType == "blur" %} blur-effect{% endif %}"
          v-bind:class="{ 'loading': isLoading, 'is-loaded': !isLoading }">
 
         {% if loadingAnimationType != "blur" %}
