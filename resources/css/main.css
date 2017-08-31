@@ -188,17 +188,17 @@ a:hover {
 .mobile-navigation {
   background-color: #FF80AB;
 }
-.navbar-toggler{
+.navbar-toggler {
   color: #fff;
 }
 @media (max-width: 992px){
-#mainNavbarCollapsable{
+#mainNavbarCollapsable {
   background-color: #FF80AB;
 }
-  #mainNavbarCollapsable a{
+  #mainNavbarCollapsable a {
     color: #fff !important;
   }
-    #mainNavbarCollapsable a:hover{
+    #mainNavbarCollapsable a:hover {
       color: #fff !important;
     }
 }

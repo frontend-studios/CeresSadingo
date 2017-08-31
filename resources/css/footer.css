@@ -43,7 +43,6 @@ html, body {
 /*Footer Mobile****************************************************************/
 @media (max-width: 767px) {
   .main_container_footer {
-    text-align: left;
     font-size: 18px;
   }
   .main_container_footer h4 {
