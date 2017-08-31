@@ -425,7 +425,9 @@ a:hover {
      background-color: #FF80AB;
      border-color: #FF80AB;
   }
-
+  a.bg-primary:focus, a.bg-primary:hover {
+  	background-color: #ff80ab;
+  }
 .btn-danger {
     color: #fff !important;
 }
