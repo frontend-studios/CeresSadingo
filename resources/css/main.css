@@ -240,8 +240,12 @@ a:hover {
 .categoriegrid .col-xs-12 .col-lg-9 {
   padding-left: 0px;
 }
-.categoriegrid .item-list-frame {
+
+.categoriegrid #twig-rendered-item-list .item-list-frame {
   padding-right: 13px;
+}
+.categoriegrid #vue-rendered-item-list .item-list-frame {
+  padding-right: 0px;
 }
 .owl-theme .owl-nav [class*=owl-] {
   background-color: #FD98BB;
