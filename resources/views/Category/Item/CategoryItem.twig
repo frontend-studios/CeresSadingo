@@ -51,7 +51,7 @@
     <resource name="itemList" :data="{ total: {{  paginatedResult.total | json_encode() }} }"></resource>
 
 
-    <div class="categoriegrid page-content container-max">
+    <div class="categoriegrid page-content container-max categoryItem-page">
       <div class="row m-t-1">
         {% if showCategoryImage %}
           {% include "CeresSadingo::Category.Item.Partials.CategoryParallaxImage" with { 'category': category } %}
