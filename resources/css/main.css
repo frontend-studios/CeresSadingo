@@ -426,8 +426,13 @@ a:hover {
      border-color: #FF80AB;
   }
   a.bg-primary:focus, a.bg-primary:hover {
-  	background-color: #ff80ab;
+  	background-color: #ff80ab !important;
   }
+
+  .btn-primary.active, .btn-primary:active, .open>.btn-primary.dropdown-toggle {
+    border-color: #ff80ab !important;
+  }
+
 .btn-danger {
     color: #fff !important;
 }
