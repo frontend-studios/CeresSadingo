@@ -138,6 +138,9 @@
     text-align: center;
     font-size: 25px;
   }
+  .homepage_card-block p {
+    display: none;
+  }
   .homepage_card_img:hover {
     border: none;
   }
