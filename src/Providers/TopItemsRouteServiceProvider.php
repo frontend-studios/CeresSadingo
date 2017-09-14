@@ -10,6 +10,6 @@ class TopItemsRouteServiceProvider extends RouteServiceProvider
 {
     public function map(Router $router)
     {
-        $router->get('homepage', 'CeresSadingo\Controllers\ContentController@showTopItems');
+        $router->get('', 'CeresSadingo\Controllers\ContentController@showTopItems');
     }
 }
