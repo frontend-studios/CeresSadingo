@@ -36,8 +36,6 @@
 
 {% set showCategoryImage = config('Ceres.item.show_category_image') == "true" %}
 
-{% set showCategoryDescription = config('Ceres.item.show_category_description') == "true" %}
-
 {% block PageBody %}
 
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterList") }}
