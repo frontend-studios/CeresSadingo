@@ -90,6 +90,8 @@ class CeresSadingoServiceProvider extends ServiceProvider
 		// Überschreibt Ceres Views
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
 		{
+			pluginApp(Container::class)->register('CeresSadingo::PageDesign.Partials.Header.NavigationList.twig', NavigationCacheSettings::class);
+
 			 $partial->set('header', 'CeresSadingo::PageDesign.Partials.Header.Header');
 			 $partial->set('footer', 'CeresSadingo::PageDesign.Partials.Footer');
 			 $partial->set('page-design', 'CeresSadingo::PageDesign.PageDesign');
