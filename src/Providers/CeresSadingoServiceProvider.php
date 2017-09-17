@@ -91,6 +91,7 @@ class CeresSadingoServiceProvider extends ServiceProvider
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
 		{
 			pluginApp(Container::class)->register('CeresSadingo::PageDesign.Partials.Header.NavigationList.twig', NavigationCacheSettings::class);
+			pluginApp(Container::class)->register('CeresSadingo::PageDesign.Partials.Header.SideNavigation.twig', SideNavigationCacheSettings::class);
 
 			 $partial->set('header', 'CeresSadingo::PageDesign.Partials.Header.Header');
 			 $partial->set('footer', 'CeresSadingo::PageDesign.Partials.Footer');
