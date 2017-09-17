@@ -5,6 +5,6 @@
 
 <resource name="navigationTree" :data="{{ categories | json_encode() }}"></resource>
 
-<ul class="mainmenu pull-lg-right">
+<ul class="mainmenu pull-lg-right mhnavigation">
     {{ Tree.get_nav_bar(categories, "") }}
 </ul>
