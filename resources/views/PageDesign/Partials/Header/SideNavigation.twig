@@ -1,4 +1,4 @@
-{% import "Ceres::Category.Macros.CategoryTree" as Tree %}
+{% import "CeresSadingo::Category.Macros.CategoryTree" as Tree %}
 
 {% set lang = services.sessionStorage.getLang() %}
 {% set categories = services.category.getNavigationTree("item", lang, 7) %}
