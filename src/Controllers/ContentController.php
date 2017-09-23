@@ -13,7 +13,7 @@ class ContentController extends Controller
     {
         $itemColumns = [
             'itemDescription' => [
-                'name1',
+                'name2',
                 'description'
             ],
             'variationBase' => [
@@ -35,7 +35,7 @@ class ContentController extends Controller
         ];
 
         $itemParams = [
-            'language' => 'en'
+            'language' => 'de'
         ];
 
         $resultItems = $itemRepository
@@ -51,6 +51,6 @@ class ContentController extends Controller
             'currentItems' => $items
         );
 
-        return $twig->render('CeresSadingo::Homepage.Homepage', $templateData);
+        return $twig->render('CeresSadingo::Homepage', $templateData);
     }
 }
