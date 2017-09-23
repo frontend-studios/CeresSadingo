@@ -2,9 +2,9 @@
 
 namespace CeresSadingo\Providers;
 
-use CeresSadingo\Caching\HomepageCacheSettings;
-use CeresSadingo\Caching\NavigationCacheSettings;
-use CeresSadingo\Caching\SideNavigationCacheSettings;
+use Ceres\Caching\HomepageCacheSettings;
+use Ceres\Caching\NavigationCacheSettings;
+use Ceres\Caching\SideNavigationCacheSettings;
 use IO\Extensions\Functions\Partial;
 use IO\Helper\CategoryKey;
 use IO\Helper\CategoryMap;
