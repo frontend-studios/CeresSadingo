@@ -51,6 +51,6 @@ class ContentController extends Controller
             'currentItems' => $items
         );
 
-        return $twig->render('CeresSadingo::Homepage', $templateData);
+        return $twig->render('CeresSadingo::Homepage.Homepage', $templateData);
     }
 }
