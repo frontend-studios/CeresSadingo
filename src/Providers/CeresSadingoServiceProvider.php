@@ -57,35 +57,35 @@ class CeresSadingoServiceProvider extends ServiceProvider
 		{
         $container->setTemplate("CeresSadingo::Homepage.Homepage");
         return false;
-    }, self::EVENT_LISTENER_PRIORITY);
+    });
 
 		// überschreibt das Basket Templates
 		$eventDispatcher->listen('IO.tpl.basket', function(TemplateContainer $container, $templateData)
 		{
 				$container->setTemplate("CeresSadingo::Basket.Basket");
 				return false;
-		}, self::EVENT_LISTENER_PRIORITY);
+		});
 
 		// überschreibt das Search Templates
 		$eventDispatcher->listen('IO.tpl.search', function(TemplateContainer $container, $templateData)
 		{
 				$container->setTemplate("CeresSadingo::ItemList.ItemListView");
 				return false;
-		}, self::EVENT_LISTENER_PRIORITY);
+		});
 
 		// Überschreibt die Category View
 		$eventDispatcher->listen('IO.tpl.category.item', function(TemplateContainer $container, $templateData)
 		{
 			$container->setTemplate('CeresSadingo::Category.Item.CategoryItem');
 			return false;
-		}, self::EVENT_LISTENER_PRIORITY);
+		}, 0);
 
 		// Überschreibt die Item View
 		$eventDispatcher->listen('IO.tpl.item', function(TemplateContainer $container, $templateData)
 		{
 			$container->setTemplate('CeresSadingo::Item.SingleItem');
 			return false;
-		}, self::EVENT_LISTENER_PRIORITY);
+		}, 0);
 
 		// Überschreibt Ceres Views
 		$eventDispatcher->listen('IO.init.templates', function(Partial $partial)
