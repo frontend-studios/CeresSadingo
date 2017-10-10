@@ -17,20 +17,5 @@
               "name"          :"CeresSadingo",
               "description"   :"Ändert das Design von Ceres!"
           }
-          {
-              "key":"CeresSadingo\\Containers\\CeresItemListContainer1",
-              "name":"First item list",
-              "description":"Display a configurable list of items in your online store"
-          },
-          {
-              "key":"CeresSadingo\\Containers\\CeresItemListContainer2",
-              "name":"Second item list",
-              "description":"Display a configurable list of items in your online store"
-          },
-          {
-              "key":"CeresSadingo\\Containers\\CeresItemListContainer3",
-              "name":"Third item list",
-              "description":"Display a configurable list of items in your online store"
-          }
       ]
 }
