@@ -496,3 +496,16 @@ a:hover {
 .sk-fading-circle .sk-circle::before {
   background-color: #e878aa;
 }
+/***** Ceres Container zum selber konfigurieren *********************************/
+.ceresSadingo_ItemListContainer{
+
+}
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices{
+  display: block;
+}
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices a{
+  float: left;
+}
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices .price-view-port{
+  float: right;
+}
