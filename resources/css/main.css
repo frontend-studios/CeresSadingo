@@ -501,7 +501,7 @@ a:hover {
 
 }
 .ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices{
-  display: block;
+  display: inline-block;
 }
 .ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices a{
   float: left;
