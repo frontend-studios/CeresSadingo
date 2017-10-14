@@ -47,10 +47,6 @@ class CeresSadingoServiceProvider extends ServiceProvider
 			'tpl.page-not-found'     => 'StaticPages.PageNotFound'          // provide template to use for page not found
 	];
 
-	public function register(){
-		$this->getApplication()->register(TopItemsRouteServiceProvider::class);
-	}
-
 	public function boot(Twig $twig, Dispatcher $eventDispatcher, ConfigRepository $config)
   {
     // überschreibt die Startseiten View
