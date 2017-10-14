@@ -95,56 +95,56 @@
 		"key"       : "homepage.homepagePerlenparadies",
 		"label"     : "Perlenparadies",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/images/gallery/Startseite/perlenparadies.png"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepagePerlenparadiesText",
 		"label"     : "Perlenparadies Text",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "Eine große Auswahl an Acrylperlen, Kunststoffperlen, Buchstabenperlen, Glas- und Holzperlen. Willkommen im Perlenparadies!"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckmaterial",
 		"label"     : "Schmuckmaterial",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/images/gallery/Startseite/schmuckmaterial.png"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckmaterialText",
 		"label"     : "Schmuckmaterial Text",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "Schmuck- und Bastelmaterial, Anhänger, Charms, Schmuckbänder, Schmuckverschlüsse und Ketten finden Sie in dieser Kategorie."
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageBastelnKreatives",
 		"label"     : "Basteln & Kreatives",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/images/gallery/Startseite/bastelnkreatives.png"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageBastelnKreativesText",
 		"label"     : "Basteln & Kreatives Text",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "Von Knöpfen über Holzklammern bis zu Schnullerketten-Clips. Hier finden Sie viele Artikel zum Basteln und für Ihre kreativen Do it yourself / DIY-Projekte!"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckstuecke",
 		"label"     : "Schmuckstücke",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/images/gallery/Startseite/schmuckstuecke.png"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSchmuckstueckeText",
 		"label"     : "Schmuckstücke Text",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "Unsere Auswahl an Schmuckstücken umfasst tolle Armbänder, schöne Ohrringe und ausgefallene Uhren. Schauen Sie sich um."
 	},
 	{
 			"tab"       : "Startseite",
