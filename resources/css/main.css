@@ -509,3 +509,6 @@ a:hover {
 .ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices .price-view-port{
   float: right;
 }
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .category-unit-price{
+  display: none;
+}
