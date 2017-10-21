@@ -389,6 +389,10 @@ a:hover {
 .base-price-amount {
   display: inline !important;
 }
+.ceresSadingo-availability {
+  font-size: 82%;
+  letter-spacing: 0.04rem;
+}
 /***** Button *****/
 /*ausgefüllter Button*/
 .btn-primary {
