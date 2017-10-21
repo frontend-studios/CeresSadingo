@@ -389,10 +389,6 @@ a:hover {
 .base-price-amount {
   display: inline !important;
 }
-.ceresSadingo-availability {
-  font-size: 82%;
-  letter-spacing: 0.04rem;
-}
 /***** Button *****/
 /*ausgefüllter Button*/
 .btn-primary {
@@ -493,8 +489,13 @@ a:hover {
 }
 /*****Artikelseite*****/
 /*Sofort versandfertig,Lieferzeit 2-3Tage*/
+.ceresSadingo-availability {
+  font-size: 82%;
+  letter-spacing: 0.04rem;
+}
 .availability_1, .availability_2{
-  background-color: #00c174;
+  font-size: 82%;
+  letter-spacing: 0.04rem;
 }
 /*****Load Animation*****/
 .sk-fading-circle .sk-circle::before {
