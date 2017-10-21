@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="{{ plugin_path('CeresSadingo') }}/css/footer.css">
     </head>
 
-    <body>
+    <body class="ceresbody-sadingo">
         <resource name="user" :data="{ isLoggedIn: {{ frontend.Account.getIsAccountLoggedIn | json_encode() }} }" ></resource>
         <resource name="basket" route="/rest/io/basket/" :data="{{ services.basket.getBasketForTemplate() | json_encode() }}" :events="['AfterBasketChanged!basket']"></resource>
         <resource name="itemSearch" :data="{}"></resource>
