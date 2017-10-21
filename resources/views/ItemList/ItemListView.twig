@@ -43,7 +43,7 @@
             <h1 class="h2" id="searchPageTitle">{{ trans("Ceres::Template.generalSearchResults") }} {{ searchString }}</h1>
           </div>
           <div class="col-xs-12 category_infoBox">
-            <h5>{{ category.details.first.shortDescription }}</h5>
+            <h5>{{ category.details[0].shortDescription | raw }}</h5>
           </div>
       </div>
 
