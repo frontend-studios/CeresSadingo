@@ -3,6 +3,11 @@
 
 {% set basketInformation  = config("CeresSadingo.basket.basketInformation") %}
 
+{% block PartialHead %}
+    <meta name="robots" content="NOINDEX, NOFOLLOW">
+    <title>{{ trans("Ceres::Template.basket") }} | {{ config("Ceres.header.company_name") }}</title>
+{% endblock %}
+
 {% block PageBody %}
 
     {{ component( "CeresSadingo::Basket.Components.BasketList" ) }}
