@@ -27,6 +27,7 @@
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
     {{ component( "Ceres::Item.Components.AddToWishList" ) }}
+    {{ component( "Ceres::Item.Components.OrderProperties" ) }}
     {{ component( "CeresSadingo::Basket.Components.AddToBasket" ) }}
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
@@ -48,7 +49,7 @@
                     <a href="#" class="producer text-muted">{{ item.documents[0].data.item.manufacturer.externalName }}</a>
                 </h6>
 
-                <h1 class="h3 title">
+                <h1 class="h2 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name" v-resource-if:currentVariation="documents[0].data.variation.name != ''">
                         {{ item.documents[0].data.texts | itemName(configItemName) }}
                     </span>
@@ -118,12 +119,14 @@
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
 
                     <add-to-basket template="#vue-add-to-basket" v-resource-if:currentVariation="documents[0].data.filter.isSalable" v-resource-push:item data-accessor="true"
-                                   resource="currentVariation" :show-quantity="true" :show-order-properties="true"></add-to-basket>
+                                   resource="currentVariation" :show-quantity="true"></add-to-basket>
+
+                    <order-properties template="#vue-order-properties" v-resource-push:item data-accessor="true" resource="currentVariation" v-resource-if:currentVariation="documents[0].data.filter.isSalable"></order-properties>
 
 
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
                 </div>
-
+                
                 {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}
                     <div class="row">
                         <add-to-wish-list template="#vue-add-to-wish-list" variation-id="{{ item.documents[0].data.variation.id }}" :is-active="{{ item.documents[0].isInWishListVariation | json_encode() }}"></add-to-wish-list>
@@ -165,7 +168,7 @@
                            role="tab">{{ trans("Ceres::Template.itemMoreDetails") }}</a>
                     </li>
 
-                    {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabs") }}
+                    {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabs", item.documents[0].data) }}
                 </ul>
 
                 <div class="tab-content">
@@ -278,20 +281,15 @@
                         </div>
                     </div>
 
-                    {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent") }}
+                    {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent", item.documents[0].data) }}
                 </div>
             </div>
         </div>
         <!-- ./ITEM DESCRIPTION -->
-        <div class="ceresSadingo_ItemListContainer">
-            {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item) }}
-        </div>
-        {#<hr>#}
 
-        {#<h3 class="m-t-3 m-b-1">{{ trans("Ceres::Template.itemCustomerFeedback") }}</h3>#}
-        {#<div class="row m-b-3">#}
-            {#{% include "Ceres::Item.Partials.ItemRating" %}#}
-        {#</div>#}
+        {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item) }}
+
+        {{ LayoutContainer.show("Ceres::SingleItem.FeedbackContainer", item) }}
 
     </div>
 
