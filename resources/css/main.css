@@ -505,15 +505,19 @@ a:hover {
 .ceresSadingo_ItemListContainer{
 
 }
-.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices{
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices, 
+.single .product-list prices {
   display: inline-block;
 }
-.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices a{
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices a,
+.single .product-list prices a {
   float: left;
 }
-.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices .price-view-port{
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices .price-view-port,
+.single .product-list prices .price-view-port{
   float: right;
 }
-.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .category-unit-price{
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .category-unit-price,
+.single .product-list prices .category-unit-price{
   display: none;
 }
