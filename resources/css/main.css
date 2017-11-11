@@ -518,6 +518,6 @@ a:hover {
   float: right;
 }
 .ceresSadingo_ItemListContainer .thumb-content .thumb-meta .category-unit-price,
-.single .product-list .prices .category-unit-price{
+.single .product-list .category-unit-price{
   display: none;
 }
