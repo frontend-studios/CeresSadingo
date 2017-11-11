@@ -92,7 +92,7 @@
                 </div>
 
                 {% if ('item.recommendedPrice' in itemData or 'all' in itemData) %}
-                    <div class="crossprice" v-resource-if:currentVariation="documents[0].data.calculatedPrices.rrp.price > 0">
+                    <div class="crossprice" v-resource-if:currentVariation="documents[0].data.calculatedPrices.rrp.price < item.documents[0].data.calculatedPrices.formatted.defaultUnitPrice">
                         <del class="text-muted small" v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.rrpPrice">
                             {{ item.documents[0].data.calculatedPrices.formatted.rrpPrice }}
                         </del>
