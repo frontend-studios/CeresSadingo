@@ -331,6 +331,7 @@ a:hover {
     width: auto !important;
     bottom: auto !important;
     float: none;
+    margin-top: 50px !important;
   }
 }
 /* Setzt "In den Warenkorb" mittig in derDesktop Ansicht */
