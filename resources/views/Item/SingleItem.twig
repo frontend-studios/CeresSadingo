@@ -54,11 +54,7 @@
                 </h6>
 
                 <h1 class="h2 title">
-                    <span v-resource-bind:currentVariation="documents.0.data.variation.name" v-resource-if:currentVariation="documents[0].data.variation.name != ''">
-                        {{ item.documents[0].data.texts | itemName(configItemName) }}
-                    </span>
-
-                    <span v-resource-if:currentVariation="documents[0].data.variation.name == ''">
+                    <span>
                         {{ item.documents[0].data.texts | itemName(configItemName) }}
                     </span>
                 </h1>
