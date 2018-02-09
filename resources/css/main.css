@@ -332,9 +332,6 @@ a:hover {
     bottom: auto !important;
     float: none;
   }
-  .single-rightside div:last-child {
-    display: none;
-  }
 }
 /* Setzt "In den Warenkorb" mittig in derDesktop Ansicht */
 @media (min-width: 992px){
@@ -505,7 +502,7 @@ a:hover {
 .ceresSadingo_ItemListContainer{
 
 }
-.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices, 
+.ceresSadingo_ItemListContainer .thumb-content .thumb-meta .prices,
 .single .product-list .prices {
   display: inline-block;
 }
