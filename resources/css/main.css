@@ -333,6 +333,10 @@ a:hover {
     float: none;
     margin-top: 50px !important;
   }
+  /* gibt in der mobile ansicht der Beschreibug einen weißen hintergrund*/
+  .single .container .col-md-7 .m-y-3{
+    background-color: white;
+  }
 }
 /* Setzt "In den Warenkorb" mittig in derDesktop Ansicht */
 @media (min-width: 992px){
