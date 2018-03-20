@@ -1,7 +1,5 @@
 //Global
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	background-color: white;
 	font-family: $font-family-serif;
 	> #vue-app,
@@ -337,6 +335,25 @@ body {
 }
 //Categorie End
 
+.basket-preview {
+	.totals {
+		font-size: 100% !important;
+	}
+}
+.btn-labeled {
+	font-size: 100% !important;
+}
+.small {
+	font-size: 100% !important;
+}
+small {
+	font-size: 100% !important;
+}
 
+.cmp-product-thumb {
+	.crossprice {
+    	color: rgba(217, 84, 79, 0.92);
+	}
+}
 
 //FS Styles End
