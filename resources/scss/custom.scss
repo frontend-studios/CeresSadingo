@@ -40,6 +40,18 @@ body {
 			font-size: 18.2px;
 		}
 	}
+	.pipe {
+		display: none;
+	}
+	.controls-list {
+		>li {
+			a {
+				&:not(.btn) {
+					padding: .65rem .75rem;
+				}
+			}
+		}
+	}
 }
 #searchBox2 {
     padding: 0;
