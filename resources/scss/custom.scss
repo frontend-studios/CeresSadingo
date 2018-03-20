@@ -252,7 +252,7 @@ body {
 			> li {
 			position: static;
 				> ul {
-					background: lighten( $brand-primary, 10% );
+					background: $sadigo-hover-menu;
 					padding: 2rem;
 					> li {
 						display: block;
@@ -276,7 +276,7 @@ body {
 	.navbar {
 		background-color: $brand-primary;
 		a {
-			color:$white;
+			color:$white !important;
 		}
 	}
 }

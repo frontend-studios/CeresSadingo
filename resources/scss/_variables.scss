@@ -84,7 +84,7 @@ $brand-secondary:       #d4021d !default;
 
 $sadigo-footer:         #333333 !default;
 $sadigo-footer-social:  #8b8b8b !default;
-
+$sadigo-hover-menu:     #FD98BB !default;
 
 $brand-success:         #7ED321 !default;
 $brand-info:            #5bc0de !default;
@@ -141,12 +141,14 @@ $link-hover-color:      darken($link-color, 15%) !default;
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:Helvetica, Arial, sans-serif !default;
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+$font-family-sans-serif: Helvetica, Arial, sans-serif !default;
 $font-family-helvetica: $font-family-sans-serif !default;
-$font-family-serif:     Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif:     'Muli', sans-serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:      $font-family-sans-serif !default;
+$font-family-base:      $font-family-serif !default;
 $font-family-heading:   $font-family-base;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
