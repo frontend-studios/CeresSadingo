@@ -87,7 +87,7 @@ body {
 .featured-sale-new {
 	&:hover {
 		.featured-category-inner {
-			background-color: #ff80ab;
+			background-color: $brand-primary;
 		}
 	}
 	.featured-category-inner {
@@ -112,7 +112,6 @@ body {
 .homepage_card_img {
 	height: auto;
 	width: 100%;
-	background-color: #e878aa;
 	&:hover {
 		-moz-transform: scale(1.1);
 		-webkit-transform: scale(1.1);
@@ -130,34 +129,7 @@ body {
 		}
 	}
 }
-.homepage_instagram {
-	height: 120px;
-	border-radius: 0.1rem;
-	border: 1px solid rgba(0,0,0,.125);
-	font-size: 24px;
-	text-align: center;
-	line-height: 120px;
-	opacity: 0.5;
-	color: #fff;
-	background: #E54755;
-	&:hover {
-		font-size: 30px;
-	}
-}
-.homepage_facebook {
-	height: 120px;
-	border-radius: 0.1rem;
-	border: 1px solid rgba(0,0,0,.125);
-	font-size: 24px;
-	text-align: center;
-	line-height: 120px;
-	opacity: 0.5;
-	color: #fff;
-	background: #3B5998;
-	&:hover {
-		font-size: 30px;
-	}
-}
+
 @media (max-width: 991px) {
 	.homepage_carousel {
 		display: none;
@@ -193,8 +165,8 @@ body {
 		width: 100%;
 		bottom: 9px;
 		h4 {
-			background: #FF80AB;
-			color: #fff;
+			background: $brand-primary;
+			color: $white;
 			padding: 10px;
 			text-align: center;
 			font-size: 25px;
@@ -213,22 +185,19 @@ body {
 //Homepage End
 
 //Footer Start
-/***** Footer *****************************************************************/
-/*Footer immer am Boden*/
-/*Footer Mobile****************************************************************/
 .footer {
 	background-color: rgb(51,51,51);
 	bottom: 0;
 	a {
-		color: #fff !important;
+		color: $white !important;
 	}
 }
 .footer-column {
-	color: #fff !important;
+	color: $white !important;
 }
 .main_container_footer {
 	padding: 25px 15px 25px 15px;
-	color: #fff;
+	color: $white;
 	ul {
 		list-style: none;
 		padding: 0;
@@ -238,11 +207,11 @@ body {
 	font-size: 10px;
 	text-align: center;
 	padding-bottom: 15px;
-	color: #fff;
+	color: $white;
 }
 .footer_social {
 	i {
-		color: #8b8b8b;
+		color: $sadigo-footer-social;
 		font-size: 20px;
 		margin-right: 10px;
 		vertical-align: middle;
@@ -275,3 +244,61 @@ body {
 }
 
 //Footer End
+
+//Menu Start
+#mainNavbarCollapsable {
+	ul {
+		&.mainmenu {
+			> li {
+			position: static;
+				> ul {
+					background: lighten( $brand-primary, 10% );
+					padding: 2rem;
+					> li {
+						display: block;
+						width: 33.3333%;
+						text-align: left;
+						float: left;
+					}		
+				}
+			}		
+		}		
+	}				
+}
+//Menu End
+
+
+//FS Styles Start
+.wrapper-main {
+	.top-bar {
+		background-color: $sadigo-footer;
+	}
+	.navbar {
+		background-color: $brand-primary;
+		a {
+			color:$white;
+		}
+	}
+}
+.control-search {
+	.anicon {
+		width:100%;
+		&.anicon-search-xcross {
+			span {
+				display: inline-block;
+			}
+		}
+	}
+}
+.card-block {
+	.card-title {
+		color:$gray;
+	}
+}
+
+
+
+
+
+
+//FS Styles End
