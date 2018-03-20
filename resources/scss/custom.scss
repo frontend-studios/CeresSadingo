@@ -1,0 +1,277 @@
+//Global
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: white;
+	> #vue-app,
+	> #vue-error {
+		background-color: white;		
+	}
+}
+
+//Header Start
+@media (max-width: 1170px) {
+	.navbar {
+		height: 100px;
+	}
+	.brand-wrapper {
+		top: 28%;
+	}
+	.mainmenu {
+		top: 43px;
+		width: 975px;
+		margin: 0 auto !important;
+		float: none !important;
+	}
+	.wrapper-main {
+		#page-body {
+			margin-top: 150px;
+		}
+		>nav.container-max {
+			top: 130px;
+		}
+	}
+	.top-bar {
+		height: 85px;
+	}
+}
+@media (max-width: 991px) {
+	.navbar {
+		height: auto;
+	}
+	.brand-wrapper {
+		top: 50%;
+	}
+	.mainmenu {
+		top: 43px;
+		width: 975px;
+		margin: 0 auto !important;
+		float: none !important;
+	}
+	.wrapper-main {
+		#page-body {
+			margin-top: 100px;
+		}
+		>nav.container-max {
+			top: 96px;
+		}
+	}
+}
+//Header End
+
+//Homepage Start
+.main_container_slider {
+	padding: 0 !important;
+	margin-top: -14px;
+}
+.homepage_carousel {
+	margin-top: 15px;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+}
+.main_pagecontent {
+	padding: 0;
+	max-width: 1200px;
+}
+.homepage_container {
+	margin-top: 25%;
+	max-width: 100%;
+	position: relative;
+	width: 100%;
+	z-index: 999;
+}
+.prop-inner {
+	padding: 15px 0;
+}
+.featured-sale-new {
+	&:hover {
+		.featured-category-inner {
+			background-color: #ff80ab;
+		}
+	}
+	.featured-category-inner {
+		background: rgba(253, 152, 187, 0.6);
+	}
+}
+.homepage_row {
+	margin-top: 25px;
+}
+.homepage_row-title {
+	margin-top: 5px;
+	text-align: center;
+}
+.homepage_row-titletext {
+	margin-bottom: 15px;
+	text-align: center;
+}
+.homepage_card {
+	width: 100% !important;
+	height: 450px;
+}
+.homepage_card_img {
+	height: auto;
+	width: 100%;
+	background-color: #e878aa;
+	&:hover {
+		-moz-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+		transition: all ease 1.5s;
+	}
+}
+.homepage_card_imgBox {
+	overflow: hidden;
+}
+.homepage_articlePreview {
+	.product-list {
+		li {
+			padding: 0 15px;
+		}
+	}
+}
+.homepage_instagram {
+	height: 120px;
+	border-radius: 0.1rem;
+	border: 1px solid rgba(0,0,0,.125);
+	font-size: 24px;
+	text-align: center;
+	line-height: 120px;
+	opacity: 0.5;
+	color: #fff;
+	background: #E54755;
+	&:hover {
+		font-size: 30px;
+	}
+}
+.homepage_facebook {
+	height: 120px;
+	border-radius: 0.1rem;
+	border: 1px solid rgba(0,0,0,.125);
+	font-size: 24px;
+	text-align: center;
+	line-height: 120px;
+	opacity: 0.5;
+	color: #fff;
+	background: #3B5998;
+	&:hover {
+		font-size: 30px;
+	}
+}
+@media (max-width: 991px) {
+	.homepage_carousel {
+		display: none;
+	}
+	.homepage_container {
+		margin-top: 0;
+	}
+}
+@media (max-width: 767px) {
+	.homepage_sale-row {
+		.col-xs-6 {
+			float: none;
+			width: 100%;
+			max-height: 150px;
+		}
+		.prop-xs-6-4 {
+			position: initial;
+		}
+	}
+	.homepage_row {
+		.col-md-3 {
+			height: 100%;
+		}
+	}
+	.homepage_card {
+		border: none;
+		height: 100%;
+	}
+	.homepage_card-block {
+		height: 35px;
+		padding: 0;
+		position: absolute;
+		width: 100%;
+		bottom: 9px;
+		h4 {
+			background: #FF80AB;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-size: 25px;
+		}
+		p {
+			display: none;
+		}
+	}
+	.homepage_card_img {
+		&:hover {
+			border: none;
+		}
+	}
+}
+
+//Homepage End
+
+//Footer Start
+/***** Footer *****************************************************************/
+/*Footer immer am Boden*/
+/*Footer Mobile****************************************************************/
+.footer {
+	background-color: rgb(51,51,51);
+	bottom: 0;
+	a {
+		color: #fff !important;
+	}
+}
+.footer-column {
+	color: #fff !important;
+}
+.main_container_footer {
+	padding: 25px 15px 25px 15px;
+	color: #fff;
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+.copyright-bar {
+	font-size: 10px;
+	text-align: center;
+	padding-bottom: 15px;
+	color: #fff;
+}
+.footer_social {
+	i {
+		color: #8b8b8b;
+		font-size: 20px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+}
+.wrapper-main {
+	overflow-y: hidden;
+	min-height: 80%;
+}
+@media (max-width: 767px) {
+	.main_container_footer {
+		font-size: 18px;
+		h4 {
+			font-size: 30px;
+			margin-bottom: 10px;
+		}
+		br {
+			display: none;
+		}
+		.col-md-3 {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+//Footer End
