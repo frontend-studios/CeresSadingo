@@ -1,6 +1,8 @@
 {% extends getPartial('page-design') %}
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
+{% set basketInformation  = config("CeresSadingo.basket.basketInformation") %}
+
 {% block PartialHead %}
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     <title>{{ trans("Ceres::Template.basket") }} | {{ ceresConfig.header.companyName }}</title>
@@ -49,6 +51,7 @@
                     </a>
                     {{ LayoutContainer.show("Ceres::Basket.AfterCheckoutButton") }}
                 </div>
+                <p class="m-t-2">{{ basketInformation }}</p>
             </div>
         </div>
 

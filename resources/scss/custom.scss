@@ -32,6 +32,13 @@ body {
 	}
 	.top-bar {
 		height: 85px;
+		.col-sm-4 {
+			i {
+				color: white !important;
+				padding: 4px;
+				font-size: 18.2px;
+			}
+		}
 	}
 }
 @media (max-width: 991px) {
@@ -180,7 +187,9 @@ body {
 		}
 	}
 }
-
+.vat-porto-info {
+    font-size: 9px !important;
+}
 //Homepage End
 
 //Footer Start
@@ -316,8 +325,8 @@ body {
 	ul {
 		li {
 			> a {
-				&:first-of-type{
-					&::after {
+				&:first-of-type {
+					&:after {
 						content: '\f107';
 						font-family: FontAwesome;
 						padding: 5px;				
@@ -353,6 +362,24 @@ small {
 .cmp-product-thumb {
 	.crossprice {
     	color: rgba(217, 84, 79, 0.92);
+	}
+}
+
+.basket-item-container {
+	.basket-item {
+		.basket-item-container-right {
+			.item-total-price {
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+.checkout-rightside {
+	.btn-success {
+		color: $white;
+		background-color:$brand-primary;
+		border-color: $brand-primary;
 	}
 }
 
