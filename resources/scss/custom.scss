@@ -3,6 +3,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	background-color: white;
+	font-family: $font-family-serif;
 	> #vue-app,
 	> #vue-error {
 		background-color: white;		
@@ -297,7 +298,40 @@ body {
 }
 
 
-
+//Categorie Start 
+.filter-wrapper {
+	.filter-toggle {
+		color: $brand-primary;
+		text-decoration: none;
+	}
+}
+.sidebar-categories {
+	font-family: $font-family-serif;
+	border: 1px solid $sadigo-categories;
+	.category-title {
+		background: $white;
+	}
+	ul {
+		li {
+			a {
+				&:first-of-type{
+					&::after {
+						content: '\f107';
+						font-family: FontAwesome;
+						padding: 5px;				
+					}
+				}
+			}
+			&.active {
+				> a {
+					color: $brand-primary;
+					background:$white;
+				}
+			}
+		}
+	}
+}
+//Categorie End
 
 
 
