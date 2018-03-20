@@ -279,6 +279,7 @@ body {
 	}
 	.navbar {
 		background-color: $brand-primary;
+		border-bottom: none;
 		a {
 			color:$white !important;
 		}
