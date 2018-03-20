@@ -1,32 +1,14 @@
 {% import "Ceres::PageDesign.Macros.IncludeComponents" as Loader %}
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+{% import "Ceres::PageDesign.Macros.Translations" as Translations %}
 {{ component( "Ceres::PageDesign.Components.Notifications" ) }}
 {{ component( "Ceres::Basket.Components.BasketPreview" ) }}
 {{ component( "Ceres::Customer.Components.Login" ) }}
 {{ component( "Ceres::Customer.Components.Registration" ) }}
 {{ component( "Ceres::Basket.Components.AddItemToBasketOverlay" ) }}
+{{ component( "Ceres::PageDesign.Components.Popper" ) }}
 
 <!DOCTYPE html>
-
-{% set lang = services.sessionStorage.getLang() %}
-
-{% set metaLang = "de" %}
-{% if lang == "de" or lang == "en" %}
-    {% set metaLang = lang %}
-{% endif %}
-
-{% set fixNavBarPos = config("Ceres.header.fixed_navbar") %}
-
-{% set basketAddInformation = config("Ceres.basket.add_item_to_basket_confirm") %}
-
-
-{% set shippingCat = config("Ceres.global.shippingCostsCategoryId") %}
-
-{% if services.template.isCategory() or services.template.isItem() %}
-    {% set categoryBreadcrumbs = services.category.getHierarchy() %}
-    {{ services.crossSelling.setType(config("Ceres.item.lists.cross_selling_type")) }}
-{% endif %}
-
 <html lang="{{ lang }}" data-framework="vue" prefix="og: http://ogp.me/ns#">
 
     <head>
@@ -35,7 +17,11 @@
         {% block PartialHead %}
         {% endblock %}
 
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+
+        {% for styleTemplate in get_additional_styles() %}
+            {% include styleTemplate.path ignore missing with styleTemplate.params %}
+        {% endfor %}
+
         <!-- Schriftart -->
         <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
         <!-- Eigenes Design -->
@@ -46,135 +32,174 @@
     </head>
 
     <body>
-        <resource name="user" :data="{ isLoggedIn: {{ frontend.Account.getIsAccountLoggedIn | json_encode() }} }" ></resource>
-        <resource name="basket" route="/rest/io/basket/" :data="{{ services.basket.getBasketForTemplate() | json_encode() }}" :events="['AfterBasketChanged!basket.totalVats']"></resource>
-        <resource name="itemSearch" :data="{}"></resource>
-        <resource name="basketItem" :data="{ currentBasketItem: { }, quantity: 1 }"></resource>
-        <resource name="localization" :data="{{ services.localization.getLocalizationData() | json_encode() }}" :events="['LocalizationChanged!localization']"></resource>
-        <resource-list name="basketItems" route="/rest/io/basket/items/" response-template="Ceres::Basket.Basket" data="{{ services.basket.getBasketItemsForTemplate('Ceres::Basket.Basket') | json_encode() }}"></resource-list>
+        <script>
+            if('ontouchstart' in document.documentElement)
+            {
+                document.body.classList.add("touch");
+            }
+            else
+            {
+                document.body.classList.add("no-touch");
+            }
+        </script>
+        <div id="vue-app">
+            <div class="wrapper wrapper-top">
+                <!-- messages -->
+                <notifications template="#vue-notifications" :initial-notifications="{{ notifications | json_encode() }}"></notifications>
+            </div>
 
-        <resource name="isLoadingBreadcrumbs" :data="false"></resource>
+            <div class="wrapper wrapper-left">
+                <!-- filters -->
+            </div>
 
-        <div class="wrapper wrapper-top">
-            <!-- messages -->
-            <notifications template="#vue-notifications"
-                :initial-notifications="{{ services.notifications.getNotifications() | json_encode() }}"
-            ></notifications>
-        </div>
+            <div class="wrapper wrapper-main {% if ceresConfig.header.fixNavBarPos %}isSticky{% endif %}">
+                {% include getPartial('header') %}
 
-        <div class="wrapper wrapper-left">
-          <!-- filters -->
-        </div>
+                <div id="page-body" class="main">
+                    {% block PageBody %}
+                        <!-- inject content of inherited templates here -->
+                    {% endblock %}
+                </div>
 
-        <div class="wrapper wrapper-main {% if fixNavBarPos == 'true' %}isSticky{% endif %}">
+                {% include getPartial('footer') %}
 
-            {% include getPartial('header') %}
-
-            <div id="page-body" class="main">
-                {% block PageBody %}
-                    <!-- inject content of inherited templates here -->
+                {% block PartialFooter %}
                 {% endblock %}
             </div>
 
-        </div>
+            {% if basket is not defined %}
+                {% set basket = services.basket.getBasketForTemplate() %}
+            {% endif %}
+            {% if ceresConfig.basket.previewType == "right" %}
+                <div class="wrapper wrapper-right">
+                    <basket-preview
+                        template="#vue-basket-preview"
+                        :basket-data="{{ basket | json_encode() }}">
+                    </basket-preview>
+                </div>
+            {% endif %}
 
-        {% include getPartial('footer') %}
-
-        <div class="wrapper wrapper-right">
-          <basket-preview template="#vue-basket-preview"></basket-preview>
-        </div>
-
-        <div class="wrapper wrapper-bottom">
-            <!-- eventually messages -->
-
-            <!-- LOGIN MODAL -->
-            <div id="login-modal-wrapper">
-                <div class="modal fade login-modal" id="login" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h3 class="modal-title">{{ trans("Ceres::Template.accLogin") }}</h3>
-                            </div>
-                            <div class="modal-body">
+            <div class="wrapper wrapper-bottom">
+                <!-- LOGIN MODAL -->
+                <div id="login-modal-wrapper">
+                    <div class="modal fade login-modal" id="login" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <div class="modal-title h3">{{ trans("Ceres::Template.accLogin") }}</div>
+                                </div>
                                 <login template="#vue-login" modal-element="login-modal-wrapper"></login>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- ./LOGIN MODAL -->
+                <!-- ./LOGIN MODAL -->
 
-            <!-- REGISTRATION MODAL -->
-            <div id="simple-registration-modal-wrapper">
-                <div class="modal fade" id="registration" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h3 class="modal-title">{{ trans("Ceres::Template.accCreateAccount") }}</h3>
-                            </div>
-                            <div class="modal-body">
+                <!-- REGISTRATION MODAL -->
+                <div id="simple-registration-modal-wrapper">
+                    <div class="modal fade" id="registration" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <div class="modal-title h3">
+                                        {{ trans("Ceres::Template.accCreateAccount") }}
+
+                                       <popper v-cloak class="pull-right m-r-1">
+                                            <button slot="handle" class="btn btn-icon btn-secondary btn-sm">
+                                                <i class="fa fa-info"></i>
+                                            </button>
+                                            <div slot="title">
+                                                {{ trans("Ceres::Template.generalContactInformations") }}
+                                            </div>
+                                            <ul slot="content" class='p-l-1'>
+                                                <li class='m-b-1'>{{ trans('Ceres::Template.generalContactInfoText1') }}</li>
+                                                <li class='m-b-1'>{{ trans('Ceres::Template.generalContactInfoText2') }}</li>
+                                                <li class='m-b-1'>{{ trans('Ceres::Template.generalContactInfoText3') }}</li>
+                                                <li>{{ trans('Ceres::Template.generalContactInfoText4') }}</li>
+                                            </ul>
+                                        </popper>
+                                    </div>
+                                </div>
                                 <registration template="#vue-registration" :is-simple-registration="true" modal-element="simple-registration-modal-wrapper"></registration>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- ./REGISTRATION MODAL -->
+                <!-- ./REGISTRATION MODAL -->
 
-            <!-- BASKET MODAL -->
-            <add-item-to-basket-overlay template="#vue-add-item-to-basket-overlay" :basket-add-information="{{ basketAddInformation | json_encode() }}"></add-item-to-basket-overlay>
-            <!-- ./BASKET MODAL -->
+                <!-- BASKET MODAL -->
+                <add-item-to-basket-overlay template="#vue-add-item-to-basket-overlay" :basket-add-information="{{ ceresConfig.basket.addItemToBasketConfirm | json_encode() }}"></add-item-to-basket-overlay>
+                <!-- ./BASKET MODAL -->
 
-            <!-- SHIPPINGCOSTS MODAL -->
-            <div id="shippingscosts-modal-wrapper">
-                <div class="modal fade" id="shippingscosts" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                <h3 class="modal-title">{{ trans('Ceres::Template.itemShippingCosts') }}</h3>
-                            </div>
-                            <div class="modal-body">
-                                {% include category_template(shippingCat, lang, services.webstoreConfig.getWebstoreConfig().webstoreId) ignore missing %}
+                <!-- SHIPPINGCOSTS MODAL -->
+                <div id="shippingscosts-modal-wrapper">
+                    <div class="modal fade" id="shippingscosts" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <div class="modal-title h3">{{ trans('Ceres::Template.itemShippingCosts') }}</div>
+                                </div>
+                                <div class="modal-body">
+                                    {% include category_template(ceresConfig.global.shippingCostsCategoryId, lang, webstoreConfig.webstoreId) ignore missing %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- ./SHIPPINGCOSTS MODAL -->
             </div>
-            <!-- ./SHIPPINGCOSTS MODAL -->
+        </div>
 
+        <div id="vue-error" style="display:none">
+            {% include "Ceres::PageDesign.Partials.VueError" %}
         </div>
 
         {{ Loader.include_components() }}
 
         {{ LayoutContainer.show("Ceres::Script.Loader") }}
 
-        {% set lang = services.sessionStorage.getLang() %}
-
-        {% if config("Ceres.log.performance.level") == 'development' %}
-            <script src="{{ plugin_path('Ceres') }}/js/lang/{{ lang }}.js"></script>
-            <script>var Translations = Languages['{{ lang }}'];</script>
+        {{ Translations.add( "Ceres", "Template" ) }}
+        {% if ceresConfig.log.performanceLevel  == 'development' %}
             <script src="{{ plugin_path('Ceres') }}/js/dist/ceres-vendor.js"></script>
-            <script src="{{ plugin_path('Ceres') }}/js/src/app.config.js"></script>
             <script src="{{ plugin_path('Ceres') }}/js/dist/ceres-app.js"></script>
         {% else %}
-            {# TODO remove douplicate import #}
-            <script src="{{ plugin_path('Ceres') }}/js/lang/{{ lang }}.js"></script>
-            <script>var Translations = Languages['{{ lang }}'];</script>
-
             <script src="{{ plugin_path('Ceres') }}/js/dist/ceres.min.js"></script>
         {% endif %}
 
+        {% for scriptTemplate in get_additional_scripts() %}
+            {% include scriptTemplate.path ignore missing with scriptTemplate.params %}
+        {% endfor %}
+
         {{ LayoutContainer.show("Ceres::Script.AfterScriptsLoaded") }}
 
+        {{ get_filtered_tags() }}
+
         <script>
-            vueApp = new Vue({
-                el: "body",
+            var rootElement = document.getElementById("vue-app");
+            var errorElement = document.getElementById("vue-error");
+
+            Vue.options.delimiters = ['${', '}'];
+
+            var vueEventHub = new Vue();
+
+            var vueApp = new Vue({
                 store: window.ceresStore
             });
+            vueApp.$mount( rootElement.cloneNode(true) );
+
+            if ( vueApp.$el.id !== "vue-app")
+            {
+                rootElement.parentNode.removeChild(rootElement);
+                errorElement.style.display = "block";
+            }
+            else
+            {
+                document.body.replaceChild( vueApp.$el, rootElement );
+                errorElement.parentNode.removeChild(errorElement);
+            }
         </script>
     </body>
-
 </html>

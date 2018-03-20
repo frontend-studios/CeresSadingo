@@ -33,10 +33,6 @@
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterList") }}
     {{ component( "Ceres::ItemList.Components.Filter.ItemFilterTagList") }}
 
-    <resource name="itemList" :data="{{ paginatedResult | json_encode }} || {}"></resource>
-    <resource name="facets" :data="{{ paginatedResult.facets | json_encode }} || []"></resource>
-    <resource name="facetParams" :data="[]"></resource>
-
     <div class="categoriegrid page-content container-max itemListView-page">
         <div class="row m-t-1">
             <div class="col-xs-12">
@@ -49,12 +45,11 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="list-wrapper">
-                            <item-list-sorting template="#vue-item-list-sorting" :sort-data="{{ config("Ceres.sort.data") | split(', ') | json_encode() }}"></item-list-sorting>
+                            <item-list-sorting template="#vue-item-list-sorting" :sorting-list="{{ searchOptions.sorting | json_encode }}" :default-sorting="{{ searchOptions.defaultSorting | json_encode }}"></item-list-sorting>
                             <items-per-page
                                 template="#vue-items-per-page"
-                                :columns-per-page="{{ config("Ceres.pagination.columnsPerPage") | json_encode() }}"
-                                :rows-per-page="{{ config("Ceres.pagination.rowsPerPage") | split(', ') | json_encode() }}"></items-per-page>
-                            <item-filter-list :facets="{{ paginatedResult.facets | json_encode }}"></item-filter-list>
+                                :pagination-values="{{ searchOptions.itemsPerPage | json_encode }}"></items-per-page>
+                            <item-filter-list :facet-data="{{ facets | json_encode }}"></item-filter-list>
                         </div>
                     </div>
                 </div>
@@ -64,11 +59,14 @@
         </div>
 
         <div class="row">
-
             <div class="col-xs-12">
 
-                <div id="vue-rendered-item-list" class="item-list-frame-main item-list-frame">
-                    <item-list template="#vue-item-list"></item-list>
+                <div id="vue-rendered-item-list" class="item-list-frame">
+                    <item-list
+                        :item-data="{{ itemList | json_encode }}"
+                        :total-items-data="{{ itemCountTotal }}"
+                        template="#vue-item-list">
+                    </item-list>
                 </div>
 
             </div>
@@ -86,8 +84,8 @@
 {% endblock %}
 
 {% block PartialHead %}
-<script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}/search?query={search_term}","query-input": "required name=search_term"}}</script>
-    {% if services.template.isSearch() %}
-        <title>{{ trans("Ceres::Template.generalSearchResults") }} {{ searchString }} | {{ config("Ceres.header.company_name") }}</title>
+<script type="application/ld+json">{"@context": "http://schema.org","@type": "WebSite","url": "{{ webstoreConfig.domainSsl }}","potentialAction":{"@type": "SearchAction","target": "{{ webstoreConfig.domainSsl }}/search?query={search_term}","query-input": "required name=search_term"}}</script>
+    {% if isSearch %}
+        <title>{{ trans("Ceres::Template.generalSearchResults") }} {{ searchString }} | {{ ceresConfig.header.companyName }}</title>
     {% endif %}
 {% endblock %}
