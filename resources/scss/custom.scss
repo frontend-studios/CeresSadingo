@@ -212,7 +212,7 @@ body {
 }
 .footer_social {
 	i {
-		color: $sadigo-footer-social;
+		color: $sadingo-footer-social;
 		font-size: 20px;
 		margin-right: 10px;
 		vertical-align: middle;
@@ -253,7 +253,7 @@ body {
 			> li {
 			position: static;
 				> ul {
-					background: $sadigo-hover-menu;
+					background: $sadingo-hover-menu;
 					padding: 2rem;
 					> li {
 						display: block;
@@ -270,9 +270,12 @@ body {
 
 
 //FS Styles Start
+.page-content {
+	background-color: $white;
+}
 .wrapper-main {
 	.top-bar {
-		background-color: $sadigo-footer;
+		background-color: $sadingo-footer;
 	}
 	.navbar {
 		background-color: $brand-primary;
@@ -307,13 +310,13 @@ body {
 }
 .sidebar-categories {
 	font-family: $font-family-serif;
-	border: 1px solid $sadigo-categories;
+	border: 1px solid $sadingo-categories;
 	.category-title {
 		background: $white;
 	}
 	ul {
 		li {
-			a {
+			> a {
 				&:first-of-type{
 					&::after {
 						content: '\f107';
