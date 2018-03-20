@@ -42,6 +42,12 @@
 		"default"   : "Hochwertiges Schmuck- und Bastelmaterial, Holzperlen, Glasperlen, Metallperlen, Holzknöpfe, Bänder und Lederartikel sowie Bastelzubehör für kreative Menschen findest Du bei Sadingo! "
 	},
 	{
+        "tab"       : "Homepage",
+        "key"       : "homepage.homepageCategory1",
+        "label"     : "Kategorieauswahl der Artikelanzeige der Startseite",
+        "type"      : "category_select"
+    },
+	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopLeftLink",
 		"label"     : "Oben links: Link",

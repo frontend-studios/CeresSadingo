@@ -30,14 +30,14 @@ body {
 			top: 130px;
 		}
 	}
-	.top-bar {
-		height: 85px;
-		.col-sm-4 {
-			i {
-				color: white !important;
-				padding: 4px;
-				font-size: 18.2px;
-			}
+}
+.top-bar {
+	height: 85px;
+	.col-sm-4 {
+		.fa {
+			color: white !important;
+			padding: 4px;
+			font-size: 18.2px;
 		}
 	}
 }

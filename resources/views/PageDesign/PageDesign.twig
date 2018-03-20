@@ -161,6 +161,53 @@
             <script src="{{ plugin_path('Ceres') }}/js/dist/ceres.min.js"></script>
         {% endif %}
 
+        <script>
+        $( document ).ready(function() {
+            
+                $(".list-carousel-first").owlCarousel({
+                    autoHeight       : true,
+                    dots             : false,
+                    items            : 4,
+                    lazyLoad         : false,
+                    loop             : false,
+                    margin           : 10,
+                    mouseDrag        : true,
+                    nav              : true,
+                    navClass         : [
+                        "owl-single-item-nav left carousel-control list-control-special",
+                        "owl-single-item-nav right carousel-control list-control-special"
+                    ],
+                    navContainerClass: "",
+                    navText          : [
+                        "<i class=\"owl-single-item-control fa fa-chevron-left\" aria-hidden=\"true\"></i>",
+                        "<i class=\"owl-single-item-control fa fa-chevron-right\" aria-hidden=\"true\"></i>"
+                    ],
+                    smartSpeed       : 350,
+
+                    responsive : {
+                        // breakpoint from 0 up
+                        0 : {
+                            items            : 1,
+                            slideBy          : 1
+                        },
+                        // breakpoint from 544 up
+                        544 : {
+                            items            : 2,
+                            slideBy          : 2
+                        },
+                        // breakpoint from 768 up
+                        768 : {
+                            items            : 4,
+                            slideBy          : 4
+                        }
+                    },
+                    onTranslated: function(elem){
+                        $(".lazyOwl").lazyload();
+                    }
+                });
+            });
+        </script>
+
         {% for scriptTemplate in get_additional_scripts() %}
             {% include scriptTemplate.path ignore missing with scriptTemplate.params %}
         {% endfor %}

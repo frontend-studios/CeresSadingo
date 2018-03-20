@@ -45,17 +45,15 @@
 {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
 {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
 
-{% set homepageArticlePreview1 = config("CeresSadingo.homepage.homepageArticlePreview1") %}
-{% set ArticlePreview1Result   = services.itemLoader.loadForTemplate(
-'CeresSadingo::ItemList.ItemListView', itemLoaderPresets.categoryList, {'categoryId': homepageArticlePreview1, 'page':1, 'items':4, 'facets': facetParams, 'sorting': itemSort}) %}
-{% set ArticlePreview1         = ArticlePreview1Result.documents %}
+{% set category1 = services.category.get(config("CeresSadingo.homepage.homepageCategory1"), lang) %}        
+{% set paginatedCategoryList1 =
+services.itemLoader.loadForTemplate(
+'Ceres::ItemList.ItemListView',
+itemLoaderPresets.categoryList,
+{'categoryId': category1.id, 'page':1, 'items':10, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
 
-{% set homepageArticlePreview2 = config("CeresSadingo.homepage.homepageArticlePreview2") %}
-{% set ArticlePreview2Result   = services.itemLoader.loadForTemplate(
-                                 'CeresSadingo::ItemList.ItemListView',
-                                 itemLoaderPresets.categoryList,
-                                 {'categoryId': homepageArticlePreview2, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
-{% set ArticlePreview2         = ArticlePreview2Result.documents %}
+
+{% set categoryList1 = paginatedCategoryList1.documents %}
 
 {% block ThemeHomepage %}
 
@@ -71,6 +69,31 @@
           {{ homepageTitleText }}
         </p>
       </div>
+
+      <div class="row">
+          <div class="section-header m-b-1">
+              <h4>{{ category1.details[0].name }}</h4>
+              <a href="{{ services.category.getURL(category1, lang) }}" class="section-link-all"><i class="fa fa-angle-double-right" aria-hidden="true">&nbsp;</i>{{ trans("Ceres::Template.homepageShowAll") }}</a>
+          </div>
+          <div class="col-xs-12 col-lg-12">
+              {% if paginatedCategoryList1 | length > 4 %}                                                                                                      
+                  <div class="list-item-carousel owl-carousel owl-theme list-carousel-first">      
+                      {% for item in categoryList1 %}                                                
+                              {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}                                            
+                      {% endfor %}
+                  </div>
+              {% else %}
+                  <ul class="product-list row grid list-carousel-first">
+                      {% for item in categoryList1 %}
+                          <li class="col-xs-12 col-sm-6 col-md-3">
+                              {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                          </li>
+                      {% endfor %}
+                  </ul>
+              {% endif %}   
+          </div>
+      </div> 
+
       <div class="homepage_sale-row">
         <div class="homepage_row row">
           <div class="col-xs-6">
