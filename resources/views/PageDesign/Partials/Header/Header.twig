@@ -20,11 +20,11 @@
 <header class="top-bar">
     <div class="container-max">
         <div class="row">
-          <div class="col-sm-4 hidden-xs-down">
+          <div class="col-sm-2 hidden-xs-down">
               <a href="https://www.facebook.com/wearesadingos" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
               <a href="https://www.instagram.com/wearesadingos" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </div>
-            <div class="col-xs-12 col-sm-8">
+            <div class="col-xs-12 col-sm-10">
             {{ LayoutContainer.show("Ceres::Header.LeftSide") }}
                 <ul id="controlsList" class="controls-list list-inline">
                     <li id="searchBox2" class="cmp cmp-search-box {% if services.template.isSearch() %} in {% endif %} hidden-md-down">
@@ -60,7 +60,7 @@
                                 aria-controls="searchBox"
                                 data-parent="#controlsList">
                             <span class="anicon-search-item" aria-hidden="true"></span>
-                            <span class="search-string">Suchen</span>
+                            <span class="search-string hidden-sm-down">Suchen</span>
                         </a>
                     </li>
                     {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}

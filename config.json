@@ -11,21 +11,21 @@
 		"key"       : "homepage.homepageSliderImg1",
 		"label"     : "Erstes Slider Bild",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/images/gallery/Startseite/sliderVorschau-1.png"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSliderImg2",
 		"label"     : "Zweites Slider Bild",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/images/gallery/Startseite/sliderVorschau-2.png"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageSliderImg3",
 		"label"     : "Drittes Slider Bild",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/images/gallery/Startseite/sliderVorschau-3.png"
 	},
 	{
 		"tab"       : "Startseite",
@@ -52,7 +52,7 @@
 		"key"       : "homepage.homepageTopLeftLink",
 		"label"     : "Oben links: Link",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/bestseller"
 	},
 	{
 		"tab"       : "Startseite",
@@ -66,14 +66,14 @@
 		"key"       : "homepage.homepageTopLeftText",
 		"label"     : "Oben link: Text",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "Bestseller"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTopRightLink",
 		"label"     : "Oben rechts: Link",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "/sale"
 	},
 	{
 		"tab"       : "Startseite",
@@ -87,14 +87,14 @@
 		"key"       : "homepage.homepageTopRightText",
 		"label"     : "Oben rechts: Text",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "sale"
 	},
 	{
 		"tab"       : "Startseite",
 		"key"       : "homepage.homepageTitleKategories",
 		"label"     : "Title der Kategorien",
 		"type"      : "text",
-		"default"   : "/"
+		"default"   : "Durchstöbere unsere Kategorien"
 	},
 	{
 		"tab"       : "Startseite",
@@ -151,18 +151,6 @@
 		"label"     : "Schmuckstücke Text",
 		"type"      : "text",
 		"default"   : "Unsere Auswahl an Schmuckstücken umfasst tolle Armbänder, schöne Ohrringe und ausgefallene Uhren. Schauen Sie sich um."
-	},
-	{
-			"tab"       : "Startseite",
-			"key"       : "homepage.homepageArticlePreview1",
-			"label"     : "Artikelvorschau 1 (Categorie ID)",
-			"type"      : "category_select"
-	},
-	{
-			"tab"       : "Startseite",
-			"key"       : "homepage.homepageArticlePreview2",
-			"label"     : "Artikelvorschau 2 (Categorie ID)",
-			"type"      : "category_select"
 	},
 	{
 			"tab"       : "Kategorien",
