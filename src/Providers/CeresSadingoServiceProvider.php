@@ -14,6 +14,7 @@ use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ConfigRepository;
+use IO\Helper\ComponentContainer;
 
 class CeresSadingoServiceProvider extends ServiceProvider
 {
@@ -34,7 +35,7 @@ class CeresSadingoServiceProvider extends ServiceProvider
 		{
         $container->setTemplate("CeresSadingo::Homepage.Homepage");
         return false;
-    });
+    	});
 
 		// überschreibt das Basket Templates
 		$eventDispatcher->listen('IO.tpl.basket', function(TemplateContainer $container, $templateData)
@@ -75,13 +76,12 @@ class CeresSadingoServiceProvider extends ServiceProvider
 			 $partial->set('page-design', 'CeresSadingo::PageDesign.PageDesign');
 		}, self::EVENT_LISTENER_PRIORITY);
 
-		$eventDispatcher->listen('IO.Component.Import', function(ComponentContainer $componentContainer) { 
-            if($componentContainer->getOriginComponentTemplate() == 'Ceres::Item.Components.SingleItem') 
+		$eventDispatcher->listen('IO.Component.Import', function (ComponentContainer $container)
+        {      
+            if($container->getOriginComponentTemplate() == 'Ceres::Item.Components.SingleItem') 
             {
-                $componentContainer->setNewComponentTemplate('CeresSadingo::Item.Components.SingleItem');
-            } 
+                $container->setNewComponentTemplate('CeresSadingo::Item.Components.SingleItem');
+            }
         }, self::EVENT_LISTENER_PRIORITY);
-
-		return false;
   }
 }
