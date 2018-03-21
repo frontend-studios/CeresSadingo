@@ -425,7 +425,11 @@ small {
     	color: rgba(217, 84, 79, 0.92);
 	}
 	.prices {
-		flex-direction: row-reverse;
+		flex-direction: row;
+		.price-view-port {
+			flex: 0 1 0;
+			margin-right: 5px;
+		}
 	}
 	.vat-porto-info {
 		font-size: 9px !important;
