@@ -1,9 +1,9 @@
 {
-      "version"               : "1.7.0",
+      "version"               : "2.5.0",
       "name"                  :"CeresSadingo",
-      "description"           :"Dies ist ein Theme für das Ceres Plugin. CeresSadingo 1.5.0 ist für die Ceres Version 1.5.0",
+      "description"           :"Sadingo Theme",
       "namespace"             :"CeresSadingo",
-      "author"                :"m.huch",
+      "author"                :"Frontend Studios",
       "license"               : "non-license",
       "price"                 : 0.00,
       "keywords"              : ["plentymarkets", "plugins", "layout", "theme", "ceres", "sadingo"],
