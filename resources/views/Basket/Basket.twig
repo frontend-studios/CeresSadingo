@@ -1,14 +1,13 @@
 {% extends getPartial('page-design') %}
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
-{% set basketInformation  = config("CeresSadingo.basket.basketInformation") %}
-
 {% block PartialHead %}
     <meta name="robots" content="NOINDEX, NOFOLLOW">
     <title>{{ trans("Ceres::Template.basket") }} | {{ ceresConfig.header.companyName }}</title>
 {% endblock %}
 
 {% block PageBody %}
+    {% set basketInformation  = config("CeresSadingo.basket.basketInformation") %}
 
     {{ component( "Ceres::Basket.Components.BasketList" ) }}
     {{ component( "Ceres::Basket.Components.Coupon" ) }}
