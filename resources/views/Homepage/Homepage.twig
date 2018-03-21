@@ -79,14 +79,14 @@ itemLoaderPresets.categoryList,
               {% if paginatedCategoryList1 | length > 4 %}                                                                                                      
                   <div class="list-item-carousel owl-carousel owl-theme list-carousel-first">      
                       {% for item in categoryList1 %}                                                
-                              {% include "CeresSandigo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}                                            
+                              {% include "CeresSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}                                            
                       {% endfor %}
                   </div>
               {% else %}
                   <ul class="product-list row grid list-carousel-first">
                       {% for item in categoryList1 %}
                           <li class="col-xs-12 col-sm-6 col-md-3">
-                              {% include "CeresSandigo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                              {% include "CeresSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                           </li>
                       {% endfor %}
                   </ul>

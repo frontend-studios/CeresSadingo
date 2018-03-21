@@ -78,9 +78,9 @@ class CeresSadingoServiceProvider extends ServiceProvider
 
 		$eventDispatcher->listen('IO.Component.Import', function (ComponentContainer $container)
         {   
-			if($componentContainer->getOriginComponentTemplate() == 'Ceres::ItemList.Components.CategoryItem') 
+			if($container->getOriginComponentTemplate() == 'Ceres::ItemList.Components.CategoryItem') 
             {
-                    $componentContainer->setNewComponentTemplate('CeresSadingo::ItemList.Components.CategoryItem');
+				$container->setNewComponentTemplate('CeresSadingo::ItemList.Components.CategoryItem');
             }   
             if($container->getOriginComponentTemplate() == 'Ceres::Item.Components.SingleItem') 
             {
