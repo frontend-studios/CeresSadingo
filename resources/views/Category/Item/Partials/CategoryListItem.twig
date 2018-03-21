@@ -91,9 +91,13 @@
                 <div class="prices">
                     {% if item.data.prices.rrp is defined and item.data.prices.rrp.price.value != 0 %}
                         <div class="price-view-port">
+                            {% if item.data.price.rrp.price >= item.data.price.default.price %}
+                                {% if item.data.price.rrp.price != item.data.price.default.price %}
                             <del class="crossprice">
                                 {{ item.data.prices.rrp.price.formatted }}
                             </del>
+                                {% endif %}
+                            {% endif %}
                         </div>
                     {% endif %}
 

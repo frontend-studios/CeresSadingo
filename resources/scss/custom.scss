@@ -321,6 +321,13 @@ body {
 
 
 //FS Styles Start
+#page-body {
+	.carousel-control {
+		top: 30%;
+		bottom: 30% !important;
+		width: 5%;
+	}
+}
 .page-content {
 	background-color: $white;
 }
