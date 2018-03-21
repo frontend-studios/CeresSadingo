@@ -75,6 +75,13 @@ class CeresSadingoServiceProvider extends ServiceProvider
 			 $partial->set('page-design', 'CeresSadingo::PageDesign.PageDesign');
 		}, self::EVENT_LISTENER_PRIORITY);
 
+		$eventDispatcher->listen('IO.Component.Import', function(ComponentContainer $componentContainer) { 
+            if($componentContainer->getOriginComponentTemplate() == 'Ceres::Item.Components.SingleItem') 
+            {
+                $componentContainer->setNewComponentTemplate('CeresSadingo::Item.Components.SingleItem');
+            } 
+        }, self::EVENT_LISTENER_PRIORITY);
+
 		return false;
   }
 }
