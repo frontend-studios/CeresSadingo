@@ -1,4 +1,13 @@
-{% extends 'Ceres::Homepage.Homepage' %}
+
+{# extends 'Ceres::Homepage.Homepage' #}
+
+{% extends getPartial('page-design') %}
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{% set showDefaultHomepage = config("Ceres.default.homepage") %}
+{% set companyLogo  = config("Ceres.header.company_logo") %}
+{% set companyName  = config("Ceres.header.company_name") %}
+
 
 {% block PartialHead %}
     <meta name="description" content="{{ config("Ceres.meta."~metaLang~".description_home") }}">
@@ -308,6 +317,5 @@ itemLoaderPresets.categoryList,
     <span class="sr-only">Next</span>
   </a>
 </div>
-
 
 {% endblock %}
