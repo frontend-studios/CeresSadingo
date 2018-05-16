@@ -453,5 +453,12 @@ small {
 		border-color: $brand-primary;
 	}
 }
-
+.contact {
+	padding-bottom: 2rem;
+	.cmp-contact {
+		#contact-map {
+			display: none;
+		}
+	}
+}
 //FS Styles End
