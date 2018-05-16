@@ -2,7 +2,6 @@
 
 {{ component( "Ceres::Customer.Components.UserLoginHandler" ) }}
 {{ component( "Ceres::PageDesign.Components.ShippingCountrySelect" ) }}
-
 {{ component( "Ceres::PageDesign.Components.MobileNavigation" ) }}
 {{ component( "Ceres::ItemList.Components.ItemSearch" ) }}
 {{ component( "Ceres::WishList.Components.WishListCount" ) }}
@@ -10,12 +9,10 @@
 
 {% set lang = services.sessionStorage.getLang() %}
 {% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
-
 {% set activeCurrencies = config("Ceres.currency.available_currencies") | split(', ') %}
 {% set enableCurrencySelect = config("Ceres.currency.enable_selection") == "true" and activeCurrencies | length > 0 %}
 {% set currencyFormat = config("Ceres.currency.format") %}
 {% set currencyFormatSelect = config("Ceres.currency.format_selection") %}
-
 
 <header class="top-bar">
     <div class="container-max">
@@ -32,26 +29,27 @@
                     </li>   
                     <li class="list-inline-item control-user">
                         <user-login-handler template="#vue-user-login-handler"
-                                :user-data="{{ services.customer.getContact() | json_encode() }}"></user-login-handler>
+                                            :user-data="{{ services.customer.getContact() | json_encode() }}"></user-login-handler>
                     </li>
                     <li class="list-inline-item dropdown control-languages">
                         <a class="" data-toggle="collapse" href="#countrySettings" aria-expanded="false"
-                        aria-controls="countrySettings"
-                        data-parent="#controlsList">
+                            aria-controls="countrySettings"
+                            data-parent="#controlsList">
                             <i class="flag-icon flag-icon-{{ lang }}"></i>
                         </a>
                     </li>
+
                     {% if enableCurrencySelect == "true" %}
-                    <li class="list-inline-item dropdown control-languages">
-                        <a class=""
-                        data-toggle="collapse"
-                        href="#currencySelect"
-                        aria-expanded="false"
-                        aria-controls="currencySelect"
-                        data-parent="#controlsList">
-                            <span>{{ services.checkout.getCurrencyData()[currencyFormat] }}</span>
-                        </a>
-                    </li>
+                        <li class="list-inline-item dropdown control-languages">
+                            <a class=""
+                                data-toggle="collapse"
+                                href="#currencySelect"
+                                aria-expanded="false"
+                                aria-controls="currencySelect"
+                                data-parent="#controlsList">
+                                <span>{{ services.checkout.getCurrencyData()[currencyFormat] }}</span>
+                            </a>
+                        </li>
                     {% endif %}
                     <li class="list-inline-item control-search hidden-lg-up">
                         <a class="anicon anicon-search-xcross" aria-label="toggle search"
@@ -94,8 +92,8 @@
                 </ul>
             </div>
         </div>
+        {% include "CeresSadingo::PageDesign.Partials.Header.Navigation" %}
     </div>
-    {% include "CeresSadingo::PageDesign.Partials.Header.Navigation" %}
 </header>
 
 
@@ -111,6 +109,7 @@
 {% endif %}
 
 <mobile-navigation :navigation-tree-data="{{ categories | json_encode }}" :initial-category="{{ initialCategory | json_encode }}" template="#vue-mobile-navigation"></mobile-navigation>
+
 
 <div class="container-max page-header">
     <div class="row">
@@ -161,10 +160,14 @@
 
                                 {% set languageList = services.webstoreConfig.getActiveLanguageList() %}
                                 {% set languageUrls = services.url.getLanguageURLs() %}
+                                {% set trailingSlash = "" %}
+                                {% if config('urlTrailingSlash') == 1 %}
+                                    {% set trailingSlash = "/" %}
+                                {% endif %}
                                 <ul>
                                     {% for language in languageList %}
                                         <li{% if lang == language %} class="active"{% endif %}>
-                                            <a href="{% if languageUrls[language] is defined %}{{ languageUrls[language] ~ queryString() }}{% else %}/{{ language }}{% endif %}{{ urls.trailingSlashSuffix }}" data-update-url>
+                                            <a href="{% if languageUrls[language] is defined %}{{ languageUrls[language] ~ queryString() }}{% else %}/{{ language }}{% endif %}{{ trailingSlash }}" data-update-url>
                                                 <i class="flag-icon flag-icon-{{ language }}"></i>
                                                 {{ trans("Ceres::Template.header" ~ language | capitalize) }}
                                             </a>

@@ -12,6 +12,7 @@
 {% set currencyFormat = config("Ceres.currency.format") %}
 
 <!DOCTYPE html>
+
 <html lang="{{ lang }}" data-framework="vue" prefix="og: http://ogp.me/ns#">
 
     <head>
@@ -20,10 +21,9 @@
         {% block PartialHead %}
         {% endblock %}
 
-
         {% for styleTemplate in get_additional_styles() %}
             {% include styleTemplate.path ignore missing with styleTemplate.params %}
-        {% endfor %}        
+        {% endfor %}
     </head>
 
     <body>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="wrapper wrapper-main {% if ceresConfig.header.fixNavBarPos %}isSticky{% endif %}">
-                {% include getPartial('header') %}
+                 {% include getPartial('header') %}
 
                 <div id="page-body" class="main">
                     {% block PageBody %}
@@ -162,7 +162,7 @@
                 isSearch: {% if services.template.isSearch() == "1" %}true{% else %}false{% endif %},
                 language: "{{ lang }}",
                 decimalSeparator: "{{ config("IO.format.separator_decimal") }}",
-                urlTrailingSlash: {{ urls.appendTrailingSlash | json_encode }}
+                urlTrailingSlash: {{ (config("plenty.system.info.urlTrailingSlash") == 1) | json_encode }}
             };
         </script>
 
@@ -176,11 +176,18 @@
             <script src="{{ plugin_path('Ceres') }}/js/dist/ceres-app.js"></script>
         {% else %}
             <script src="{{ plugin_path('Ceres') }}/js/dist/ceres.min.js"></script>
-        {% endif %}
+        {% endif %}        
+        
+        {% for scriptTemplate in get_additional_scripts() %}
+            {% include scriptTemplate.path ignore missing with scriptTemplate.params %}
+        {% endfor %}
 
+        {{ LayoutContainer.show("Ceres::Script.AfterScriptsLoaded") }}
+
+        {{ get_filtered_tags() }}
+        
         <script>
-        $( document ).ready(function() {
-            
+        $( document ).ready(function() {            
                 $(".list-carousel-first").owlCarousel({
                     autoHeight       : true,
                     dots             : false,
@@ -224,14 +231,6 @@
                 });
             });
         </script>
-
-        {% for scriptTemplate in get_additional_scripts() %}
-            {% include scriptTemplate.path ignore missing with scriptTemplate.params %}
-        {% endfor %}
-
-        {{ LayoutContainer.show("Ceres::Script.AfterScriptsLoaded") }}
-
-        {{ get_filtered_tags() }}
 
         <script>
             var rootElement = document.getElementById("vue-app");
