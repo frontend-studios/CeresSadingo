@@ -3,7 +3,7 @@ const JS_DIST   = './resources/js/dist/';
 const JS_LANG   = './resources/js/lang/';
 const SCSS_SRC  = './resources/scss/';
 const SCSS_DIST = './resources/css/';
-const OUTPUT_PREFIX = 'main';
+const OUTPUT_PREFIX = 'sadingo';
 
 // import gulp
 var fs = require('fs');
