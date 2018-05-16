@@ -23,10 +23,10 @@
     {% set sorting = request.get("sorting") %}
 {% endif %}
 
-{% set paginatedResult = services.itemLoader.loadForTemplate('CeresSadingo::ItemList.ItemListView', itemLoaderPresets.search, {'query': request.get("query"), 'page': page, 'items': itemsPerPage, 'sorting':  sorting, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+{% set paginatedResult = services.itemLoader.loadForTemplate('ThemeSadingo::ItemList.ItemListView', itemLoaderPresets.search, {'query': request.get("query"), 'page': page, 'items': itemsPerPage, 'sorting':  sorting, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
 {% block PageBody %}
 
-    {{ component( "CeresSadingo::ItemList.Components.ItemList" ) }}
+    {{ component( "ThemeSadingo::ItemList.Components.ItemList" ) }}
     {{ component( "Ceres::ItemList.Components.ItemListSorting" ) }}
     {{ component( "Ceres::ItemList.Components.ItemsPerPage" ) }}
     {{ component( "Ceres::ItemList.Components.Pagination" ) }}

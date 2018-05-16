@@ -30,35 +30,35 @@
     {% else %}
         {% block ThemeHomepage %}
 
-        {% set homepageSliderImg1  = config("CeresSadingo.homepage.homepageSliderImg1") %}
-        {% set homepageSliderImg2  = config("CeresSadingo.homepage.homepageSliderImg2") %}
-        {% set homepageSliderImg3  = config("CeresSadingo.homepage.homepageSliderImg3") %}
+        {% set homepageSliderImg1  = config("ThemeSadingo.homepage.homepageSliderImg1") %}
+        {% set homepageSliderImg2  = config("ThemeSadingo.homepage.homepageSliderImg2") %}
+        {% set homepageSliderImg3  = config("ThemeSadingo.homepage.homepageSliderImg3") %}
 
-        {% set homepageBannerLink  = config("CeresSadingo.homepage.homepageBannerLink") %}
-        {% set homepageBannerText  = config("CeresSadingo.homepage.homepageBannerText") %}
+        {% set homepageBannerLink  = config("ThemeSadingo.homepage.homepageBannerLink") %}
+        {% set homepageBannerText  = config("ThemeSadingo.homepage.homepageBannerText") %}
 
-        {% set homepageTitle  = config("CeresSadingo.homepage.homepageTitle") %}
-        {% set homepageTitleText  = config("CeresSadingo.homepage.homepageTitleText") %}
+        {% set homepageTitle  = config("ThemeSadingo.homepage.homepageTitle") %}
+        {% set homepageTitleText  = config("ThemeSadingo.homepage.homepageTitleText") %}
 
-        {% set homepageTopLeftLink  = config("CeresSadingo.homepage.homepageTopLeftLink") %}
-        {% set homepageTopLeftImg  = config("CeresSadingo.homepage.homepageTopLeftImg") %}
-        {% set homepageTopLeftText  = config("CeresSadingo.homepage.homepageTopLeftText") %}
+        {% set homepageTopLeftLink  = config("ThemeSadingo.homepage.homepageTopLeftLink") %}
+        {% set homepageTopLeftImg  = config("ThemeSadingo.homepage.homepageTopLeftImg") %}
+        {% set homepageTopLeftText  = config("ThemeSadingo.homepage.homepageTopLeftText") %}
 
-        {% set homepageTopRightLink  = config("CeresSadingo.homepage.homepageTopRightLink") %}
-        {% set homepageTopRightImg  = config("CeresSadingo.homepage.homepageTopRightImg") %}
-        {% set homepageTopRightText  = config("CeresSadingo.homepage.homepageTopRightText") %}
+        {% set homepageTopRightLink  = config("ThemeSadingo.homepage.homepageTopRightLink") %}
+        {% set homepageTopRightImg  = config("ThemeSadingo.homepage.homepageTopRightImg") %}
+        {% set homepageTopRightText  = config("ThemeSadingo.homepage.homepageTopRightText") %}
 
-        {% set homepageTitleKategories  = config("CeresSadingo.homepage.homepageTitleKategories") %}
-        {% set homepageCategoriePerlenparadies  = config("CeresSadingo.homepage.homepagePerlenparadies") %}
-        {% set homepageCategoriePerlenparadiesText  = config("CeresSadingo.homepage.homepagePerlenparadiesText") %}
-        {% set homepageCategorieSchmuckmaterial  = config("CeresSadingo.homepage.homepageSchmuckmaterial") %}
-        {% set homepageCategorieSchmuckmaterialText  = config("CeresSadingo.homepage.homepageSchmuckmaterialText") %}
-        {% set homepageCategorieBastelnKreatives  = config("CeresSadingo.homepage.homepageBastelnKreatives") %}
-        {% set homepageCategorieBastelnKreativesText  = config("CeresSadingo.homepage.homepageBastelnKreativesText") %}
-        {% set homepageCategorieSchmuckstuecke  = config("CeresSadingo.homepage.homepageSchmuckstuecke") %}
-        {% set homepageCategorieSchmuckstueckeText  = config("CeresSadingo.homepage.homepageSchmuckstueckeText") %}
+        {% set homepageTitleKategories  = config("ThemeSadingo.homepage.homepageTitleKategories") %}
+        {% set homepageCategoriePerlenparadies  = config("ThemeSadingo.homepage.homepagePerlenparadies") %}
+        {% set homepageCategoriePerlenparadiesText  = config("ThemeSadingo.homepage.homepagePerlenparadiesText") %}
+        {% set homepageCategorieSchmuckmaterial  = config("ThemeSadingo.homepage.homepageSchmuckmaterial") %}
+        {% set homepageCategorieSchmuckmaterialText  = config("ThemeSadingo.homepage.homepageSchmuckmaterialText") %}
+        {% set homepageCategorieBastelnKreatives  = config("ThemeSadingo.homepage.homepageBastelnKreatives") %}
+        {% set homepageCategorieBastelnKreativesText  = config("ThemeSadingo.homepage.homepageBastelnKreativesText") %}
+        {% set homepageCategorieSchmuckstuecke  = config("ThemeSadingo.homepage.homepageSchmuckstuecke") %}
+        {% set homepageCategorieSchmuckstueckeText  = config("ThemeSadingo.homepage.homepageSchmuckstueckeText") %}
 
-        {% set category1 = services.category.get(config("CeresSadingo.homepage.homepageCategory1"), lang) %}        
+        {% set category1 = services.category.get(config("ThemeSadingo.homepage.homepageCategory1"), lang) %}        
         {% set paginatedCategoryList1 =
         services.itemLoader.loadForTemplate(
         'Ceres::ItemList.ItemListView',
@@ -67,8 +67,8 @@
 
         {% set categoryList1 = paginatedCategoryList1.documents %}
 
-        {{ component( "CeresSadingo::ItemList.Components.ItemList") }}
-        {{ component( "CeresSadingo::ItemList.Components.CategoryImageCarousel") }}
+        {{ component( "ThemeSadingo::ItemList.Components.ItemList") }}
+        {{ component( "ThemeSadingo::ItemList.Components.CategoryImageCarousel") }}
         {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
         <div class="main_container container-max page-content homepage_container"><!--Anfang des Containers-->
@@ -89,14 +89,14 @@
                       {% if paginatedCategoryList1 | length > 4 %}                                                                                                      
                           <div class="list-item-carousel owl-carousel owl-theme list-carousel-first">      
                               {% for item in categoryList1 %}                                                
-                                      {% include "CeresSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}                                            
+                                      {% include "ThemeSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}                                            
                               {% endfor %}
                           </div>
                       {% else %}
                           <ul class="product-list row grid list-carousel-first">
                               {% for item in categoryList1 %}
                                   <li class="col-xs-12 col-sm-6 col-md-3">
-                                      {% include "CeresSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                                      {% include "ThemeSadingo::Category.Item.Partials.CategoryListItem" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                                   </li>
                               {% endfor %}
                           </ul>
@@ -197,7 +197,7 @@
               <div class="homepage_row homepage_articlePreview row">
 
               </div>
-              <div class="ceresSadingo_ItemListContainer">
+              <div class="ThemeSadingo_ItemListContainer">
                 {% set homepageContainer1 = LayoutContainer.show("Ceres::Homepage.Container1") %}
                 {% if homepageContainer1 | trim is empty %}
                     {% if slider1.url or slider2.url or slider3.url %}

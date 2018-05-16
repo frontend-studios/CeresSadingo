@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block PageBody %}
-    {% set basketInformation  = config("CeresSadingo.basket.basketInformation") %}
+    {% set basketInformation  = config("ThemeSadingo.basket.basketInformation") %}
 
     {{ component( "Ceres::Basket.Components.BasketList" ) }}
     {{ component( "Ceres::Basket.Components.Coupon" ) }}
